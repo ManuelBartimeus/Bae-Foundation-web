@@ -1,0 +1,379 @@
+/* Founder's Message Specific Styles */
+
+/* Hero Quote Section */
+.founder-hero {
+  background: linear-gradient(135deg, #1520a6 0%, #2563eb 100%);
+  color: white;
+  padding: 120px 20px 80px;
+  margin: 0 -48px 0 -48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.founder-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../assets/hero.jpg') center/cover;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.founder-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 35px,
+      rgba(255, 255, 255, 0.03) 35px,
+      rgba(255, 255, 255, 0.03) 70px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 35px,
+      rgba(255, 255, 255, 0.03) 35px,
+      rgba(255, 255, 255, 0.03) 70px
+    );
+  z-index: 0;
+}
+
+.quote-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.quote-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.hero-quote {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.quote-attribution {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.quote-attribution span:first-child {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.quote-attribution span:last-child {
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+  color: var(--black);
+}
+
+/* Message Cards */
+.message-card {
+  background: rgba(250, 214, 165, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(250, 214, 165, 0.3);
+  transition: all 0.3s ease;
+}
+
+.message-card:hover {
+  background: rgba(250, 214, 165, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.message-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--black);
+}
+
+.message-card .intro {
+  margin-bottom: 15px;
+}
+
+.message-card .highlight {
+  background: rgba(21, 32, 166, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid #1520a6;
+  font-weight: 500;
+}
+
+/* Founder Profile */
+.founder-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  position: sticky;
+  top: 100px;
+}
+
+.founder-social {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.social-icon.whatsapp {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+}
+
+.social-icon.linkedin {
+  background: linear-gradient(135deg, #0077B5 0%, #005885 100%);
+}
+
+.social-icon.twitter {
+  background: linear-gradient(135deg, #1DA1F2 0%, #0d8bd9 100%);
+}
+
+.social-icon.instagram {
+  background: linear-gradient(135deg, #E1306C 0%, #C13584 50%, #833AB4 100%);
+}
+
+.founder-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(250, 214, 165, 0.3);
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1520a6;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #666;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Founder CTA */
+.founder-cta {
+  background: linear-gradient(135deg, #fad6a5 0%, #f4c483 100%);
+  border-radius: 24px;
+  padding: 60px 40px;
+  text-align: center;
+  margin: 80px auto 0;
+  max-width: 1400px;
+}
+
+.founder-cta .cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.founder-cta h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--black);
+}
+
+.founder-cta p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.founder-cta .cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.founder-cta .donate {
+  background: #1a1a1a;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.founder-cta .donate:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+.founder-cta .volunteer {
+  background: white;
+  color: #1a1a1a;
+  padding: 15px 30px;
+  border: 2px solid #1a1a1a;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.founder-cta .volunteer:hover {
+  background: #1a1a1a;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .founder-hero {
+    margin: 0 -32px 0 -32px;
+    padding: 100px 20px 60px;
+  }
+  
+  .hero-quote {
+    font-size: 2.5rem;
+  }
+  
+  .founder-profile {
+    position: relative;
+    top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .founder-hero {
+    margin: 0 -20px 0 -20px;
+    padding: 80px 15px 50px;
+  }
+  
+  .hero-quote {
+    font-size: 2rem;
+  }
+  
+  .quote-icon {
+    font-size: 2rem;
+  }
+  
+  .rebuild-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .content-right {
+    order: -1;
+  }
+  
+  .founder-stats {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .stat-item {
+    padding: 15px;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem;
+  }
+  
+  .message-card {
+    padding: 20px;
+  }
+  
+  .founder-cta .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .founder-cta .donate,
+  .founder-cta .volunteer {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .founder-hero {
+    margin: 0 -14px 0 -14px;
+    padding: 60px 10px 40px;
+  }
+  
+  .hero-quote {
+    font-size: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .founder-cta {
+    padding: 40px 20px;
+  }
+}
