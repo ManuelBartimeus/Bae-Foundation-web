@@ -23,6 +23,7 @@
   z-index: -1;
 }
 
+/* Geometric Pattern Overlay - Zigzag Pattern like impact-card orange */
 .founder-hero::after {
   content: '';
   position: absolute;
@@ -30,22 +31,16 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
-    repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 35px,
-      rgba(255, 255, 255, 0.03) 35px,
-      rgba(255, 255, 255, 0.03) 70px
-    ),
-    repeating-linear-gradient(
-      -45deg,
-      transparent,
-      transparent 35px,
-      rgba(255, 255, 255, 0.03) 35px,
-      rgba(255, 255, 255, 0.03) 70px
-    );
+  opacity: 0.15;
   z-index: 0;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
 }
 
 .quote-container {
@@ -141,47 +136,6 @@
   top: 100px;
 }
 
-.founder-social {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-  justify-content: center;
-}
-
-.social-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  color: white;
-  font-size: 1.3rem;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.social-icon:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.social-icon.whatsapp {
-  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
-}
-
-.social-icon.linkedin {
-  background: linear-gradient(135deg, #0077B5 0%, #005885 100%);
-}
-
-.social-icon.twitter {
-  background: linear-gradient(135deg, #1DA1F2 0%, #0d8bd9 100%);
-}
-
-.social-icon.instagram {
-  background: linear-gradient(135deg, #E1306C 0%, #C13584 50%, #833AB4 100%);
-}
-
 .founder-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -229,11 +183,53 @@
   text-align: center;
   margin: 80px auto 0;
   max-width: 1400px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Geometric Pattern - Top 20px only */
+.founder-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 45px;
+  z-index: 1;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+}
+
+/* Geometric Pattern - Bottom 20px only */
+.founder-cta::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 45px;
+  z-index: 1;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
 }
 
 .founder-cta .cta-content {
   max-width: 600px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .founder-cta h3 {
@@ -272,8 +268,8 @@
   transform: translateY(-2px);
 }
 
-.founder-cta .volunteer {
-  background: white;
+.founder-cta .founder-volunteer {
+  background: transparent;
   color: #1a1a1a;
   padding: 15px 30px;
   border: 2px solid #1a1a1a;
@@ -284,7 +280,7 @@
   transition: all 0.3s ease;
 }
 
-.founder-cta .volunteer:hover {
+.founder-cta .founder-volunteer:hover {
   background: #1a1a1a;
   color: white;
   transform: translateY(-2px);
@@ -353,7 +349,7 @@
   }
   
   .founder-cta .donate,
-  .founder-cta .volunteer {
+  .founder-cta .founder-volunteer {
     width: 100%;
     max-width: 300px;
   }

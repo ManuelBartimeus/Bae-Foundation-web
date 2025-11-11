@@ -1,12 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import "./AboutScreen.css";
 import "./OurStory.css";
-import { FiCalendar, FiHeart, FiUsers, FiTrendingUp, FiAward, FiGlobe } from "react-icons/fi";
-import { FaEye, FaHandshake, FaStar, FaLightbulb, FaHandHoldingHeart } from "react-icons/fa";
+import {
+  FiCalendar,
+  FiHeart,
+  FiUsers,
+  FiTrendingUp,
+  FiAward,
+  FiGlobe,
+} from "react-icons/fi";
+import {
+  FaEye,
+  FaHandshake,
+  FaStar,
+  FaLightbulb,
+  FaHandHoldingHeart,
+} from "react-icons/fa";
 import { LuTarget } from "react-icons/lu";
 import aboutImg from "../assets/about-us-pic.jpg";
 import heroImg from "../assets/hero.jpg";
-import impactImg from "../assets/african-kids-enjoying-life_23-2151438340.jpg";
+import impactImg from "../assets/MA-41.jpg";
 
 export default function OurStory() {
   const [activeTimeline, setActiveTimeline] = useState(0);
@@ -15,33 +28,38 @@ export default function OurStory() {
     {
       year: "2016",
       title: "The Spark",
-      description: "Conceived from Teens in Christ (T-I-C), a passionate youth community determined to live with meaning and inspire ethical leadership.",
-      icon: <FiHeart />
+      description:
+        "Conceived from Teens in Christ (T-I-C), a passionate youth community determined to live with meaning and inspire ethical leadership.",
+      icon: <FiHeart />,
     },
     {
       year: "2017",
       title: "Official Launch",
-      description: "Launched on April 2nd at Rainbow Christian Center, Tema, Ghana. Programs in youth leadership, education, and community development commence.",
-      icon: <FiUsers />
+      description:
+        "Launched on April 2nd at Rainbow Christian Center, Tema, Ghana. Programs in youth leadership, education, and community development commence.",
+      icon: <FiUsers />,
     },
     {
       year: "2018-2020",
       title: "Growth & Impact",
-      description: "Expanded programs across Ghana, establishing partnerships with schools and communities. Launched education support initiatives.",
-      icon: <FiTrendingUp />
+      description:
+        "Expanded programs across Ghana, establishing partnerships with schools and communities. Launched education support initiatives.",
+      icon: <FiTrendingUp />,
     },
     {
       year: "2021-2023",
       title: "Recognition & Expansion",
-      description: "Gained recognition for impactful work. Launched major initiatives including health programs and women empowerment projects.",
-      icon: <FiAward />
+      description:
+        "Gained recognition for impactful work. Launched major initiatives including health programs and women empowerment projects.",
+      icon: <FiAward />,
     },
     {
       year: "2024",
       title: "International Reach",
-      description: "First international chapter inaugurated in The Gambia as part of our Legacy & Expansion Program.",
-      icon: <FiGlobe />
-    }
+      description:
+        "First international chapter inaugurated in The Gambia as part of our Legacy & Expansion Program.",
+      icon: <FiGlobe />,
+    },
   ];
 
   const coreValues = [
@@ -49,26 +67,26 @@ export default function OurStory() {
       title: "Integrity & Compassion",
       description: "Serving before self and standing for what is right.",
       color: "#1520a6",
-      icon: <FaHandshake />
+      icon: <FaHandshake />,
     },
     {
       title: "Excellence with Conscience",
       description: "High standards anchored in empathy and ethics.",
       color: "#fad6a5",
-      icon: <FaStar />
+      icon: <FaStar />,
     },
     {
       title: "Innovation & Stewardship",
       description: "Creative, responsible use of resources for lasting change.",
       color: "#16a34a",
-      icon: <FaLightbulb />
+      icon: <FaLightbulb />,
     },
     {
       title: "Inclusivity & Dignity",
       description: "Every life has worth; every voice deserves a future.",
       color: "#9333ea",
-      icon: <FaHandHoldingHeart />
-    }
+      icon: <FaHandHoldingHeart />,
+    },
   ];
 
   return (
@@ -78,8 +96,23 @@ export default function OurStory() {
         <div className="story-hero-content">
           <h1>Our Story</h1>
           <p>
-            A journey of transformation, from a small youth community to an 
-            international force for positive change across Africa and beyond.
+            A journey of transformation — from a small youth community with a
+            shared dream to an international force for positive change across
+            Africa and beyond. What began as a gathering of passionate young
+            people determined to make a difference in their local community has
+            evolved into a vibrant movement that touches lives across borders.
+          </p>
+          <br />
+          <p>
+            Our story is built on faith, resilience, and the unwavering belief
+            that lasting change begins with ordinary individuals who dare to
+            take action. In our earliest days, we organized small
+            initiatives—clean-up drives, youth outreaches, and community
+            education programs—driven by nothing more than purpose and unity.
+            These humble beginnings became the foundation for something far
+            greater: a movement that empowers communities, inspires responsible
+            leadership, and champions the values of compassion, service, and
+            integrity.
           </p>
         </div>
         <div className="story-hero-image">
@@ -93,20 +126,21 @@ export default function OurStory() {
           <div className="overview-text">
             <h2>Who We Are Today</h2>
             <p>
-              <strong>Before Anyone Else (B.A.E) Foundation</strong> is a registered
-              multinational, impact-oriented NGO dedicated to holistic development
-              and service. We stand as the{" "}
+              <strong>Before Anyone Else (B.A.E) Foundation</strong> is a
+              registered multinational, impact-oriented NGO dedicated to
+              holistic development and service. We stand as the{" "}
               <strong>
                 Centre for Excellence, Ethical-Transformational Leadership,
                 Innovation, and Sustainable Impact
-              </strong>.
+              </strong>
+              .
             </p>
             <p>
               These four pillars define our identity and fuel our work across
-              Africa and beyond, touching thousands of lives through our 
+              Africa and beyond, touching thousands of lives through our
               comprehensive programs and initiatives.
             </p>
-            
+
             <div className="overview-stats">
               <div className="stat-card">
                 <span className="stat-number">9</span>
@@ -140,20 +174,22 @@ export default function OurStory() {
             {timelineEvents.map((event, index) => (
               <button
                 key={index}
-                className={`timeline-nav-btn ${index === activeTimeline ? 'active' : ''}`}
+                className={`timeline-nav-btn ${
+                  index === activeTimeline ? "active" : ""
+                }`}
                 onClick={() => setActiveTimeline(index)}
               >
-                <div className="timeline-icon">
-                  {event.icon}
-                </div>
+                <div className="timeline-icon">{event.icon}</div>
                 <span>{event.year}</span>
               </button>
             ))}
           </div>
-          
+
           <div className="timeline-content">
             <div className="timeline-card">
-              <div className="timeline-year">{timelineEvents[activeTimeline].year}</div>
+              <div className="timeline-year">
+                {timelineEvents[activeTimeline].year}
+              </div>
               <h3>{timelineEvents[activeTimeline].title}</h3>
               <p>{timelineEvents[activeTimeline].description}</p>
             </div>
@@ -170,10 +206,10 @@ export default function OurStory() {
             </div>
             <h3>Our Mission</h3>
             <p>
-              To serve as agents of change—championing compassion, justice, and 
-              ethical leadership—by integrating actionable practices that address 
-              socio-economic needs and environmental challenges, nurturing hope, 
-              dignity, and quality of life.
+              To serve as agents of change—championing compassion, justice, and
+              ethical leadership—by integrating actionable practices that
+              address socio-economic needs and environmental challenges,
+              nurturing hope, dignity, and quality of life.
             </p>
           </div>
           <div className="mv-card vision-card">
@@ -182,9 +218,12 @@ export default function OurStory() {
             </div>
             <h3>Our Vision</h3>
             <p>
-              A world lived out through <strong>acts of kindness, service, and 
-              transformative leadership</strong>, where every person, regardless 
-              of background, has the opportunity to thrive.
+              A world lived out through{" "}
+              <strong>
+                acts of kindness, service, and transformative leadership
+              </strong>
+              , where every person, regardless of background, has the
+              opportunity to thrive.
             </p>
           </div>
         </div>
@@ -195,8 +234,8 @@ export default function OurStory() {
         <h2>Our Core Values</h2>
         <div className="values-grid">
           {coreValues.map((value, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="value-card"
               style={{ borderTopColor: value.color }}
             >
@@ -216,11 +255,11 @@ export default function OurStory() {
           <h2>Aligned to the Global Goals</h2>
           <p>
             The Foundation aligns with the{" "}
-            <strong>United Nations Sustainable Development Goals (SDGs)</strong>,
-            advancing integrated solutions that address root causes of poverty,
-            inequality, and environmental degradation.
+            <strong>United Nations Sustainable Development Goals (SDGs)</strong>
+            , advancing integrated solutions that address root causes of
+            poverty, inequality, and environmental degradation.
           </p>
-          
+
           <div className="sdg-focus-areas">
             <div className="focus-area">
               <FiUsers className="focus-icon" />
@@ -247,7 +286,7 @@ export default function OurStory() {
         <div className="cta-content">
           <h2>Be Part of Our Continuing Story</h2>
           <p>
-            Every chapter of our story has been written with the support of 
+            Every chapter of our story has been written with the support of
             people who believe in our mission. Help us write the next chapter.
           </p>
           <div className="cta-buttons">

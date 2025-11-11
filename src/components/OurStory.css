@@ -8,14 +8,14 @@
   align-items: center;
   padding: 80px 0;
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 25px auto 0 auto;
 }
 
 .story-hero-content h1 {
   font-size: 3.5rem;
   font-weight: 800;
   color: #1520a6;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   line-height: 1.1;
 }
 
@@ -29,15 +29,15 @@
   width: 100%;
   border-radius: 24px;
   object-fit: cover;
-  height: 400px;
+  height: 500px;
 }
 
 /* Story Overview */
 .story-overview {
-  background: rgba(250, 214, 165, 0.1);
+  background: linear-gradient(135deg, #fad6a5a3 0%, #f4d9b4ff 100%);
   border-radius: 24px;
   padding: 60px 40px;
-  margin: 80px auto;
+  margin: 40px auto;
   max-width: 1400px;
 }
 
@@ -103,7 +103,7 @@
   width: 100%;
   border-radius: 20px;
   object-fit: cover;
-  height: 300px;
+  height: 610px;
 }
 
 /* Timeline Section */
@@ -185,7 +185,7 @@
 }
 
 .timeline-card {
-  background: linear-gradient(135deg, #fad6a5 0%, #f4c483 100%);
+  background: linear-gradient(135deg, #f4d9b4ff 0%, #fad6a5a3 100%);
   border-radius: 24px;
   padding: 60px;
   width: 100%;
@@ -252,7 +252,7 @@
 }
 
 .vision-card {
-  background: linear-gradient(135deg, #fad6a5 0%, #f4c483 100%);
+  background: linear-gradient(135deg, #f4d9b4ff 0%, #fad6a5a3 100%);
   color: #333;
 }
 

@@ -6,6 +6,9 @@ export default function Header({ currentPage, onNavigate }) {
   const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
+  // Check if current page is an About Us sub-page
+  const isAboutPage = ['about', 'founders-message', 'our-story', 'team'].includes(currentPage);
+
   const handleNavigation = (page) => {
     onNavigate(page);
     setIsAboutDropdownOpen(false); // Close dropdown when navigating
@@ -50,7 +53,7 @@ export default function Header({ currentPage, onNavigate }) {
         </button>
         <div className="es-nav-dropdown" ref={dropdownRef}>
           <button 
-            className={`es-nav-item es-nav-dropdown-trigger ${currentPage === 'about' ? 'active' : ''}`}
+            className={`es-nav-item es-nav-dropdown-trigger ${isAboutPage ? 'active' : ''}`}
             onClick={toggleAboutDropdown}
             aria-expanded={isAboutDropdownOpen}
             aria-haspopup="true"
@@ -100,7 +103,7 @@ export default function Header({ currentPage, onNavigate }) {
           className={`es-nav-item ${currentPage === 'impact-shop' ? 'active' : ''}`}
           onClick={() => handleNavigation('impact-shop')}
         >
-          Impact Shop
+          Legacy Store
         </button>
         <button 
           className={`es-nav-item ${currentPage === 'blog' ? 'active' : ''}`}

@@ -4,7 +4,8 @@ import "./AboutScreen.css";
 import "./FoundersMessage.css";
 import founderImg from "../assets/founder_img.png";
 import { FiUser, FiStar, FiHome } from "react-icons/fi";
-import { FaQuoteLeft, FaWhatsapp, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaQuoteLeft, FaWhatsapp, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { SiThreads } from "react-icons/si";
 
 export default function FoundersMessage() {
   // Count-up animations for founder stats
@@ -116,19 +117,19 @@ export default function FoundersMessage() {
                   <span>Before Anyone Else Foundation</span>
                 </div>
               </div>
-
-              <div className="founder-social">
-                <a href="https://wa.me/yourphonenumber" target="_blank" rel="noopener noreferrer" className="social-icon whatsapp">
+              
+              <div className="social-media-icons">
+                <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className="founder-social-icon whatsapp">
                   <FaWhatsapp />
                 </a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="social-icon linkedin">
-                  <FaLinkedin />
+                <a href="https://www.threads.com/@capt.derrick_pope?xmt=AQF0ADeMZol0PnYuHJ-XF72c9CZuBmD20_AxSsAyoePlm4M" target="_blank" rel="noopener noreferrer" className="founder-social-icon threads">
+                  <SiThreads />
                 </a>
-                <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" className="social-icon twitter">
-                  <FaTwitter />
-                </a>
-                <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener noreferrer" className="social-icon instagram">
+                <a href="https://instagram.com//capt.derrick_pope/" target="_blank" rel="noopener noreferrer" className="founder-social-icon instagram">
                   <FaInstagram />
+                </a>
+                <a href="https://linkedin.com//in/derrick-p-006672114/" target="_blank" rel="noopener noreferrer" className="founder-social-icon linkedin">
+                  <FaLinkedin />
                 </a>
               </div>
               
@@ -161,7 +162,7 @@ export default function FoundersMessage() {
           </p>
           <div className="cta-buttons">
             <button className="donate">Support Our Cause</button>
-            <button className="volunteer">Become a Volunteer</button>
+            <button className="founder-volunteer">Become a Volunteer</button>
           </div>
         </div>
       </section>

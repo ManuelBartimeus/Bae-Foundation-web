@@ -4,6 +4,7 @@ import { FaRegBuilding, FaRegUserCircle } from "react-icons/fa";
 import { useCountUp, useCountUpFromString } from "../hooks/useCountUp";
 import "./HomeScreen.css";
 import heroImage from "../assets/hero.jpg";
+import testimonialimage from "../assets/school_boy_smiling.jpg";
 import initiative1 from "../assets/initiatives/initiative-1.png";
 import initiative2 from "../assets/initiatives/initiative-2.png";
 import initiative3 from "../assets/initiatives/initiative-3.png";
@@ -146,13 +147,12 @@ export default function HomeScreen() {
               tabIndex="0"
             >
               <img
-                src={heroImage}
+                src={testimonialimage}
                 alt="testimonial avatar"
                 className="es-quote-avatar"
               />
               <span className="es-quote-text">
-                "Because of this organization, I was given hope and a second
-                chance."
+                "Because of this organization, science finally came alive to me."
               </span>
             </div>
 
@@ -167,20 +167,11 @@ export default function HomeScreen() {
               aria-label="Dedicated team information"
               tabIndex="0"
             >
-              <h4 className="es-team-title">Dedicated team</h4>
+              <h4 className="es-team-title">Good News Bible School</h4>
               <p className="es-team-desc">
-                Providing essential resources and aid to those who are in need
-                in emergency.
+                Engaging the students of Good News Bible School in basic electronics.
               </p>
 
-              <div className="es-team-meta" aria-hidden="true">
-                <div className="es-team-avatars">
-                  <img src={heroImage} alt="team avatar 1" />
-                  <img src={heroImage} alt="team avatar 2" />
-                  <img src={heroImage} alt="team avatar 3" />
-                </div>
-                <div className="es-team-number">50k</div>
-              </div>
             </article>
           </div>
         </section>
@@ -724,7 +715,7 @@ export default function HomeScreen() {
             The colours in our emblem speak the language of our cause.
           </p>
         </div>
-      
+
         <div className="content">
           {/* Logo and Heading */}
           <div className="logo-center">
@@ -763,17 +754,16 @@ export default function HomeScreen() {
       </section>
 
       {/* ---------- Section 3: Call to Action ---------- */}
-      <section className="projects-cta">
-        <div className="cta-content">
+      <section className="home-projects-cta">
+        <div className="home-cta-content">
           <h2>Want to Support Our Projects?</h2>
           <p>
-            Your contribution can help us expand these life-changing initiatives 
+            Your contribution can help us expand these life-changing initiatives
             and reach even more communities in need.
           </p>
-          <div className="cta-buttons">
+          <div className="home-cta-buttons">
             <button className="donate">Donate Now</button>
             <button className="volunteer">Volunteer</button>
-            <button className="partner">Partner With Us</button>
           </div>
         </div>
 
