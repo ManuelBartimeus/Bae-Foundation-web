@@ -2,15 +2,49 @@
 .impact-shop-header {
   text-align: center;
   padding: 6rem 2rem 4rem;
-  background: linear-gradient(135deg, #1520a6 0%, #1520a680 100%);
-  color: white;
+  background: linear-gradient(135deg, #fad6a5f2 0%, #d79d4af2 100%);
+  color: #095c54;
+  border-radius: 35px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Zigzag pattern overlay for impact-shop-header */
+.impact-shop-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.15;
+  z-index: 0;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+}
+
+.legacy-store-logo {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
 }
 
 .impact-shop-header h1 {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  color: white;
+  color: #095c54;
+  position: relative;
+  z-index: 1;
 }
 
 .impact-shop-header p {
@@ -18,7 +52,10 @@
   max-width: 800px;
   margin: 0 auto 2rem;
   opacity: 0.95;
+  color: #202321; 
   line-height: 1.6;
+  position: relative;
+  z-index: 1;
 }
 
 .shop-features {
@@ -27,6 +64,8 @@
   gap: 3rem;
   flex-wrap: wrap;
   margin-top: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .feature {
@@ -39,7 +78,7 @@
 
 .feature svg {
   font-size: 1.2rem;
-  color: #fad6a5;
+  color: #202321;
 }
 
 /* Shop Controls */
@@ -125,7 +164,7 @@
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  background: linear-gradient(135deg, #1520a6 0%, #0f1654 100%);
+  background: #1520a6;
   color: white;
   padding: 1rem 1.5rem;
   border-radius: 25px;
@@ -133,7 +172,7 @@
 }
 
 .cart-total {
-  background: linear-gradient(135deg, #fad6a5 0%, #f5c885 100%);
+  background: #fad6a5;
   color: #1a1a1a;
   padding: 0.3rem 0.8rem;
   border-radius: 15px;
@@ -494,11 +533,54 @@
   color: white;
   padding: 4rem 2rem;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 35px;
+}
+
+/* Geometric Pattern - Top 45px only */
+.shop-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 45px;
+  z-index: 1;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+}
+
+/* Geometric Pattern - Bottom 45px only */
+.shop-cta::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 45px;
+  z-index: 1;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
 }
 
 .cta-content {
   max-width: 800px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .cta-content h2 {

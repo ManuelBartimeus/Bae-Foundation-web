@@ -176,9 +176,6 @@ export default function Projects() {
           </div>
           
           <div className="category-filters">
-            <span className="filter-label">
-              <FiFilter /> Filter by Category:
-            </span>
             {projectCategories.map(category => (
               <button
                 key={category.id}

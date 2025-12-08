@@ -1,36 +1,56 @@
 /* Our Story Specific Styles */
 
-/* Story Hero Section */
-.story-hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-  padding: 80px 0;
-  max-width: 1400px;
-  margin: 25px auto 0 auto;
+/* Story Header Section */
+.story-header {
+  text-align: center;
+  padding: 6rem 2rem 4rem;
+  background: linear-gradient(135deg, #1520a6 0%, #1520a680 100%);
+  color: white;
+  border-radius: 35px;
+  position: relative;
+  overflow: hidden;
 }
 
-.story-hero-content h1 {
-  font-size: 3.5rem;
-  font-weight: 800;
-  color: #1520a6;
-  margin-bottom: 40px;
-  line-height: 1.1;
+/* Zigzag pattern overlay for story-header */
+.story-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.15;
+  z-index: 0;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
 }
 
-.story-hero-content p {
+.story-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.story-header p {
   font-size: 1.2rem;
-  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0.95;
   line-height: 1.6;
+  position: relative;
+  z-index: 1;
 }
 
-.story-hero-image img {
-  width: 100%;
-  border-radius: 24px;
-  object-fit: cover;
-  height: 500px;
-}
+/* Story Header Section - REMOVED, replaced with header */
 
 /* Story Overview */
 .story-overview {
@@ -43,7 +63,7 @@
 
 .overview-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr 1.75fr;
   gap: 60px;
   align-items: center;
 }
@@ -103,7 +123,7 @@
   width: 100%;
   border-radius: 20px;
   object-fit: cover;
-  height: 610px;
+  height: 660px;
 }
 
 /* Timeline Section */
@@ -228,6 +248,28 @@
   padding: 50px;
   border-radius: 24px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Zigzag pattern overlay for mv-cards */
+.mv-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.15;
+  z-index: 0;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
 }
 
 .mv-icon-wrapper {
@@ -235,6 +277,8 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 25px;
+  position: relative;
+  z-index: 1;
 }
 
 .mv-icon {
@@ -264,11 +308,15 @@
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 25px;
+  position: relative;
+  z-index: 1;
 }
 
 .mv-card p {
   font-size: 1.1rem;
   line-height: 1.6;
+  position: relative;
+  z-index: 1;
 }
 
 /* Core Values */
@@ -387,6 +435,51 @@
   margin: 120px auto 0;
   max-width: 1400px;
   color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Geometric Pattern - Top 45px only */
+.story-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 45px;
+  z-index: 1;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+}
+
+/* Geometric Pattern - Bottom 45px only */
+.story-cta::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 45px;
+  z-index: 1;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+}
+
+.story-cta .cta-content {
+  position: relative;
+  z-index: 2;
 }
 
 .story-cta .cta-content h2 {

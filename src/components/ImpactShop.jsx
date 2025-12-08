@@ -4,6 +4,9 @@ import './ImpactShop.css';
 import { FiShoppingCart, FiHeart, FiStar, FiFilter, FiSearch, FiPackage, FiTruck, FiShield, FiGift } from 'react-icons/fi';
 import { FaGraduationCap, FaHandsHelping, FaLeaf, FaHeart, FaShoppingBag } from 'react-icons/fa';
 
+// Import Legacy Store logo
+import legacyStoreLogo from '../assets/Legacy Store logo png.png';
+
 // Import some images for products (using existing assets)
 import aboutImg from '../assets/about-us-pic.jpg';
 import volunteerImg from '../assets/volunteer.jpg';
@@ -187,7 +190,7 @@ export default function ImpactShop() {
     <main className="rebuild-page">
       {/* Header */}
       <section className="impact-shop-header">
-        <h1>Impact Shop</h1>
+        <img src={legacyStoreLogo} alt="Legacy Store" className="legacy-store-logo" />
         <p>
           Shop with purpose. Every purchase directly funds our life-changing initiatives 
           across Africa. Choose your impact and see exactly how your contribution 

@@ -120,7 +120,7 @@
   top: 100%;
   left: 0;
   min-width: 180px;
-  background: rgba(250, 214, 165, 0.95);
+  background: #fad6a5f2;
   backdrop-filter: blur(10px);
   border-radius: 12px;
   box-shadow: 0 8px 32px rgba(10, 10, 10, 0.15);
@@ -1315,20 +1315,70 @@ button:focus, .es-quote:focus, .es-team-card:focus, .es-nav-item:focus {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 4px solid white;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   width: 150px;
   height: 150px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+  position: relative;
+}
+
+/* Inner colored borders for each meaning card */
+.meaning-card.red {
+  box-shadow: 0 0 0 3px white, 0 0 0 6px #ff1a1a, 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.meaning-card.orange {
+  box-shadow: 0 0 0 3px white, 0 0 0 6px #ff7a00, 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.meaning-card.yellow {
+  box-shadow: 0 0 0 3px white, 0 0 0 6px #ffca28, 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.meaning-card.blue {
+  box-shadow: 0 0 0 3px white, 0 0 0 6px #2196f3, 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.meaning-card.green {
+  box-shadow: 0 0 0 3px white, 0 0 0 6px #4caf50, 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.meaning-card.purple {
+  box-shadow: 0 0 0 3px white, 0 0 0 6px #9c27b0, 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .meaning-card:hover {
   transform: translateY(-12px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
   background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: white;
+}
+
+/* Hover state maintains colored borders */
+.meaning-card.red:hover {
+  box-shadow: 0 0 0 3px white, 0 0 0 6px #ff1a1a, 0 20px 60px rgba(255, 26, 26, 0.3);
+}
+
+.meaning-card.orange:hover {
+  box-shadow: 0 0 0 3px white, 0 0 0 6px #ff7a00, 0 20px 60px rgba(255, 122, 0, 0.3);
+}
+
+.meaning-card.yellow:hover {
+  box-shadow: 0 0 0 3px white, 0 0 0 6px #ffca28, 0 20px 60px rgba(255, 202, 40, 0.3);
+}
+
+.meaning-card.blue:hover {
+  box-shadow: 0 0 0 3px white, 0 0 0 6px #2196f3, 0 20px 60px rgba(33, 150, 243, 0.3);
+}
+
+.meaning-card.green:hover {
+  box-shadow: 0 0 0 3px white, 0 0 0 6px #4caf50, 0 20px 60px rgba(76, 175, 80, 0.3);
+}
+
+.meaning-card.purple:hover {
+  box-shadow: 0 0 0 3px white, 0 0 0 6px #9c27b0, 0 20px 60px rgba(156, 39, 176, 0.3);
 }
 
 .color-name {
@@ -1580,12 +1630,54 @@ button:focus, .es-quote:focus, .es-team-card:focus, .es-nav-item:focus {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Geometric Pattern - Top 45px only */
+.home-projects-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 45px;
+  z-index: 1;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+}
+
+/* Geometric Pattern - Bottom 45px only */
+.home-projects-cta::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 45px;
+  z-index: 1;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
 }
 
 .home-cta-content {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 .home-cta-content h2 {

@@ -111,7 +111,7 @@
 }
 
 .type-btn.active {
-  background: linear-gradient(135deg, #1520a6 0%, #0f1654 100%);
+  background: #1520a6;
   border-color: #1520a6;
   color: white;
 }

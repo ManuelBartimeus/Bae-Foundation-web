@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './AboutScreen.css';
 import './Team.css';
-import { FiChevronLeft, FiChevronRight, FiLinkedin, FiTwitter, FiMail, FiMapPin } from 'react-icons/fi';
-import { FaInstagram, FaFacebook } from 'react-icons/fa';
+import { FiChevronLeft, FiChevronRight, FiLinkedin, FiMail, FiMapPin } from 'react-icons/fi';
+import { FaInstagram } from 'react-icons/fa';
 import founderImg from '../assets/founder_img.png';
 import teamImg from '../assets/team/team-1.png';
 import aboutImg from '../assets/about-us-pic.jpg';
@@ -21,9 +21,9 @@ export default function Team() {
           image: founderImg,
           location: "Tema, Ghana",
           socials: {
-            linkedin: "#",
-            twitter: "#",
-            email: "derrick@baefoundation.org"
+            linkedin: "https://www.linkedin.com/in/derrick-p-006672114/",
+            instagram: "https://www.instagram.com/capt.derrick_pope/",
+            email: "mailto:derrick@baefoundation.org"
           },
           achievements: ["9 Years Leadership", "12K+ Lives Impacted", "International Expansion"]
         }
@@ -39,7 +39,7 @@ export default function Team() {
           image: teamImg,
           location: "Accra, Ghana",
           socials: {
-            linkedin: "#",
+            linkedin: "https://linkedin.com/in/sarah-johnson",
             email: "sarah@baefoundation.org"
           },
           achievements: ["15+ Years Experience", "PhD Development Studies", "Strategic Planning Expert"]
@@ -51,7 +51,7 @@ export default function Team() {
           image: aboutImg,
           location: "Kumasi, Ghana",
           socials: {
-            linkedin: "#",
+            linkedin: "https://linkedin.com/in/michael-asante",
             email: "michael@baefoundation.org"
           },
           achievements: ["University Professor", "Policy Research", "Community Development"]
@@ -63,7 +63,7 @@ export default function Team() {
           image: teamImg,
           location: "Tema, Ghana",
           socials: {
-            linkedin: "#",
+            linkedin: "https://linkedin.com/in/grace-mensah",
             email: "grace@baefoundation.org"
           },
           achievements: ["CPA Certified", "Financial Management", "Nonprofit Expert"]
@@ -80,8 +80,8 @@ export default function Team() {
           image: teamImg,
           location: "Tema, Ghana",
           socials: {
-            linkedin: "#",
-            twitter: "#",
+            linkedin: "https://linkedin.com/in/emmanuel-kojo",
+            instagram: "https://instagram.com/emmanuel.kojo",
             email: "emmanuel@baefoundation.org"
           },
           achievements: ["5+ Years Leadership", "Youth Programs", "Community Mobilization"]
@@ -93,8 +93,8 @@ export default function Team() {
           image: aboutImg,
           location: "Accra, Ghana",
           socials: {
-            linkedin: "#",
-            instagram: "#",
+            linkedin: "https://linkedin.com/in/abena-osei",
+            instagram: "https://instagram.com/abena.osei",
             email: "abena@baefoundation.org"
           },
           achievements: ["Education Expert", "Women Empowerment", "Program Coordination"]
@@ -106,7 +106,8 @@ export default function Team() {
           image: teamImg,
           location: "Cape Coast, Ghana",
           socials: {
-            facebook: "#",
+            linkedin: "https://linkedin.com/in/kwame-asiedu",
+            instagram: "https://instagram.com/kwame.asiedu",
             email: "kwame@baefoundation.org"
           },
           achievements: ["Field Operations", "Community Relations", "Project Implementation"]
@@ -123,8 +124,8 @@ export default function Team() {
           image: aboutImg,
           location: "Banjul, The Gambia",
           socials: {
-            linkedin: "#",
-            twitter: "#",
+            linkedin: "https://linkedin.com/in/fatou-sanyang",
+            instagram: "https://instagram.com/fatou.sanyang",
             email: "fatou@baefoundation.org"
           },
           achievements: ["International Expansion", "Cultural Adaptation", "Strategic Planning"]
@@ -136,7 +137,8 @@ export default function Team() {
           image: teamImg,
           location: "Serrekunda, The Gambia",
           socials: {
-            facebook: "#",
+            linkedin: "https://linkedin.com/in/modou-jallow",
+            instagram: "https://instagram.com/modou.jallow",
             email: "modou@baefoundation.org"
           },
           achievements: ["Community Outreach", "Local Partnerships", "Cultural Integration"]
@@ -148,7 +150,8 @@ export default function Team() {
           image: aboutImg,
           location: "Brikama, The Gambia",
           socials: {
-            instagram: "#",
+            linkedin: "https://linkedin.com/in/awa-ceesay",
+            instagram: "https://instagram.com/awa.ceesay",
             email: "awa@baefoundation.org"
           },
           achievements: ["Youth Development", "Leadership Programs", "Community Engagement"]
@@ -172,9 +175,7 @@ export default function Team() {
   const getSocialIcon = (platform) => {
     switch (platform) {
       case 'linkedin': return <FiLinkedin />;
-      case 'twitter': return <FiTwitter />;
       case 'instagram': return <FaInstagram />;
-      case 'facebook': return <FaFacebook />;
       case 'email': return <FiMail />;
       default: return null;
     }
@@ -210,16 +211,20 @@ export default function Team() {
           <div className="team-members">
             {teamSections[activeSlide].members.map((member, index) => (
               <div key={index} className="member-card">
-                <div className="member-image">
-                  <img src={member.image} alt={member.name} />
+                <div className="member-header">
+                  <div className="member-image">
+                    <img src={member.image} alt={member.name} />
+                  </div>
+                  <div className="member-header-info">
+                    <h3>{member.name}</h3>
+                    <p className="member-role">{member.role}</p>
+                    <div className="member-location">
+                      <FiMapPin className="location-icon" />
+                      <span>{member.location}</span>
+                    </div>
+                  </div>
                 </div>
                 <div className="member-info">
-                  <h3>{member.name}</h3>
-                  <p className="member-role">{member.role}</p>
-                  <div className="member-location">
-                    <FiMapPin className="location-icon" />
-                    <span>{member.location}</span>
-                  </div>
                   <p className="member-bio">{member.bio}</p>
                   
                   <div className="member-achievements">
@@ -230,7 +235,7 @@ export default function Team() {
                   
                   <div className="member-socials">
                     {Object.entries(member.socials).map(([platform, link]) => (
-                      <a key={platform} href={link} className="social-link">
+                      <a key={platform} href={link} className="team-social-link">
                         {getSocialIcon(platform)}
                       </a>
                     ))}

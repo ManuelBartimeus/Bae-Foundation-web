@@ -91,33 +91,16 @@ export default function OurStory() {
 
   return (
     <main className="rebuild-page">
-      {/* Hero Section */}
-      <section className="story-hero">
-        <div className="story-hero-content">
-          <h1>Our Story</h1>
-          <p>
-            A journey of transformation — from a small youth community with a
-            shared dream to an international force for positive change across
-            Africa and beyond. What began as a gathering of passionate young
-            people determined to make a difference in their local community has
-            evolved into a vibrant movement that touches lives across borders.
-          </p>
-          <br />
-          <p>
-            Our story is built on faith, resilience, and the unwavering belief
-            that lasting change begins with ordinary individuals who dare to
-            take action. In our earliest days, we organized small
-            initiatives—clean-up drives, youth outreaches, and community
-            education programs—driven by nothing more than purpose and unity.
-            These humble beginnings became the foundation for something far
-            greater: a movement that empowers communities, inspires responsible
-            leadership, and champions the values of compassion, service, and
-            integrity.
-          </p>
-        </div>
-        <div className="story-hero-image">
-          <img src={aboutImg} alt="Our story journey" />
-        </div>
+      {/* Header */}
+      <section className="story-header">
+        <h1>Our Story</h1>
+        <p>
+          A journey of transformation — from a small youth community with a
+          shared dream to an international force for positive change across
+          Africa and beyond. Our story is built on faith, resilience, and the unwavering belief
+          that lasting change begins with ordinary individuals who dare to
+          take action.
+        </p>
       </section>
 
       {/* Foundation Overview */}

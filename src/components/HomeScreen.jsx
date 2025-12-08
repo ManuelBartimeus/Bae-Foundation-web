@@ -644,7 +644,7 @@ export default function HomeScreen() {
                 <div>
                   <p>
                     {" "}
-                    <strong>2</strong> Schools Reached
+                    <strong>10</strong> Schools Reached
                   </p>
                 </div>
               </div>
@@ -653,7 +653,7 @@ export default function HomeScreen() {
                 <div>
                   <p>
                     {" "}
-                    <strong>150+</strong> Students Impacted
+                    <strong>1000+</strong> Students Impacted
                   </p>
                 </div>
               </div>
@@ -742,7 +742,7 @@ export default function HomeScreen() {
                 text: "Purple stands for DEVOTION TO SERVING",
               },
             ].map((item, index) => (
-              <div className="meaning-card" key={index}>
+              <div className={`meaning-card ${item.color.toLowerCase()}`} key={index}>
                 <h3 className={`color-name ${item.color.toLowerCase()}`}>
                   {item.color}
                 </h3>

@@ -4,6 +4,29 @@
   padding: 6rem 2rem 4rem;
   background: linear-gradient(135deg, #1520a6 0%, #1520a680 100%);
   color: white;
+  border-radius: 35px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Zigzag pattern overlay for portfolio-header */
+.portfolio-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.15;
+  z-index: 0;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
 }
 
 .portfolio-header h1 {
@@ -11,6 +34,8 @@
   font-weight: 700;
   margin-bottom: 1.5rem;
   color: white;
+  position: relative;
+  z-index: 1;
 }
 
 .portfolio-header p {
@@ -19,6 +44,8 @@
   margin: 0 auto;
   opacity: 0.95;
   line-height: 1.6;
+  position: relative;
+  z-index: 1;
 }
 
 /* Filter Section */
@@ -59,7 +86,7 @@
 }
 
 .filter-tab.active {
-  background: linear-gradient(135deg, #1520a6 0%, #0f1654 100%);
+  background: #1520a6;
   border-color: #1520a6;
   color: white;
 }
@@ -157,7 +184,7 @@
 
 .view-gallery {
   align-self: flex-start;
-  background: linear-gradient(135deg, #fad6a5 0%, #f5c885 100%);
+  background: #fad6a5;
   color: #1a1a1a;
   border: none;
   padding: 0.8rem 1.5rem;
@@ -500,11 +527,54 @@
   color: white;
   padding: 4rem 2rem;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 35px;
+}
+
+/* Geometric Pattern - Top 45px only */
+.portfolio-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 45px;
+  z-index: 1;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+}
+
+/* Geometric Pattern - Bottom 45px only */
+.portfolio-cta::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 45px;
+  z-index: 1;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
 }
 
 .cta-content {
   max-width: 800px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .cta-content h2 {
