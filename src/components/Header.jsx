@@ -91,7 +91,7 @@ export default function Header({ currentPage, onNavigate }) {
           className={`es-nav-item ${currentPage === 'projects' ? 'active' : ''}`}
           onClick={() => handleNavigation('projects')}
         >
-          Projects
+          Initiatives
         </button>
         <button 
           className={`es-nav-item ${currentPage === 'portfolio' ? 'active' : ''}`}

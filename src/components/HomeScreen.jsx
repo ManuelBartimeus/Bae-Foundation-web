@@ -756,7 +756,7 @@ export default function HomeScreen() {
       {/* ---------- Section 3: Call to Action ---------- */}
       <section className="home-projects-cta">
         <div className="home-cta-content">
-          <h2>Want to Support Our Projects?</h2>
+          <h2>Want to Support Our Initiatives?</h2>
           <p>
             Your contribution can help us expand these life-changing initiatives
             and reach even more communities in need.
