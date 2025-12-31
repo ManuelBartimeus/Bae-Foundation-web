@@ -7,13 +7,19 @@ import { FaGraduationCap, FaHandsHelping, FaLeaf, FaHeart, FaShoppingBag } from 
 // Import Legacy Store logo
 import legacyStoreLogo from '../assets/Legacy Store logo png.png';
 
-// Import some images for products (using existing assets)
-import aboutImg from '../assets/about-us-pic.jpg';
-import volunteerImg from '../assets/volunteer.jpg';
-import kidsImg from '../assets/african-kids-enjoying-life_23-2151438340.jpg';
-import studyImg from '../assets/study-group-african-people_23-2149156390.jpg';
-import teacherImg from '../assets/african-woman-teaching-children-class.jpg';
-import bookImg from '../assets/world-book-day-celebration_23-2151245079.jpg';
+// Import merchandise images
+import hopeLivesHereTshirt from '../assets/merch/hope_lives_here_tshirt.jpg';
+import serveWithPurposeCap from '../assets/merch/serve_with_purpose_cap.jpg';
+import changeMakerWristband from '../assets/merch/change_maker_wristband.jpg';
+import purposePlannerNotebook from '../assets/merch/purpose_planner_notepad.jpg';
+import writeForChangePenSet from '../assets/merch/write_for_change_pen_set.jpg';
+import learnAndRiseFlashCards from '../assets/merch/learn_and_rise_flash_card.jpg';
+import sustainLifeWaterBottle from '../assets/merch/sustain_life_water_bottle.jpg';
+import carryHopeToteBag from '../assets/merch/carry_hope_tote bag.jpg';
+import keyToChangeKeyHolder from '../assets/merch/keys_to_change_keyholder.jpg';
+import hopeEveryMorningMug from '../assets/merch/hope_every_morning_mug.jpg';
+import messageOfHopePoster from '../assets/merch/message_of_hope_poster.jpg';
+import dailyLightDevotional from '../assets/merch/daily_light_devotional.jpg';
 
 export default function ImpactShop() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -23,123 +29,156 @@ export default function ImpactShop() {
 
   const productCategories = [
     { id: 'all', name: 'All Products', icon: <FaShoppingBag /> },
-    { id: 'education', name: 'Education', icon: <FaGraduationCap /> },
-    { id: 'health', name: 'Health & Wellness', icon: <FaHeart /> },
-    { id: 'community', name: 'Community Support', icon: <FaHandsHelping /> },
-    { id: 'environment', name: 'Environment', icon: <FaLeaf /> }
+    { id: 'apparel', name: 'Apparel & Wearables', icon: <FaGraduationCap /> },
+    { id: 'stationery', name: 'Stationery & Learning', icon: <FaHeart /> },
+    { id: 'lifestyle', name: 'Lifestyle & Accessories', icon: <FaHandsHelping /> },
+    { id: 'faith', name: 'Faith & Inspiration', icon: <FaLeaf /> }
   ];
 
   const products = [
     {
       id: 1,
-      name: "School Supply Kit",
-      category: "education",
-      price: 25,
-      originalPrice: 35,
-      description: "Complete school supplies for one child including notebooks, pencils, pens, rulers, and a backpack.",
-      image: bookImg,
-      impact: "Supports 1 child's education for 3 months",
-      rating: 4.9,
-      reviews: 156,
-      inStock: true,
-      featured: true,
-      badge: "Most Popular"
+      name: "Hope Lives Here T-Shirt",
+      category: "apparel",
+      price: 120,
+      description: "A comfortable cotton T-shirt branded with the foundation's message of hope and service. Designed for everyday wear and outreach events.",
+      image: hopeLivesHereTshirt,
+      impact: "One purchase supports basic relief materials for a vulnerable family during outreach programs.",
+      rating: 4.7,
+      reviews: 89,
+      purchaseLink: "https://selar.com/v1wds47o16"
     },
     {
       id: 2,
-      name: "Clean Water Fund",
-      category: "health",
-      price: 50,
-      description: "Provide clean drinking water access for a family of 5 for one month through our water purification program.",
-      image: kidsImg,
-      impact: "Provides clean water for 1 family for 30 days",
-      rating: 5.0,
-      reviews: 203,
-      inStock: true,
-      featured: true,
-      badge: "High Impact"
+      name: "Serve With Purpose Cap",
+      category: "apparel",
+      price: 80,
+      description: "A durable, adjustable cap featuring the foundation's logo, suitable for outdoor outreach activities.",
+      image: serveWithPurposeCap,
+      impact: "Funds transportation for volunteers to rural outreach locations.",
+      rating: 4.5,
+      reviews: 72,
+      purchaseLink: "https://selar.com/8467mapx1b"
     },
     {
       id: 3,
-      name: "Women Empowerment Package",
-      category: "community",
-      price: 75,
-      originalPrice: 90,
-      description: "Support a woman entrepreneur with microloan funds, business training, and mentorship for 6 months.",
-      image: teacherImg,
-      impact: "Empowers 1 woman entrepreneur for 6 months",
-      rating: 4.8,
-      reviews: 89,
-      inStock: true,
-      featured: true,
-      badge: "Limited Time"
+      name: "Change Maker Wristband",
+      category: "apparel",
+      price: 30,
+      description: "Silicone wristband printed with a short inspirational message representing the foundation's mission.",
+      image: changeMakerWristband,
+      impact: "Supports the printing of educational materials for community sensitization programs.",
+      rating: 4.6,
+      reviews: 134,
+      purchaseLink: "https://selar.com/641w11u666"
     },
     {
       id: 4,
-      name: "Tree Planting Initiative",
-      category: "environment",
-      price: 15,
-      description: "Plant 10 trees in degraded areas to combat climate change and restore natural ecosystems.",
-      image: aboutImg,
-      impact: "Plants 10 trees and restores 0.1 hectare",
-      rating: 4.7,
-      reviews: 312,
-      inStock: true,
-      featured: false
+      name: "Purpose Planner Notebook",
+      category: "stationery",
+      price: 60,
+      description: "A high-quality notebook with motivational quotes and the foundation's branding.",
+      image: purposePlannerNotebook,
+      impact: "Helps provide school supplies for underprivileged children.",
+      rating: 4.8,
+      reviews: 156,
+      purchaseLink: "https://selar.com/815r957716"
     },
     {
       id: 5,
-      name: "Digital Literacy Course",
-      category: "education",
-      price: 40,
-      description: "Sponsor one person's enrollment in our 3-month digital literacy and computer skills program.",
-      image: studyImg,
-      impact: "Provides digital skills training for 1 person",
-      rating: 4.9,
-      reviews: 127,
-      inStock: true,
-      featured: false
+      name: "Write for Change Pen Set",
+      category: "stationery",
+      price: 25,
+      description: "A set of branded pens ideal for daily use at school, work, or outreach events.",
+      image: writeForChangePenSet,
+      impact: "Contributes to literacy and reading programs in underserved communities.",
+      rating: 4.4,
+      reviews: 98,
+      purchaseLink: "https://selar.com/27x7885l37"
     },
     {
       id: 6,
-      name: "Health Checkup Sponsorship",
-      category: "health",
-      price: 30,
-      description: "Sponsor a comprehensive health checkup including basic tests and consultations for one person.",
-      image: volunteerImg,
-      impact: "Provides health screening for 1 person",
-      rating: 4.6,
-      reviews: 94,
-      inStock: true,
-      featured: false
+      name: "Learn & Rise Flash Cards",
+      category: "stationery",
+      price: 50,
+      description: "Simple educational flash cards designed for early childhood learning during community outreaches.",
+      image: learnAndRiseFlashCards,
+      impact: "Supports early childhood education initiatives in rural areas.",
+      rating: 4.7,
+      reviews: 112,
+      purchaseLink: "https://selar.com/81m484959j"
     },
     {
       id: 7,
-      name: "Youth Leadership Training",
-      category: "education",
-      price: 60,
-      originalPrice: 80,
-      description: "Fund a young leader's participation in our comprehensive leadership development program.",
-      image: studyImg,
-      impact: "Develops 1 youth leader for the future",
-      rating: 5.0,
-      reviews: 76,
-      inStock: true,
-      featured: true,
-      badge: "New Launch"
+      name: "Sustain Life Water Bottle",
+      category: "lifestyle",
+      price: 100,
+      description: "A reusable, eco-friendly water bottle with the foundation's logo.",
+      image: sustainLifeWaterBottle,
+      impact: "Promotes environmental responsibility while funding clean-water awareness programs.",
+      rating: 4.9,
+      reviews: 203,
+      purchaseLink: "https://selar.com/66d9dy8p17"
     },
     {
       id: 8,
-      name: "Community Garden Kit",
-      category: "environment",
-      price: 35,
-      description: "Provide seeds, tools, and training to establish a sustainable community garden feeding 20 families.",
-      image: kidsImg,
-      impact: "Feeds 20 families with fresh vegetables",
-      rating: 4.8,
+      name: "Carry Hope Tote Bag",
+      category: "lifestyle",
+      price: 70,
+      description: "A strong canvas tote bag suitable for shopping, school, or outreach use.",
+      image: carryHopeToteBag,
+      impact: "Supports women empowerment initiatives through skills training programs.",
+      rating: 4.6,
       reviews: 145,
-      inStock: false,
-      featured: false
+      purchaseLink: "https://selar.com/727007am79"
+    },
+    {
+      id: 9,
+      name: "Key to Change Key Holder",
+      category: "lifestyle",
+      price: 20,
+      description: "A simple branded key holder that keeps your keys organized while spreading awareness.",
+      image: keyToChangeKeyHolder,
+      impact: "Helps cover administrative costs for outreach coordination.",
+      rating: 4.3,
+      reviews: 67,
+      purchaseLink: "https://selar.com/ukf68i1278"
+    },
+    {
+      id: 10,
+      name: "Hope Every Morning Mug",
+      category: "faith",
+      price: 65,
+      description: "A ceramic mug printed with an encouraging message aligned with the foundation's values.",
+      image: hopeEveryMorningMug,
+      impact: "Supports counseling and emotional-support outreach programs.",
+      rating: 4.8,
+      reviews: 178,
+      purchaseLink: "https://selar.com/10611l6896"
+    },
+    {
+      id: 11,
+      name: "Message of Hope Poster",
+      category: "faith",
+      price: 45,
+      description: "A beautifully designed poster carrying a strong message of resilience and compassion.",
+      image: messageOfHopePoster,
+      impact: "Funds community awareness campaigns and advocacy efforts.",
+      rating: 4.5,
+      reviews: 92,
+      purchaseLink: "https://selar.com/tf55l17561"
+    },
+    {
+      id: 12,
+      name: "Daily Light Devotional",
+      category: "faith",
+      price: 40,
+      description: "A short devotional booklet encouraging reflection, compassion, and service.",
+      image: dailyLightDevotional,
+      impact: "Supports spiritual and moral development sessions during outreach programs.",
+      rating: 4.9,
+      reviews: 215,
+      purchaseLink: "https://selar.com/y6ak7u71q6"
     }
   ];
 
@@ -160,7 +199,7 @@ export default function ImpactShop() {
           return b.rating - a.rating;
         case 'featured':
         default:
-          return b.featured - a.featured;
+          return 0;
       }
     });
 
@@ -225,23 +264,8 @@ export default function ImpactShop() {
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
             </div>
-            
-            <div className="sort-dropdown">
-              <FiFilter className="filter-icon" />
-              <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
-                <option value="featured">Featured</option>
-                <option value="price-low">Price: Low to High</option>
-                <option value="price-high">Price: High to Low</option>
-                <option value="rating">Highest Rated</option>
-              </select>
-            </div>
           </div>
-          
-          <div className="cart-summary">
-            <FiShoppingCart />
-            <span>{getCartCount()} items</span>
-            <span className="cart-total">${getCartTotal()}</span>
-          </div>
+        
         </div>
         
         <div className="category-filters">
@@ -263,13 +287,8 @@ export default function ImpactShop() {
         <div className="products-container">
           {filteredProducts.map(product => (
             <div key={product.id} className="product-card">
-              {product.badge && (
-                <div className="product-badge">{product.badge}</div>
-              )}
-              
               <div className="product-image">
                 <img src={product.image} alt={product.name} />
-                {!product.inStock && <div className="out-of-stock">Out of Stock</div>}
               </div>
               
               <div className="product-info">
@@ -299,19 +318,15 @@ export default function ImpactShop() {
                 </div>
                 
                 <div className="product-price">
-                  <span className="current-price">${product.price}</span>
-                  {product.originalPrice && (
-                    <span className="original-price">${product.originalPrice}</span>
-                  )}
+                  <span className="current-price">GHS {product.price}</span>
                 </div>
                 
                 <button 
-                  className={`add-to-cart ${!product.inStock ? 'disabled' : ''}`}
-                  onClick={() => product.inStock && addToCart(product)}
-                  disabled={!product.inStock}
+                  className="add-to-cart"
+                  onClick={() => window.open(product.purchaseLink, '_blank')}
                 >
                   <FiShoppingCart />
-                  {product.inStock ? 'Add to Cart' : 'Out of Stock'}
+                  Buy Now
                 </button>
               </div>
             </div>
@@ -325,29 +340,6 @@ export default function ImpactShop() {
             <p>Try adjusting your search or filter criteria.</p>
           </div>
         )}
-      </section>
-
-      {/* Impact Stats */}
-      <section className="shop-impact-stats">
-        <h2>Your Collective Impact</h2>
-        <div className="impact-stats-grid">
-          <div className="impact-stat">
-            <span className="stat-number">5,240</span>
-            <span className="stat-label">Children Educated</span>
-          </div>
-          <div className="impact-stat">
-            <span className="stat-number">1,890</span>
-            <span className="stat-label">Families Fed</span>
-          </div>
-          <div className="impact-stat">
-            <span className="stat-number">3,100</span>
-            <span className="stat-label">Trees Planted</span>
-          </div>
-          <div className="impact-stat">
-            <span className="stat-number">850</span>
-            <span className="stat-label">Women Empowered</span>
-          </div>
-        </div>
       </section>
 
       {/* How It Works */}

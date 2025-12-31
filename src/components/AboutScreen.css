@@ -379,4 +379,59 @@ li {
   .rebuild-page {
     padding: 118px 14px 80px 14px;
   }
+  
+  .rebuild-header h1 {
+    font-size: 32px;
+  }
+  
+  .rebuild-content {
+    gap: 30px;
+  }
+  
+  .chip {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+  
+  .social-media-icons {
+    gap: 25px;
+  }
+  
+  .founder-social-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+  
+  .rebuild-section h2 {
+    font-size: 22px;
+  }
+  
+  .final-cta {
+    padding: 60px 14px;
+  }
+  
+  .final-cta h2 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 375px) {
+  .rebuild-page {
+    padding: 115px 12px 70px 12px;
+  }
+  
+  .rebuild-header h1 {
+    font-size: 28px;
+  }
+  
+  .social-media-icons {
+    gap: 20px;
+  }
+  
+  .founder-social-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
 }

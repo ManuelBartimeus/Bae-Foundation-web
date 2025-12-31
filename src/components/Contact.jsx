@@ -103,40 +103,40 @@ export default function Contact() {
                   <div className="contact-item">
                     <FiMapPin className="contact-icon" />
                     <div>
-                      <span className="label">Address</span>
-                      <span className="value">{office.address}</span>
+                      <span className="cont-label">Address</span>
+                      <span className="cont-value">{office.address}</span>
                     </div>
                   </div>
                   
                   <div className="contact-item">
                     <FiPhone className="contact-icon" />
                     <div>
-                      <span className="label">Phone</span>
-                      <span className="value">{office.phone}</span>
+                      <span className="cont-label">Phone</span>
+                      <span className="cont-value">{office.phone}</span>
                     </div>
                   </div>
                   
                   <div className="contact-item">
                     <FiMail className="contact-icon" />
                     <div>
-                      <span className="label">Email</span>
-                      <span className="value">{office.email}</span>
+                      <span className="cont-label">Email</span>
+                      <span className="cont-value">{office.email}</span>
                     </div>
                   </div>
                   
                   <div className="contact-item">
                     <FaWhatsapp className="contact-icon whatsapp" />
                     <div>
-                      <span className="label">WhatsApp</span>
-                      <span className="value">{office.whatsapp}</span>
+                      <span >WhatsApp</span>
+                      <span className="cont-value">{office.whatsapp}</span>
                     </div>
                   </div>
                   
                   <div className="contact-item">
                     <FiClock className="contact-icon" />
                     <div>
-                      <span className="label">Office Hours</span>
-                      <span className="value">{office.hours} ({office.timezone})</span>
+                      <span className="cont-label">Office Hours</span>
+                      <span className="cont-value">{office.hours} ({office.timezone})</span>
                     </div>
                   </div>
                 </div>

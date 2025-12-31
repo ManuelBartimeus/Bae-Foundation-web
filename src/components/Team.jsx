@@ -7,6 +7,17 @@ import founderImg from '../assets/founder_img.png';
 import teamImg from '../assets/team/team-1.png';
 import aboutImg from '../assets/about-us-pic.jpg';
 
+// Gambian Chapter Team Images
+import aliciaMacauley from '../assets/team/alicia_macauley.jpeg';
+import philipKanfrom from '../assets/team/philip_kanfrom.jpg';
+import ceceliaWuday from '../assets/team/cecilia_wuday.jpeg';
+import georgianEda from '../assets/team/georgian_eda.jpeg';
+import abigailBennett from '../assets/team/abigail_bennett.jpeg';
+import sarataCeesay from '../assets/team/sarata_ceesay.jpeg';
+
+// Ghanaian Chapter Team Images
+import manuelBartimeus from '../assets/team/manuel_bartimeus.png';
+
 export default function Team() {
   const [activeSlide, setActiveSlide] = useState(0);
 
@@ -48,7 +59,7 @@ export default function Team() {
           name: "Prof. Michael Asante",
           role: "Board Secretary",
           bio: "Professor of Social Sciences with expertise in community development and policy research.",
-          image: aboutImg,
+          image: teamImg,
           location: "Kumasi, Ghana",
           socials: {
             linkedin: "https://linkedin.com/in/michael-asante",
@@ -74,6 +85,19 @@ export default function Team() {
       title: "Ghanaian Chapter",
       members: [
         {
+          name: "Manuel Bartimeus",
+          role: "IT & Digital Systems Manager",
+          bio: "Technology innovator driving digital transformation and systems infrastructure for BAE Foundation. Specializes in web development, digital marketing, and IT solutions that amplify the foundation's reach and operational efficiency.",
+          image: manuelBartimeus,
+          location: "Tema, Ghana",
+          socials: {
+            linkedin: "https://www.linkedin.com/in/manuel-bartimeus-1a849b256/",
+            instagram: "https://www.instagram.com/the.generalhimself/",
+            email: "mailto:manuelbartimeus@gmail.com"
+          },
+          achievements: ["Digital Infrastructure", "Web Development", "IT Strategy"]
+        },
+        {
           name: "Emmanuel Kojo",
           role: "Country Director - Ghana",
           bio: "Dynamic leader overseeing all operations and programs in Ghana. Expert in youth empowerment and community mobilization.",
@@ -90,7 +114,7 @@ export default function Team() {
           name: "Abena Osei",
           role: "Programs Manager",
           bio: "Passionate about education and women empowerment. Coordinates all educational and gender-focused initiatives.",
-          image: aboutImg,
+          image: teamImg,
           location: "Accra, Ghana",
           socials: {
             linkedin: "https://linkedin.com/in/abena-osei",
@@ -98,19 +122,6 @@ export default function Team() {
             email: "abena@baefoundation.org"
           },
           achievements: ["Education Expert", "Women Empowerment", "Program Coordination"]
-        },
-        {
-          name: "Kwame Asiedu",
-          role: "Field Operations Coordinator",
-          bio: "Ensures seamless execution of field activities and maintains strong relationships with partner communities.",
-          image: teamImg,
-          location: "Cape Coast, Ghana",
-          socials: {
-            linkedin: "https://linkedin.com/in/kwame-asiedu",
-            instagram: "https://instagram.com/kwame.asiedu",
-            email: "kwame@baefoundation.org"
-          },
-          achievements: ["Field Operations", "Community Relations", "Project Implementation"]
         }
       ]
     },
@@ -118,43 +129,82 @@ export default function Team() {
       title: "Gambian Chapter",
       members: [
         {
-          name: "Fatou Sanyang",
+          name: "Alicia Macauley",
           role: "Country Director - The Gambia",
-          bio: "Pioneering leader of BAE Foundation's international expansion. Expert in cross-cultural program adaptation.",
-          image: aboutImg,
+          bio: "Visionary leader spearheading BAE Foundation's international expansion in The Gambia. Passionate about youth empowerment, education equity, and building sustainable community development programs that transform lives.",
+          image: aliciaMacauley,
           location: "Banjul, The Gambia",
           socials: {
-            linkedin: "https://linkedin.com/in/fatou-sanyang",
-            instagram: "https://instagram.com/fatou.sanyang",
-            email: "fatou@baefoundation.org"
+            linkedin: "http://linkedin.com/in/alice-sally-macauley-91b24128a",
+            instagram: "https://www.instagram.com/its_alicia_019",
+            email: "alicia@baefoundation.org"
           },
-          achievements: ["International Expansion", "Cultural Adaptation", "Strategic Planning"]
+          achievements: ["International Expansion", "Youth Leadership", "Strategic Planning"]
         },
         {
-          name: "Modou Jallow",
-          role: "Community Outreach Manager",
-          bio: "Builds strong connections with local communities and ensures programs meet specific regional needs.",
-          image: teamImg,
-          location: "Serrekunda, The Gambia",
+          name: "Philip Kanform",
+          role: "Community Engagement Manager",
+          bio: "Dedicated community advocate building bridges between BAE Foundation and local Gambian communities. Skilled in stakeholder engagement, grassroots mobilization, and culturally-responsive program design that honors local traditions while driving progress.",
+          image: philipKanfrom,
+          location: "Banjul, The Gambia",
           socials: {
-            linkedin: "https://linkedin.com/in/modou-jallow",
-            instagram: "https://instagram.com/modou.jallow",
-            email: "modou@baefoundation.org"
+            linkedin: "https://linkedin.com/in/philip-kanform",
+            instagram: "https://instagram.com/philip.kanform",
+            email: "philip@baefoundation.org"
           },
-          achievements: ["Community Outreach", "Local Partnerships", "Cultural Integration"]
+          achievements: ["Community Mobilization", "Local Partnerships", "Program Implementation"]
         },
         {
-          name: "Awa Ceesay",
-          role: "Youth Programs Coordinator",
-          bio: "Focuses on youth empowerment and leadership development programs tailored for Gambian communities.",
-          image: aboutImg,
-          location: "Brikama, The Gambia",
+          name: "Cecelia Wuday Sanyang",
+          role: "Women's Empowerment Coordinator",
+          bio: "Champion for gender equality and women's rights in The Gambia. Leads the Fem-Virtutis initiative, empowering girls and women through education, skills training, and leadership development programs that break barriers and create opportunities.",
+          image: ceceliaWuday,
+          location: "Banjul, The Gambia",
           socials: {
-            linkedin: "https://linkedin.com/in/awa-ceesay",
-            instagram: "https://instagram.com/awa.ceesay",
-            email: "awa@baefoundation.org"
+            linkedin: "https://linkedin.com/in/cecelia-sanyang",
+            instagram: "https://instagram.com/cecelia.sanyang",
+            email: "cecelia@baefoundation.org"
           },
-          achievements: ["Youth Development", "Leadership Programs", "Community Engagement"]
+          achievements: ["Women Empowerment", "Fem-Virtutis Programs", "Gender Advocacy"]
+        },
+        {
+          name: "Georgian Eda Badjie",
+          role: "Education Programs Officer",
+          bio: "Education specialist dedicated to expanding access to quality learning for underserved youth. Coordinates scholarship programs, mentorship initiatives, and STEM education projects that unlock potential and open pathways to success.",
+          image: georgianEda,
+          location: "Banjul, The Gambia",
+          socials: {
+            linkedin: "https://linkedin.com/in/georgian-badjie",
+            instagram: "https://instagram.com/georgian.badjie",
+            email: "georgian@baefoundation.org"
+          },
+          achievements: ["Education Access", "Scholarship Programs", "STEM Initiatives"]
+        },
+        {
+          name: "Abigail Bennett Edet",
+          role: "Youth Development Coordinator",
+          bio: "Dynamic youth advocate focused on leadership development and capacity building for Gambian young people. Designs and implements programs that cultivate confidence, critical thinking, and civic engagement among the next generation of leaders.",
+          image: abigailBennett,
+          location: "Banjul, The Gambia",
+          socials: {
+            linkedin: "https://linkedin.com/in/abigail-edet",
+            instagram: "https://instagram.com/abigail.edet",
+            email: "abigail@baefoundation.org"
+          },
+          achievements: ["Youth Leadership", "Capacity Building", "Program Development"]
+        },
+        {
+          name: "Sarata Ceesay",
+          role: "Communications & Outreach Officer",
+          bio: "Creative communications professional amplifying BAE Foundation's impact across The Gambia. Manages social media, community outreach campaigns, and storytelling initiatives that showcase the foundation's work and inspire community participation.",
+          image: sarataCeesay,
+          location: "Banjul, The Gambia",
+          socials: {
+            linkedin: "https://linkedin.com/in/sarata-ceesay",
+            instagram: "https://instagram.com/sarata.ceesay",
+            email: "sarata@baefoundation.org"
+          },
+          achievements: ["Digital Communications", "Community Outreach", "Brand Storytelling"]
         }
       ]
     }

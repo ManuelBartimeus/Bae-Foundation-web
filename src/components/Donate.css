@@ -739,3 +739,25 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 375px) {
+  .donate-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .trust-indicators {
+    gap: 1rem;
+  }
+  
+  .trust-item {
+    font-size: 0.85rem;
+  }
+  
+  .cause-card {
+    padding: 0.8rem;
+  }
+  
+  .custom-amount {
+    font-size: 1.8rem;
+  }
+}

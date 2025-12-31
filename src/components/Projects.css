@@ -895,3 +895,22 @@
     font-size: 0.9rem;
   }
 }
+
+@media (max-width: 375px) {
+  .projects-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .filter-chip {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .project-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .project-desc {
+    font-size: 0.85rem;
+  }
+}

@@ -752,3 +752,23 @@
     padding: 3rem 1rem;
   }
 }
+
+/* Additional Mobile Breakpoints */
+@media (max-width: 375px) {
+  .blog-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .category-tab {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.85rem;
+  }
+  
+  .post-content h3 {
+    font-size: 1.1rem;
+  }
+}

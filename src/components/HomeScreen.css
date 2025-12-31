@@ -1855,6 +1855,42 @@ button:focus, .es-quote:focus, .es-team-card:focus, .es-nav-item:focus {
 }
 
 /* Responsive for Impact Results */
+@media (max-width: 1024px) {
+  .es-root {
+    padding: 90px 32px 10px 32px;
+  }
+  
+  .es-header {
+    padding: 10px 32px;
+  }
+  
+  .es-hero {
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .es-left,
+  .es-right {
+    width: 100%;
+  }
+  
+  .es-title {
+    font-size: 72px;
+    line-height: 68px;
+  }
+  
+  .es-right-panel {
+    width: 100%;
+    height: 500px;
+  }
+  
+  .section-grid,
+  .volunteer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
 @media (max-width: 900px) {
   .section-grid,
   .volunteer-grid,
@@ -1872,6 +1908,7 @@ button:focus, .es-quote:focus, .es-team-card:focus, .es-nav-item:focus {
 
   .home-projects-cta {
     padding: 3rem 1rem;
+    width: 100%;
   }
 
   .home-cta-content {
@@ -1895,5 +1932,142 @@ button:focus, .es-quote:focus, .es-team-card:focus, .es-nav-item:focus {
 
   .volunteer-video {
     height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .es-root {
+    padding: 80px 20px 10px 20px;
+  }
+  
+  .es-header {
+    padding: 10px 20px;
+  }
+  
+  .es-header-nav {
+    display: none;
+  }
+  
+  .es-title {
+    font-size: 48px;
+    line-height: 46px;
+  }
+  
+  .es-description {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  
+  .es-right-panel {
+    height: 400px;
+  }
+  
+  .es-quote {
+    left: 20px;
+    top: 30px;
+    width: calc(100% - 40px);
+    padding: 12px 16px;
+  }
+  
+  .es-watch {
+    right: 20px;
+    top: 100px;
+  }
+  
+  .es-pill {
+    left: 20px;
+    bottom: 30px;
+  }
+  
+  .es-team-card {
+    right: 20px;
+    bottom: 20px;
+    width: 200px;
+  }
+  
+  .home-cta-content h2 {
+    font-size: 2rem;
+  }
+  
+  .home-cta-content p {
+    font-size: 1rem;
+  }
+  
+  .home-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .home-cta-buttons button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .es-root {
+    padding: 75px 14px 10px 14px;
+  }
+  
+  .es-header {
+    padding: 8px 14px;
+  }
+  
+  .es-logo-image {
+    height: 40px;
+  }
+  
+  .es-title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+  
+  .es-description {
+    font-size: 13px;
+    line-height: 22px;
+  }
+  
+  .es-btn-primary {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+  
+  .es-right-panel {
+    height: 350px;
+  }
+  
+  .es-quote {
+    position: static;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .es-watch {
+    position: static;
+    margin: 1rem auto;
+  }
+  
+  .es-pill {
+    position: static;
+    margin-top: 1rem;
+  }
+  
+  .es-team-card {
+    position: static;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .es-initiative-track {
+    gap: 40px;
+  }
+  
+  .es-initiative-item {
+    width: 120px;
+    height: 60px;
+  }
+  
+  .volunteer-video {
+    height: 300px;
   }
 }

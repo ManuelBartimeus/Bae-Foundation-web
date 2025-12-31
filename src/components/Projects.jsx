@@ -20,7 +20,7 @@ export default function Projects() {
 
   // Count-up animations for project stats
   const projectsCount = useCountUp(7, 2000); // Will be dynamic based on projects.length
-  const livesImpacted = useCountUpFromString('12,000+', 2000);
+  const livesImpacted = useCountUpFromString('12K+', 2000);
   const focusAreas = useCountUp(4, 2000);
   const countries = useCountUp(2, 2000);
 

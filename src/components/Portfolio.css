@@ -777,3 +777,23 @@
     padding: 3rem 1rem;
   }
 }
+
+/* Additional Mobile Breakpoints */
+@media (max-width: 375px) {
+  .portfolio-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .portfolio-container {
+    gap: 2rem;
+  }
+  
+  .filter-tab {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.85rem;
+  }
+  
+  .portfolio-details h3 {
+    font-size: 1.1rem;
+  }
+}
