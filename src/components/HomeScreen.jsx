@@ -1,9 +1,13 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { FaPlay, FaArrowRight, FaDonate } from "react-icons/fa";
 import { FaRegBuilding, FaRegUserCircle } from "react-icons/fa";
 import { useCountUp, useCountUpFromString } from "../hooks/useCountUp";
 import "./HomeScreen.css";
 import heroImage from "../assets/hero.jpg";
+import f52 from "../assets/f52.png";
+import f5 from "../assets/f5.png";
+import f4 from "../assets/f4.png";
+import f14 from "../assets/f14.png";
 import testimonialimage from "../assets/school_boy_smiling.jpg";
 import initiative1 from "../assets/initiatives/initiative-1.png";
 import initiative2 from "../assets/initiatives/initiative-2.png";
@@ -40,6 +44,56 @@ import reelVideo from "../assets/reel-video.mp4";
 
 export default function HomeScreen() {
   const videoRef = useRef(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Slideshow data
+  const slides = [
+    {
+      image: heroImage,
+      quote: {
+        avatar: testimonialimage,
+        text: '"Because of this organization, science finally came alive to me."'
+      },
+      pill: "Real lives changed by your support",
+      teamCard: {
+        title: "Canaan City Christian Academy",
+        description: "Engaging the students of Canaan City Christian Academy in basic electronics."
+      }
+    },
+    {
+      image: f52,
+      quote: {
+        avatar: f4,
+        text: '"This initiative gave me hope and a chance to dream again."'
+      },
+      pill: "Empowering communities together",
+      teamCard: {
+        title: "Bible Church Academy",
+        description: "Empowering our future leaders to break mental barriers and develop leadership."
+      }
+    },
+    {
+      image: f5,
+      quote: {
+        avatar: f14,
+        text: '"I never thought education could change everything, but it did."'
+      },
+      pill: "Building futures through education",
+      teamCard: {
+        title: "Bible Church Academy",
+        description: "Supporting talented students to excel academically and become leaders."
+      }
+    }
+  ];
+
+  // Automatic slideshow
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 10000);
+
+    return () => clearInterval(interval);
+  }, [slides.length]);
 
   // Intersection Observer for video autoplay
   useEffect(() => {
@@ -134,9 +188,10 @@ export default function HomeScreen() {
             aria-label="Volunteers holding donation signs"
           >
             <img
-              src={heroImage}
-              alt="Children smiling"
+              src={slides[currentSlide].image}
+              alt="Initiative showcase"
               className="es-hero-image"
+              key={currentSlide}
             />
 
             {/* Quote bubble */}
@@ -147,18 +202,18 @@ export default function HomeScreen() {
               tabIndex="0"
             >
               <img
-                src={testimonialimage}
+                src={slides[currentSlide].quote.avatar}
                 alt="testimonial avatar"
                 className="es-quote-avatar"
               />
               <span className="es-quote-text">
-                "Because of this organization, science finally came alive to me."
+                {slides[currentSlide].quote.text}
               </span>
             </div>
 
             {/* Bottom-left pill */}
             <div className="es-pill" aria-hidden="true">
-              Real lives changed by your support
+              {slides[currentSlide].pill}
             </div>
 
             {/* Team card at bottom-right */}
@@ -167,12 +222,24 @@ export default function HomeScreen() {
               aria-label="Dedicated team information"
               tabIndex="0"
             >
-              <h4 className="es-team-title">Good News Bible School</h4>
+              <h4 className="es-team-title">{slides[currentSlide].teamCard.title}</h4>
               <p className="es-team-desc">
-                Engaging the students of Good News Bible School in basic electronics.
+                {slides[currentSlide].teamCard.description}
               </p>
 
             </article>
+
+            {/* Carousel navigation dots */}
+            <div className="carousel-dots">
+              {slides.map((_, index) => (
+                <button
+                  key={index}
+                  className={`carousel-dot ${currentSlide === index ? 'active' : ''}`}
+                  onClick={() => setCurrentSlide(index)}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </section>
       </section>
@@ -603,106 +670,6 @@ export default function HomeScreen() {
                 </h3>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ---------- Section 1: Green Step Environmental Awareness ---------- */}
-      <section className="impact-section">
-        <div className="section-header">
-          <h1 className="section-title">Results that Inspire Change</h1>
-          <p className="section-subtitle">
-            Through dedicated initiatives and community-driven action, we
-            continue to deliver results and lasting change for a more equitable
-            and hopeful future.
-          </p>
-        </div>
-
-        <div className="section-grid">
-          <div className="image-wrapper">
-            <img
-              src={greenStepImg}
-              alt="Green Step Environmental Awareness Project at St. Peter's Secondary School"
-              className="impact-img"
-            />
-          </div>
-
-          <div className="text-content">
-            <span className="tag">Nakaaba Policy Initiative</span>
-            <h2>Inspiring Proactive Youth Leaders for a Sustainable Future</h2>
-            <p>
-              BEFORE ANYONE ELSE FOUNDATION – The Gambia continued the momentum
-              with our second engagement at St. Peter's Secondary School,
-              sparking insightful conversations on sustainability, environmental
-              policy, and student-led initiatives to keep their surroundings
-              clean and resourceful.
-            </p>
-
-            <div className="stats-row">
-              <div className="stat-box">
-                <FaRegBuilding className="stat-icon yellow-icon" />
-                <div>
-                  <p>
-                    {" "}
-                    <strong>10</strong> Schools Reached
-                  </p>
-                </div>
-              </div>
-              <div className="stat-box">
-                <FaRegUserCircle className="stat-icon yellow-icon" />
-                <div>
-                  <p>
-                    {" "}
-                    <strong>1000+</strong> Students Impacted
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ---------- Section 2: Personal and Hand Hygiene Outreach ---------- */}
-      <section className="impact-section">
-        <div className="section-grid">
-          <div className="text-content">
-            <span className="tag">Health & Hygiene Initiative</span>
-            <h2>Building Healthier Futures Through Hand Hygiene Education</h2>
-            <p>
-              We conducted a Personal and Hand Hygiene Outreach in Ho, Volta
-              Region, engaging over 120 students from Ho Technical Basic School
-              and PCG-RIIS Basic School. We donated hygiene kits, buckets, soap,
-              and sanitizers, and extended the initiative to the Presbyterian
-              Church – RIIS Congregation to encourage ongoing healthy hygiene
-              practices.
-            </p>
-
-            <div className="stats-row">
-              <div className="stat-box">
-                <FaRegBuilding className="stat-icon yellow-icon" />
-                <div>
-                  <p>
-                    <strong>2</strong> Schools Reached
-                  </p>
-                </div>
-              </div>
-              <div className="stat-box">
-                <FaRegUserCircle className="stat-icon yellow-icon" />
-                <div>
-                  <p>
-                    <strong>120+</strong> Students Impacted
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="image-wrapper">
-            <img
-              src={hygieneOutreachImg}
-              alt="Personal and Hand Hygiene Outreach in Ho, Volta Region"
-              className="impact-img"
-            />
           </div>
         </div>
       </section>
