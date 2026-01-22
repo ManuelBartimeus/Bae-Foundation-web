@@ -57,7 +57,7 @@ function App() {
     <div className="App">
       <Header currentPage={currentPage} onNavigate={handleNavigation} />
       {renderCurrentPage()}
-      <Footer />
+      <Footer onNavigate={handleNavigation} />
     </div>
   );
 }

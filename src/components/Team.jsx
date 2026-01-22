@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './AboutScreen.css';
 import './Team.css';
 import { FiChevronLeft, FiChevronRight, FiLinkedin, FiMail, FiMapPin } from 'react-icons/fi';
+import { FaFacebook, FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from 'react-icons/fa';
 import founderImg from '../assets/founder_img.png';
 import teamImg from '../assets/team/team-1.png';
@@ -13,7 +14,15 @@ import philipKanfrom from '../assets/team/philip_kanfrom.jpg';
 import ceceliaWuday from '../assets/team/cecilia_wuday.jpeg';
 import georgianEda from '../assets/team/georgian_eda.jpeg';
 import abigailBennett from '../assets/team/abigail_bennett.jpeg';
-import sarataCeesay from '../assets/team/sarata_ceesay.jpeg';
+import sarataCeesay from '../assets/team/sarata_ceesay.png';
+import amabenyiwah from "../assets/team/ama_benyiwah.jpeg";
+import vanessakwao from "../assets/team/vanessa_kwao.jpeg";
+import esunamaseye from "../assets/team/esunam_aseye.jpeg";
+import reynardnutakor from "../assets/team/reynard_nutakor.jpeg";
+import nanayirenkyi from "../assets/team/nana_yirenkyi.jpeg";
+import doreendotse from "../assets/team/doreen_dotse.jpg";
+import agnesgomez from "../assets/team/agnes_gomez.jpeg";
+import sarahking from "../assets/team/sarah_king.png";
 
 // Ghanaian Chapter Team Images
 import manuelBartimeus from '../assets/team/manuel_bartimeus.png';
@@ -40,54 +49,128 @@ export default function Team() {
         }
       ]
     },
-    {
-      title: "Board of Trustees",
-      members: [
-        {
-          name: "Dr. Sarah Johnson",
-          role: "Board Chairperson",
-          bio: "Distinguished academic and development expert with over 15 years in nonprofit governance and strategic planning.",
-          image: teamImg,
-          location: "Accra, Ghana",
-          socials: {
-            linkedin: "https://linkedin.com/in/sarah-johnson",
-            email: "sarah@baefoundation.org"
-          },
-          achievements: ["15+ Years Experience", "PhD Development Studies", "Strategic Planning Expert"]
-        },
-        {
-          name: "Prof. Michael Asante",
-          role: "Board Secretary",
-          bio: "Professor of Social Sciences with expertise in community development and policy research.",
-          image: teamImg,
-          location: "Kumasi, Ghana",
-          socials: {
-            linkedin: "https://linkedin.com/in/michael-asante",
-            email: "michael@baefoundation.org"
-          },
-          achievements: ["University Professor", "Policy Research", "Community Development"]
-        },
-        {
-          name: "Mrs. Grace Mensah",
-          role: "Board Treasurer",
-          bio: "Certified Public Accountant with extensive experience in financial management for nonprofit organizations.",
-          image: teamImg,
-          location: "Tema, Ghana",
-          socials: {
-            linkedin: "https://linkedin.com/in/grace-mensah",
-            email: "grace@baefoundation.org"
-          },
-          achievements: ["CPA Certified", "Financial Management", "Nonprofit Expert"]
-        }
-      ]
-    },
+    // {
+    //   title: "Board of Trustees",
+    //   members: [
+    //     {
+    //       name: "Dr. Sarah Johnson",
+    //       role: "Board Chairperson",
+    //       bio: "Distinguished academic and development expert with over 15 years in nonprofit governance and strategic planning.",
+    //       image: teamImg,
+    //       location: "Accra, Ghana",
+    //       socials: {
+    //         linkedin: "https://linkedin.com/in/sarah-johnson",
+    //         email: "sarah@baefoundation.org"
+    //       },
+    //       achievements: ["15+ Years Experience", "PhD Development Studies", "Strategic Planning Expert"]
+    //     },
+    //     {
+    //       name: "Prof. Michael Asante",
+    //       role: "Board Secretary",
+    //       bio: "Professor of Social Sciences with expertise in community development and policy research.",
+    //       image: teamImg,
+    //       location: "Kumasi, Ghana",
+    //       socials: {
+    //         linkedin: "https://linkedin.com/in/michael-asante",
+    //         email: "michael@baefoundation.org"
+    //       },
+    //       achievements: ["University Professor", "Policy Research", "Community Development"]
+    //     },
+    //     {
+    //       name: "Mrs. Grace Mensah",
+    //       role: "Board Treasurer",
+    //       bio: "Certified Public Accountant with extensive experience in financial management for nonprofit organizations.",
+    //       image: teamImg,
+    //       location: "Tema, Ghana",
+    //       socials: {
+    //         linkedin: "https://linkedin.com/in/grace-mensah",
+    //         email: "grace@baefoundation.org"
+    //       },
+    //       achievements: ["CPA Certified", "Financial Management", "Nonprofit Expert"]
+    //     }
+    //   ]
+    // },
     {
       title: "Ghanaian Chapter",
       members: [
         {
+          name: "Ama Benyiwah Quansah",
+          role: "Director, Administration and General Services",
+          bio: "Oversees administration and general services to support organizational goals.",
+          image: amabenyiwah,
+          location: "Accra, Ghana",
+          socials: {
+            linkedin: "https://www.linkedin.com/in/ahmah-bee-quansah-92b867268?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+            instagram: "https://www.instagram.com/every_thingsome10?igsh=OW1pNTZ2YXd2aXlr&utm_source=qr",
+            email: "mailto: ahybee98@gmail.com"
+          },
+          achievements: ["Project Management", "Youth Programs", "Local Government Service"]
+        },
+        {
+          name: "Unity Reynard Nutakor",
+          role: "Director, Operations and Logistics",
+          bio: "Directs operations and logistics to ensure smooth project delivery.",
+          image: reynardnutakor,
+          location: "Accra, Ghana",
+          socials: {
+            linkedin: "https://www.linkedin.com/in/reynard-nutakor-a60699379?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+            email: "mailto: reynardnutakor24@gmail.com"
+          },
+          achievements: ["Technical Expert", "Group Leadership", "Human Relations"]
+        },
+        {
+          name: "Vanessa Kwao",
+          role: "Director,  Sponsorship and Partnerships",
+          bio: "Directs sponsorship and partnership efforts to support organizational mission.",
+          image: vanessakwao,
+          location: "Accra, Ghana",
+          socials: {
+      
+            instagram: "https://www.instagram.com/vanessa_kwao?igsh=YzE1ejFsdDlhdDZi&utm_source=qr",
+            email: "mailto: vannykwao@gmail.com"
+          },
+          achievements: ["Founder & CEO", "Real Estate Solutions", "Human Relations"]
+        },
+        {
+          name: "Esunam Aseye Ami Akpaloo",
+          role: "Volta Legacy Spot Lead",
+          bio: "Leads Volta region initiatives for community development and empowerment.",
+          image: esunamaseye,
+          location: "Ho, Ghana",
+          socials: {
+            instagram: "https://www.instagram.com/aseyeesunam/?utm_source=ig_web_button_share_sheet",
+            email: "mailto: aseyeesunam@gmail.com"
+          },
+          achievements: ["Nature Enthusiast", "Sustainable Solutions", "Environmental Activist"]
+        },
+        {
+          name: "Doreen Selassie Dotse ",
+          role: "Ashanti Legacy Spot Lead",
+          bio: "Leads Ashanti region programs for youth development and empowerment.",
+          image: doreendotse,
+          location: "Kumasi, Ghana",
+          socials: {
+            instagram: "https://www.instagram.com/sel.asiii/?utm_source=ig_web_button_share_sheet",
+            email: "mailto: doreenselasi67@gmail.com"
+          },
+          achievements: ["Youth Programs", "Youth Empowerment", "Girl-Child Activist"]
+        },
+        {
+          name: "Nana Ankama Yirenkyi ",
+          role: "Ashanti Legacy Spot Deputy Lead",
+          bio: "Assists Ashanti region lead in community and youth programs.",
+          image: nanayirenkyi,
+          location: "Kumasi, Ghana",
+          socials: {
+            instagram: "https://www.instagram.com/op.nana_/?utm_source=ig_web_button_share_sheet",
+            email: "mailto: nayirenkyi05@gmail.com"
+          },
+          achievements: ["Multimedia Expert", "Community Mobilization", "Youth Development"]
+        },
+        {
           name: "Manuel Bartimeus",
           role: "IT & Digital Systems Manager",
-          bio: "Technology innovator driving digital transformation and systems infrastructure for BAE Foundation. Specializes in web development, digital marketing, and IT solutions that amplify the foundation's reach and operational efficiency.",
+          bio: "Technology innovator driving digital transformation and systems infrastructure for BAE Foundation.",
           image: manuelBartimeus,
           location: "Tema, Ghana",
           socials: {
@@ -95,33 +178,7 @@ export default function Team() {
             instagram: "https://www.instagram.com/the.generalhimself/",
             email: "mailto:manuelbartimeus@gmail.com"
           },
-          achievements: ["Digital Infrastructure", "Web Development", "IT Strategy"]
-        },
-        {
-          name: "Emmanuel Kojo",
-          role: "Country Director - Ghana",
-          bio: "Dynamic leader overseeing all operations and programs in Ghana. Expert in youth empowerment and community mobilization.",
-          image: teamImg,
-          location: "Tema, Ghana",
-          socials: {
-            linkedin: "https://linkedin.com/in/emmanuel-kojo",
-            instagram: "https://instagram.com/emmanuel.kojo",
-            email: "emmanuel@baefoundation.org"
-          },
-          achievements: ["5+ Years Leadership", "Youth Programs", "Community Mobilization"]
-        },
-        {
-          name: "Abena Osei",
-          role: "Programs Manager",
-          bio: "Passionate about education and women empowerment. Coordinates all educational and gender-focused initiatives.",
-          image: teamImg,
-          location: "Accra, Ghana",
-          socials: {
-            linkedin: "https://linkedin.com/in/abena-osei",
-            instagram: "https://instagram.com/abena.osei",
-            email: "abena@baefoundation.org"
-          },
-          achievements: ["Education Expert", "Women Empowerment", "Program Coordination"]
+          achievements: ["Digital Solutions Expert", "Creative Consultant", "Business Strategist"]
         }
       ]
     },
@@ -129,82 +186,105 @@ export default function Team() {
       title: "Gambian Chapter",
       members: [
         {
-          name: "Alicia Macauley",
-          role: "Country Director - The Gambia",
-          bio: "Visionary leader spearheading BAE Foundation's international expansion in The Gambia. Passionate about youth empowerment, education equity, and building sustainable community development programs that transform lives.",
+          name: "Agnes Gomez",
+          role: "Country Director",
+          bio: "Directs country efforts to foster community growth and empowerment.",
+          image: agnesgomez,
+          location: "Banjul, The Gambia",
+          socials: {
+            linkedin: "https://www.linkedin.com/in/agnes-gomez-4335142a4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+            facebook: "https://www.facebook.com/share/1BuifUQxx3/?mibextid=wwXIfr",
+            email: "mailto: agnesgomez05@gmail.com"
+          },
+          achievements: ["Policy Reformer", "Public Speaker", "Youth & Women Advocate"]
+        },
+        {
+          name: "Alice Sally Macauley",
+          role: "Programs and Projects Lead",
+          bio: "Leads programs and projects for community impact and growth.",
           image: aliciaMacauley,
           location: "Banjul, The Gambia",
           socials: {
             linkedin: "http://linkedin.com/in/alice-sally-macauley-91b24128a",
             instagram: "https://www.instagram.com/its_alicia_019",
-            email: "alicia@baefoundation.org"
+            email: "mailto: sallymacauleyalice@gmail.com"
           },
-          achievements: ["International Expansion", "Youth Leadership", "Strategic Planning"]
-        },
-        {
-          name: "Philip Kanform",
-          role: "Community Engagement Manager",
-          bio: "Dedicated community advocate building bridges between BAE Foundation and local Gambian communities. Skilled in stakeholder engagement, grassroots mobilization, and culturally-responsive program design that honors local traditions while driving progress.",
-          image: philipKanfrom,
-          location: "Banjul, The Gambia",
-          socials: {
-            linkedin: "https://linkedin.com/in/philip-kanform",
-            instagram: "https://instagram.com/philip.kanform",
-            email: "philip@baefoundation.org"
-          },
-          achievements: ["Community Mobilization", "Local Partnerships", "Program Implementation"]
-        },
-        {
-          name: "Cecelia Wuday Sanyang",
-          role: "Women's Empowerment Coordinator",
-          bio: "Champion for gender equality and women's rights in The Gambia. Leads the Fem-Virtutis initiative, empowering girls and women through education, skills training, and leadership development programs that break barriers and create opportunities.",
-          image: ceceliaWuday,
-          location: "Banjul, The Gambia",
-          socials: {
-            linkedin: "https://linkedin.com/in/cecelia-sanyang",
-            instagram: "https://instagram.com/cecelia.sanyang",
-            email: "cecelia@baefoundation.org"
-          },
-          achievements: ["Women Empowerment", "Fem-Virtutis Programs", "Gender Advocacy"]
-        },
-        {
-          name: "Georgian Eda Badjie",
-          role: "Education Programs Officer",
-          bio: "Education specialist dedicated to expanding access to quality learning for underserved youth. Coordinates scholarship programs, mentorship initiatives, and STEM education projects that unlock potential and open pathways to success.",
-          image: georgianEda,
-          location: "Banjul, The Gambia",
-          socials: {
-            linkedin: "https://linkedin.com/in/georgian-badjie",
-            instagram: "https://instagram.com/georgian.badjie",
-            email: "georgian@baefoundation.org"
-          },
-          achievements: ["Education Access", "Scholarship Programs", "STEM Initiatives"]
-        },
-        {
-          name: "Abigail Bennett Edet",
-          role: "Youth Development Coordinator",
-          bio: "Dynamic youth advocate focused on leadership development and capacity building for Gambian young people. Designs and implements programs that cultivate confidence, critical thinking, and civic engagement among the next generation of leaders.",
-          image: abigailBennett,
-          location: "Banjul, The Gambia",
-          socials: {
-            linkedin: "https://linkedin.com/in/abigail-edet",
-            instagram: "https://instagram.com/abigail.edet",
-            email: "abigail@baefoundation.org"
-          },
-          achievements: ["Youth Leadership", "Capacity Building", "Program Development"]
+          achievements: ["Public Healthcare", "Hairstylist", "Travel Enthusiast"]
         },
         {
           name: "Sarata Ceesay",
-          role: "Communications & Outreach Officer",
-          bio: "Creative communications professional amplifying BAE Foundation's impact across The Gambia. Manages social media, community outreach campaigns, and storytelling initiatives that showcase the foundation's work and inspire community participation.",
+          role: "Sponsorship and Partnerships Lead",
+          bio: "Manages sponsorship and partnerships to secure resources and support.",
           image: sarataCeesay,
           location: "Banjul, The Gambia",
           socials: {
-            linkedin: "https://linkedin.com/in/sarata-ceesay",
-            instagram: "https://instagram.com/sarata.ceesay",
-            email: "sarata@baefoundation.org"
+            facebook: "https://www.facebook.com/share/17wAZEuftY/?mibextid=wwXIfr",
+            x: "https://x.com/ceesaysarata?s=11&t=xVnB7_I_z6Lx6MlqVZ70xA",
+            email: "mailto: ceesaysarata92@gmail.com"
           },
-          achievements: ["Digital Communications", "Community Outreach", "Brand Storytelling"]
+          achievements: ["Public Speaker", "Youth Parliamentarian", "Political Enthusiast"]
+        },
+        {
+          name: "Sarah Eyatundeh King",
+          role: "Volunteer and Outreach Coordinator",
+          bio: "Manages volunteer programs and outreach to expand community involvement.",
+          image: sarahking,
+          location: "Banjul, The Gambia",
+          socials: {
+            linkedin: "https://www.linkedin.com/in/sarah-king-8732642ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+            instagram: "https://www.instagram.com/xx_sarah_05?igsh=NTkzdXd5Z2N3eHFm&utm_source=qr",
+            email: "mailto: saraheya555@gmail.com"
+          },
+          achievements: ["Sales Specialist", "Administrative Expert", "Virtual Entrepreneur"]
+        },
+        {
+          name: "Cecelia Wuday Sanyang",
+          role: "Media and Communications Lead",
+          bio: "Oversees media and communications for effective messaging and outreach.",
+          image: ceceliaWuday,
+          location: "Banjul, The Gambia",
+          socials: {
+            x: "https://x.com/cecciahogero?s=11",
+            email: "mailto: ceccisphotography@gmail.com"
+          },
+          achievements: ["Visual Storyteller", "Photographer", "Girl-Child Advocate"]
+        },
+        {
+          name: "Georgian Eda Badjie",
+          role: "Deputy Media and Communications Officer",
+          bio: "Assists in media and communications to promote organizational goals.",
+          image: georgianEda,
+          location: "Banjul, The Gambia",
+          socials: {
+            linkedin: "https://www.linkedin.com/in/georgian-badjie-958a08393?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            instagram: "https://www.instagram.com/gina__eda?igsh=MWRsaTJxMWtnYjdveg==",
+            email: "mailto: badjiegeorgian12@gmail.com"
+          },
+          achievements: ["HR Management", "Project Management", "Policy Making Expert"]
+        },
+        {
+          name: "Philip Kanform",
+          role: "Operations and Logistics Officer",
+          bio: "Manages operations and logistics to ensure efficient project delivery.",
+          image: philipKanfrom,
+          location: "Banjul, The Gambia",
+          socials: {
+            instagram: "https://www.instagram.com/philip_kanform?igsh=M2IwYXo2dTNiN2tm",
+            facebook: "https://www.facebook.com/share/184NCjGZZL/",
+            email: "mailto: pkanform10@gmail.com "
+          },
+          achievements: ["Music Minister", "Youth Programs", "Local Partnerships"]
+        },
+        {
+          name: "Abigail Bennett Edet",
+          role: "Finance Lead",
+          bio: "Handles financial leadership and planning to ensure fiscal health.",
+          image: abigailBennett,
+          location: "Banjul, The Gambia",
+          socials: {
+            instagram: "https://instagram.com/abigail.edet"
+          },
+          achievements: ["Financial Projection", "Capacity Building", "Youth Development"]
         }
       ]
     }
@@ -227,6 +307,8 @@ export default function Team() {
       case 'linkedin': return <FiLinkedin />;
       case 'instagram': return <FaInstagram />;
       case 'email': return <FiMail />;
+      case 'facebook' : return <FaFacebook />; 
+      case 'x' : return <FaXTwitter />;
       default: return null;
     }
   };
@@ -285,7 +367,7 @@ export default function Team() {
                   
                   <div className="member-socials">
                     {Object.entries(member.socials).map(([platform, link]) => (
-                      <a key={platform} href={link} className="team-social-link">
+                      <a key={platform} target="_blank" href={link} className="team-social-link">
                         {getSocialIcon(platform)}
                       </a>
                     ))}

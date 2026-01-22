@@ -20,12 +20,13 @@ import { LuTarget } from "react-icons/lu";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import aboutImg from "../assets/about-us-pic.jpg";
 import heroImg from "../assets/hero.jpg";
-import impactImg from "../assets/MA-41.jpg";
+import impactImg from "../assets/WCDC-219.jpg";
 
 // 2016 Images
 import img2016_1 from "../assets/2016/bae2016 (1).jpg";
 import img2016_2 from "../assets/2016/bae2016 (2).jpg";
 import img2016_3 from "../assets/2016/bae2016 (3).jpg";
+import img2016_4 from "../assets/2016/bae2016 (4).jpg";
 
 // 2017 Images
 import img2017_1 from "../assets/2017/@_baefoundation Gents putting swag into proper prospective...Joy To the least .Launch and gospel.jpg";
@@ -36,16 +37,37 @@ import img2017_3 from "../assets/2017/Team Love ❤...@_baefoundation.jpg";
 import img2018_1 from "../assets/2018/IMG_5196.JPG";
 import img2018_2 from "../assets/2018/IMG_5198.JPG";
 import img2018_3 from "../assets/2018/IMG_5204.JPG";
+import img2018_4 from "../assets/2018/d10.png";
+import img2018_5 from "../assets/2018/d11.jpg";
+import img2018_6 from "../assets/2018/day2.12.jpg";
+import img2018_7 from "../assets/2018/day2.23.jpg";
+import img2018_8 from "../assets/2018/day3.4.jpg";
 
 // 2021 Images
 import img2021_1 from "../assets/2021/HHo-116.jpg";
 import img2021_2 from "../assets/2021/HHo-62.jpg";
 import img2021_3 from "../assets/2021/HHo-78.jpg";
+import img2021_4 from "../assets/2021/d16.jpg";
+import img2021_5 from "../assets/2021/HHo-93.jpg";
+import img2021_6 from "../assets/2021/MA-6.jpg";
+import img2021_7 from "../assets/2021/MA-20.jpg";
+import img2021_8 from "../assets/2021/HHo-87.jpg";
+import img2021_9 from "../assets/2021/HHo-88.jpg";
 
 // 2024 Images
 import img2024_1 from "../assets/2024/E Policy Day1-18.jpg";
 import img2024_2 from "../assets/2024/E Policy Day2-26.jpg";
-import img2024_3 from "../assets/2024/FP-18.jpg";
+import img2024_3 from "../assets/2024/E Policy Day4-16.jpg";
+import img2024_4 from "../assets/2024/E Policy Day5-18.jpg";
+import img2024_5 from "../assets/2024/E Policy Day5.jpg";
+import img2024_6 from "../assets/2024/E Policy Day6-19.jpg";
+import img2024_7 from "../assets/2024/Fem Day2-19.jpg";
+import img2024_8 from "../assets/2024/FP-16.jpg";
+import img2024_9 from "../assets/2024/FP-19.jpg";
+import img2024_10 from "../assets/2024/FP-48.jpg";
+import img2024_11 from "../assets/2024/FP-83.jpg";
+import img2024_12 from "../assets/2024/FP-71.jpg";
+import img2024_13 from "../assets/2024/FP-43.jpg";
 
 export default function OurStory() {
   const [activeTimeline, setActiveTimeline] = useState(0);
@@ -56,7 +78,8 @@ export default function OurStory() {
     0: [ // 2016 - The Spark
       { src: img2016_1, title: "The Beginning", subtitle: "Teens in Christ" },
       { src: img2016_2, title: "Faith & Vision", subtitle: "Building Dreams" },
-      { src: img2016_3, title: "Early Days", subtitle: "Foundation Roots" }
+      { src: img2016_3, title: "Early Days", subtitle: "Foundation Roots" },
+      { src: img2016_4, title: "Community Spirit", subtitle: "Serving Together" }
     ],
     1: [ // 2017 - Official Launch
       { src: img2017_1, title: "Launch Day", subtitle: "April 2nd, 2017" },
@@ -66,17 +89,38 @@ export default function OurStory() {
     2: [ // 2018-2020 - Growth & Impact
       { src: img2018_1, title: "Education Support", subtitle: "Expanding Reach" },
       { src: img2018_2, title: "School Partnerships", subtitle: "Building Networks" },
-      { src: img2018_3, title: "Community Growth", subtitle: "Across Ghana" }
+      { src: img2018_3, title: "Community Growth", subtitle: "Across Ghana" },
+      { src: img2018_4, title: "STEM Education", subtitle: "Gospel Merges with Science" },
+      { src: img2018_5, title: "Moral Formation", subtitle: "Holistic Learning" },
+      { src: img2018_6, title: "Student Engagement", subtitle: "Inspiring Minds" },
+      { src: img2018_7, title: "Innovation Focus", subtitle: "Future Leaders" },
+      { src: img2018_8, title: "Strengthening Impact", subtitle: "Building Foundations" }
     ],
     3: [ // 2021-2023 - Recognition & Expansion
       { src: img2021_1, title: "Women Empowerment", subtitle: "Fem-Virtutis Launch" },
       { src: img2021_2, title: "Health Programs", subtitle: "Community Wellness" },
-      { src: img2021_3, title: "Recognition", subtitle: "Growing Impact" }
+      { src: img2021_3, title: "Recognition", subtitle: "Growing Impact" },
+      { src: img2021_4, title: "Scholar Programs", subtitle: "BAE Scholars" },
+      { src: img2021_5, title: "Innovation Competitions", subtitle: "SMARNOVA" },
+      { src: img2021_6, title: "Policy Think Tank", subtitle: "Naakaba Initiative" },
+      { src: img2021_7, title: "Diverse Impact", subtitle: "Expanding Programs" },
+      { src: img2021_8, title: "Community Development", subtitle: "Holistic Approach" },
+      { src: img2021_9, title: "Sustainable Growth", subtitle: "Long-Term Vision" }
     ],
     4: [ // 2024 - International Reach
       { src: img2024_1, title: "Policy Development", subtitle: "Gambia Chapter" },
       { src: img2024_2, title: "Legacy Program", subtitle: "Cross-Border Impact" },
-      { src: img2024_3, title: "Global Vision", subtitle: "Expanding Horizons" }
+      { src: img2024_3, title: "Global Vision", subtitle: "Expanding Horizons" },
+      { src: img2024_4, title: "Community Solutions", subtitle: "Local Empowerment" },
+      { src: img2024_5, title: "International Team", subtitle: "Building Together" },
+      { src: img2024_6, title: "Sustainable Impact", subtitle: "Long-Term Change" },
+      { src: img2024_7, title: "Fem-Virtutis Growth", subtitle: "Empowering More" },
+      { src: img2024_8, title: "Innovation Training", subtitle: "New Initiatives" },
+      { src: img2024_9, title: "Climate Education", subtitle: "Raising Awareness" },
+      { src: img2024_10, title: "Community Engagement", subtitle: "Building Networks" },
+      { src: img2024_11, title: "Youth Leadership", subtitle: "Inspiring Change" },
+      { src: img2024_12, title: "Educational Equity", subtitle: "Bridging Gaps" },
+      { src: img2024_13, title: "Future Planning", subtitle: "Sustaining Growth" }
     ]
   };
 

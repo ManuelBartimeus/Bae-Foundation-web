@@ -1,7 +1,7 @@
 .footer {
   background-color: #1a1a1a;
   color: #ffffff;
-  padding: 60px 0 0 0;
+  padding: 40px 0 0 0;
   margin-top: 80px;
   font-family: "Inter", sans-serif;
 }
@@ -11,8 +11,8 @@
   margin: 0 auto;
   padding: 0 40px;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 60px;
+  grid-template-columns: 2fr 1.5fr 1.5fr;
+  gap: 50px;
   align-items: flex-start;
 }
 
@@ -20,14 +20,14 @@
 .footer-left {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
 }
 
 .footer-logo {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .logo-img {
@@ -64,7 +64,7 @@
   font-size: 14px;
   line-height: 1.6;
   color: #cccccc;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
 .org-description em {
@@ -90,12 +90,11 @@
 }
 
 /* Center and Right Sections */
-.footer-center,
 .footer-projects,
 .footer-right {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 
 .footer-title {
@@ -190,7 +189,7 @@
   background-color: #111111;
   border-top: 1px solid #333333;
   padding: 20px 0;
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 .footer-bottom-container {

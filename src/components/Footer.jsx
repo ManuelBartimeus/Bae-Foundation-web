@@ -36,35 +36,7 @@ export default function Footer() {
           <button className="get-involved-btn">Get Involved</button>
         </div>
 
-        {/* Center Section - Useful Links */}
-        <div className="footer-center">
-          <h3 className="footer-title">USEFUL LINKS</h3>
-          <ul className="footer-links">
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/about">Our Story</a>
-            </li>
-            <li>
-              <a href="/donate">Initiatives</a>
-            </li>
-            <li>
-              <a href="/contact">Portfolio</a>
-            </li>
-            <li>
-              <a href="/blog">Legacy Store</a>
-            </li>
-            <li>
-              <a href="/blog">Blog</a>
-            </li>
-            <li>
-              <a href="/blog">Contact</a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Center Right Section - Recent Projects */}
+        {/* Center Section - Recent Projects */}
         <div className="footer-projects">
           <h3 className="footer-title">RECENT INITIATIVES</h3>
           <ul className="project-links">
