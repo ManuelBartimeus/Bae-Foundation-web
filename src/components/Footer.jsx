@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import logo from "../assets/logo.png";
+import monologo from "../assets/logo-1-monochrome.png";
 import {
   FaInstagram,
   FaTwitter,
@@ -15,6 +16,7 @@ import {
 export default function Footer() {
   return (
     <footer className="footer">
+      <img src={monologo} alt="BAE Foundation Monochrome Logo" className="footer-background-logo-img" />
       <div className="footer-container">
         {/* Left Section - Organization Info */}
         <div className="footer-left">
