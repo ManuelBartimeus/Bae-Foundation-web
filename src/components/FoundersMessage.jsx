@@ -3,7 +3,7 @@ import { useCountUp, useCountUpFromString } from "../hooks/useCountUp";
 import "./AboutScreen.css";
 import "./FoundersMessage.css";
 import founderImg from "../assets/founder_img.png";
-import { FiUser, FiStar, FiHome } from "react-icons/fi";
+import { FiUser, FiStar, FiHome, FiCalendar, FiUsers, FiGlobe } from "react-icons/fi"; // Added new icons
 import { FaQuoteLeft, FaWhatsapp, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { SiThreads } from "react-icons/si";
 
@@ -46,10 +46,7 @@ export default function FoundersMessage() {
                 <strong>The Before Anyone Else Foundation</strong> was born from
                 that belief, that humanity's truest strength lies in service,
                 compassion, and the courage to make a difference where it matters
-                most. We exist to remind the world that leadership is not about
-                power, but about purpose. It's about showing up, with empathy,
-                with excellence, and with an unshakable commitment to what is
-                right.
+                most.
               </p>
             </div>
 
@@ -58,31 +55,12 @@ export default function FoundersMessage() {
               <p className="intro">
                 Our vision is simple yet profound: to build a culture where people
                 lead with integrity, think with innovation, and serve with
-                humanity. We believe that true impact is not measured by how much
-                we achieve, but by how deeply we touch lives and awaken potential
-                in others.
-              </p>
-              
-              <p className="intro">
-                Volunteerism is the heartbeat of our foundation, ordinary people
-                doing extraordinary things because they believe that change begins
-                with them. It is through these selfless acts that we see hope take
-                form, that we see communities transform, and that we reaffirm our
-                shared humanity.
+                humanity.
               </p>
             </div>
 
             <div className="message-card">
               <h3>Excellence with Conscience</h3>
-              <p className="intro">
-                At the core of everything we do is{" "}
-                <strong>excellence with conscience</strong> — a commitment to do
-                good, and to do it well. We hold ourselves to the highest
-                standards, not because it is expected, but because it is who we
-                are. Every step we take, every initiative we lead, is guided by
-                ethics, empathy, and innovation — the values that define us.
-              </p>
-              
               <p className="intro highlight">
                 <strong>
                   The world is in constant motion, yet our purpose remains still:
@@ -90,19 +68,13 @@ export default function FoundersMessage() {
                   before anyone else.
                 </strong>
               </p>
-              
-              <p className="intro">
-                Let us continue to lead with heart, think with vision, and serve
-                with integrity. For when we place humanity at the center of our
-                actions, we not only build a better future — we become the very
-                change we seek.
-              </p>
             </div>
           </div>
 
           <div className="content-right">
             <div className="founder-profile">
               <img src={founderImg} alt="Mr. Derrick Puplampu" className="rebuild-img" />
+              
               <div className="founder-chips">
                 <div className="chip">
                   <FiUser className="chip-icon" />
@@ -112,39 +84,31 @@ export default function FoundersMessage() {
                   <FiStar className="chip-icon" />
                   <span>Founder & Executive Director</span>
                 </div>
-                <div className="chip">
-                  <FiHome className="chip-icon" />
-                  <span>Before Anyone Else Foundation</span>
-                </div>
               </div>
               
               <div className="social-media-icons">
-                <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className="founder-social-icon whatsapp">
-                  <FaWhatsapp />
-                </a>
-                <a href="https://www.threads.com/@capt.derrick_pope?xmt=AQF0ADeMZol0PnYuHJ-XF72c9CZuBmD20_AxSsAyoePlm4M" target="_blank" rel="noopener noreferrer" className="founder-social-icon threads">
-                  <SiThreads />
-                </a>
-                <a href="https://instagram.com//capt.derrick_pope/" target="_blank" rel="noopener noreferrer" className="founder-social-icon instagram">
-                  <FaInstagram />
-                </a>
-                <a href="https://linkedin.com//in/derrick-p-006672114/" target="_blank" rel="noopener noreferrer" className="founder-social-icon linkedin">
-                  <FaLinkedin />
-                </a>
+                <a href="#" className="founder-social-icon whatsapp"><FaWhatsapp /></a>
+                <a href="#" className="founder-social-icon threads"><SiThreads /></a>
+                <a href="#" className="founder-social-icon instagram"><FaInstagram /></a>
+                <a href="#" className="founder-social-icon linkedin"><FaLinkedin /></a>
               </div>
               
+              {/* Updated Stats Grid */}
               <div className="founder-stats">
                 <div className="stat-item">
+                  <FiCalendar className="stat-icon" />
                   <span className="stat-number" ref={founderYears.ref}>{founderYears.count}</span>
                   <span className="stat-label">Years of Leadership</span>
                 </div>
                 <div className="stat-item">
+                  <FiUsers className="stat-icon" />
                   <span className="stat-number" ref={livesImpacted.ref}>{livesImpacted.count}</span>
                   <span className="stat-label">Lives Impacted</span>
                 </div>
                 <div className="stat-item">
+                  <FiGlobe className="stat-icon" />
                   <span className="stat-number" ref={countries.ref}>{countries.count}</span>
-                  <span className="stat-label">Countries</span>
+                  <span className="stat-label">Countries Reach</span>
                 </div>
               </div>
             </div>
@@ -156,10 +120,7 @@ export default function FoundersMessage() {
       <section className="founder-cta">
         <div className="cta-content">
           <h3>Join Our Movement</h3>
-          <p>
-            Together, we can create the change we wish to see in the world. 
-            Your support enables us to continue serving those who need it most.
-          </p>
+          <p>Together, we can create the change we wish to see in the world.</p>
           <div className="cta-buttons">
             <button className="donate">Support Our Cause</button>
             <button className="founder-volunteer">Become a Volunteer</button>
