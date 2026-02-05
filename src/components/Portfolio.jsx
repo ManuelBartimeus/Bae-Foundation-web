@@ -5,28 +5,132 @@ import './Portfolio.css';
 import { FiPlay, FiPause, FiChevronLeft, FiChevronRight, FiExternalLink, FiCalendar, FiMapPin, FiUsers, FiAward } from 'react-icons/fi';
 import { FaImages, FaVideo, FaNewspaper, FaGraduationCap, FaHeart, FaHandsHelping, FaLeaf } from 'react-icons/fa';
 
-// Import images
-import heroImg from '../assets/hero.jpg';
-import aboutImg from '../assets/about-us-pic.jpg';
-import volunteerImg from '../assets/volunteer.jpg';
-import studyGroupImg from '../assets/study-group-african-people_23-2149156390.jpg';
-import africanWomanImg from '../assets/african-woman-teaching-children-class.jpg';
-import kidsEnjoyingImg from '../assets/african-kids-enjoying-life_23-2151438340.jpg';
-import boyRaisingHandImg from '../assets/boy-rising-hand-class_23-2150814449.jpg';
-import worldBookDayImg from '../assets/world-book-day-celebration_23-2151245079.jpg';
-import kidReadingImg from '../assets/kid-reading.jpg';
-import sparkitupImg from '../assets/sparkitup-page.jpg';
-import smanorvaImg from '../assets/smanorva-page.jpg';
+// Import images from portfolio folders
+// Spark It Up - 2016
+import sparkCover from '../assets/portfolio/Spark it Up - 2016/f33287936.jpg';
+import sparkImg1 from '../assets/portfolio/Spark it Up - 2016/f33293568.jpg';
+import sparkImg2 from '../assets/portfolio/Spark it Up - 2016/f33295360.jpg';
+import sparkImg3 from '../assets/portfolio/Spark it Up - 2016/f33297408.jpg';
+import sparkImg4 from '../assets/portfolio/Spark it Up - 2016/f33302016.jpg';
+import sparkImg5 from '../assets/portfolio/Spark it Up - 2016/f33302784.jpg';
 
-// Spark It Up images
-import sparkImg1 from '../assets/Spark It up/f33169152.jpg';
-import sparkImg2 from '../assets/Spark It up/f33175552.jpg';
-import sparkImg3 from '../assets/Spark It up/f33182464.jpg';
-import sparkImg4 from '../assets/Spark It up/f33185536.jpg';
-import sparkImg5 from '../assets/Spark It up/f33197056.jpg';
-import sparkImg6 from '../assets/Spark It up/f33205504.jpg';
-import sparkImg7 from '../assets/Spark It up/f33213952.jpg';
-import sparkImg8 from '../assets/Spark It up/f33220096.jpg';
+// Gospel Merges with Science - Ada 2019
+import gmsCover from '../assets/portfolio/Gospel Merges with Science Ada - 2019/IMG_5212.JPG';
+import gmsAdaImg1 from '../assets/portfolio/Gospel Merges with Science Ada - 2019/IMG_5213.JPG';
+import gmsAdaImg2 from '../assets/portfolio/Gospel Merges with Science Ada - 2019/IMG_5214.JPG';
+import gmsAdaImg3 from '../assets/portfolio/Gospel Merges with Science Ada - 2019/IMG_5215.JPG';
+import gmsAdaImg4 from '../assets/portfolio/Gospel Merges with Science Ada - 2019/IMG_5216.JPG';
+
+// Gospel Merges with Science - Upper East 2021
+import gmsUECover from '../assets/portfolio/Gospel Merges with Science Upper East - 2021/day2.25.jpg';
+import gmsUEImg1 from '../assets/portfolio/Gospel Merges with Science Upper East - 2021/day2.26.jpg';
+import gmsUEImg2 from '../assets/portfolio/Gospel Merges with Science Upper East - 2021/day2.27.jpg';
+import gmsUEImg3 from '../assets/portfolio/Gospel Merges with Science Upper East - 2021/day2.28.jpg';
+import gmsUEImg4 from '../assets/portfolio/Gospel Merges with Science Upper East - 2021/day2.29.jpg';
+
+// Salt and Light - KNUST 2022
+import saltLightKNUSTCover from '../assets/portfolio/Salt and Light KNUST - 2022/273379491_470417901473252_3224974489427031315_n.jpg';
+import saltLightKNUSTImg1 from '../assets/portfolio/Salt and Light KNUST - 2022/273444364_405908048002008_7449093780124342334_n.jpg';
+
+// BaeLentine Project - Lake Bosomtwe 2022
+import baeLentineLakeCover from '../assets/portfolio/BaeLentine Project Lake Bosomtwe - 2022/274941862_356388026325472_5042934996861471274_n.jpg';
+import baeLentineLakeImg1 from '../assets/portfolio/BaeLentine Project Lake Bosomtwe - 2022/275151446_444071277463068_3854400468390722305_n.jpg';
+import baeLentineLakeImg2 from '../assets/portfolio/BaeLentine Project Lake Bosomtwe - 2022/277402272_375535237796248_850569691250874766_n.jpg';
+import baeLentineLakeImg3 from '../assets/portfolio/BaeLentine Project Lake Bosomtwe - 2022/277493490_661087015227097_7356619086613534071_n.jpg';
+import baeLentineLakeImg4 from '../assets/portfolio/BaeLentine Project Lake Bosomtwe - 2022/277572820_365855968772097_6528147868934305903_n.jpg';
+
+// Time with Series - Verda Annan 2022
+import timeWithSeriesCover from '../assets/portfolio/Time with Series - Verda Annan - 2022/verdaannan1.jpg';
+
+// Salt and Light - Accra 2020
+import saltLightAccraCover from '../assets/portfolio/Salt and Light Project  Accra- 2020/143233764_2471235606519573_2692205312451538686_n.jpg';
+import saltLightAccraImg1 from '../assets/portfolio/Salt and Light Project  Accra- 2020/143598733_837194323529922_7138761947317853754_n.jpg';
+import saltLightAccraImg2 from '../assets/portfolio/Salt and Light Project  Accra- 2020/143754675_240391271097897_2951016959396486469_n.jpg';
+
+// BAE Valentine Project - REMA Orphanage 2020
+import baeValentineCover from '../assets/portfolio/BAE Valentine Project REMA Orphanage - 2020/rema1.jpg';
+import baeValentineImg1 from '../assets/portfolio/BAE Valentine Project REMA Orphanage - 2020/rema2.jpg';
+import baeValentineImg2 from '../assets/portfolio/BAE Valentine Project REMA Orphanage - 2020/rema3.jpg';
+
+// GOSCCI Virtual Conference 2020
+import goscci2020Cover from '../assets/portfolio/GOSCCI Virtual Conference - 2020/gosscivirtualconf.jpg';
+
+// FEM Menstrual Hygiene 2024
+import femHygieneCover from '../assets/portfolio/FEM Menstrual Hygience Outreach - 2024/Fem Day2.jpg';
+import femHygieneImg1 from '../assets/portfolio/FEM Menstrual Hygience Outreach - 2024/Fem Day2-19.jpg';
+import femHygieneImg2 from '../assets/portfolio/FEM Menstrual Hygience Outreach - 2024/Fem Day2-20.jpg';
+import femHygieneImg3 from '../assets/portfolio/FEM Menstrual Hygience Outreach - 2024/Fem Day2-21.jpg';
+import femHygieneImg4 from '../assets/portfolio/FEM Menstrual Hygience Outreach - 2024/Fem Day2-22.jpg';
+
+// Minds Alive Conference - Ghana 2024
+import mindsAliveGhanaCover from '../assets/portfolio/Minds Alive Conference Ghana - 2024/MA.jpg';
+import mindsAliveGhanaImg1 from '../assets/portfolio/Minds Alive Conference Ghana - 2024/MA-38.jpg';
+import mindsAliveGhanaImg2 from '../assets/portfolio/Minds Alive Conference Ghana - 2024/MA-39.jpg';
+import mindsAliveGhanaImg3 from '../assets/portfolio/Minds Alive Conference Ghana - 2024/MA-40.jpg';
+import mindsAliveGhanaImg4 from '../assets/portfolio/Minds Alive Conference Ghana - 2024/MA-41.jpg';
+
+// Minds Alive Conference - The Gambia 2024
+import mindsAliveGambiaCover from '../assets/portfolio/Minds Alive Conference The Gambia - 2024/IMG_8985.jpg';
+import mindsAliveGambiaImg1 from '../assets/portfolio/Minds Alive Conference The Gambia - 2024/IMG_8986.jpg';
+import mindsAliveGambiaImg2 from '../assets/portfolio/Minds Alive Conference The Gambia - 2024/IMG_8987.jpg';
+import mindsAliveGambiaImg3 from '../assets/portfolio/Minds Alive Conference The Gambia - 2024/IMG_8988.jpg';
+import mindsAliveGambiaImg4 from '../assets/portfolio/Minds Alive Conference The Gambia - 2024/IMG_8991.jpg';
+
+// BAE Scholar Program 2024-2025
+import baeScholarCover from '../assets/portfolio/BAE Scholar Program - 2024-2025/bae scholar.jpg';
+import baeScholarImg1 from '../assets/portfolio/BAE Scholar Program - 2024-2025/bae scholar-26.jpg';
+import baeScholarImg2 from '../assets/portfolio/BAE Scholar Program - 2024-2025/bae scholar-27.jpg';
+import baeScholarImg3 from '../assets/portfolio/BAE Scholar Program - 2024-2025/bae scholar-28.jpg';
+import baeScholarImg4 from '../assets/portfolio/BAE Scholar Program - 2024-2025/bae scholar-29.jpg';
+
+// Minds Alive Conference - KNUST 2025
+import mindsAliveKNUSTCover from '../assets/portfolio/Minds Alive Conference KNUST - 2025/MAH-KNUST-125.jpg';
+import mindsAliveKNUSTImg1 from '../assets/portfolio/Minds Alive Conference KNUST - 2025/MAH-KNUST-132.jpg';
+import mindsAliveKNUSTImg2 from '../assets/portfolio/Minds Alive Conference KNUST - 2025/MAH-KNUST-95.jpg';
+import mindsAliveKNUSTImg3 from '../assets/portfolio/Minds Alive Conference KNUST - 2025/MAH-KNUST-96.jpg';
+import mindsAliveKNUSTImg4 from '../assets/portfolio/Minds Alive Conference KNUST - 2025/SnP-10.jpg';
+import mindsAliveKNUSTImg5 from '../assets/portfolio/Minds Alive Conference KNUST - 2025/SnP-21.jpg';
+
+// Female Power Conference 2025
+import femalePowerCover from '../assets/portfolio/Female Power Conference - 2025/FP-83.jpg';
+import femalePowerImg1 from '../assets/portfolio/Female Power Conference - 2025/FP-84.jpg';
+import femalePowerImg2 from '../assets/portfolio/Female Power Conference - 2025/FP-89.jpg';
+import femalePowerImg3 from '../assets/portfolio/Female Power Conference - 2025/FP-91.jpg';
+import femalePowerImg4 from '../assets/portfolio/Female Power Conference - 2025/FP-93.jpg';
+
+// She Leads Webinar 2025
+import sheLeadsCover from '../assets/portfolio/She Leads Webinar - 2025/sheleadswebinar 1.jpg';
+
+// BaeLentine Love by the Lake 2025
+import baeLentineLoveCover from '../assets/portfolio/BaeLentine Love by the Lake - 2025/LBL.jpg';
+import baeLentineLoveImg1 from '../assets/portfolio/BaeLentine Love by the Lake - 2025/LBL-129.jpg';
+import baeLentineLoveImg2 from '../assets/portfolio/BaeLentine Love by the Lake - 2025/LBL-130.jpg';
+import baeLentineLoveImg3 from '../assets/portfolio/BaeLentine Love by the Lake - 2025/LBL-170.jpg';
+import baeLentineLoveImg4 from '../assets/portfolio/BaeLentine Love by the Lake - 2025/LBL-171.jpg';
+
+// Hand Hygiene Outreach - Ho 2025
+import handHygieneCover from '../assets/portfolio/Hand Hygiene Outreach Ho - 2025/HHo-110.jpg';
+import handHygieneImg1 from '../assets/portfolio/Hand Hygiene Outreach Ho - 2025/HHo-111.jpg';
+import handHygieneImg2 from '../assets/portfolio/Hand Hygiene Outreach Ho - 2025/HHo-112.jpg';
+import handHygieneImg3 from '../assets/portfolio/Hand Hygiene Outreach Ho - 2025/HHo-115.jpg';
+import handHygieneImg4 from '../assets/portfolio/Hand Hygiene Outreach Ho - 2025/HHo-116.jpg';
+
+// World Children's Day 360 Event 2025
+import worldChildrenDayCover from '../assets/portfolio/World Children\'s Day 360 Event - 2025/WCDC-157.jpg';
+import worldChildrenDayImg1 from '../assets/portfolio/World Children\'s Day 360 Event - 2025/WCDC-158.jpg';
+import worldChildrenDayImg2 from '../assets/portfolio/World Children\'s Day 360 Event - 2025/WCDC-173.jpg';
+import worldChildrenDayImg3 from '../assets/portfolio/World Children\'s Day 360 Event - 2025/WCDC-174.jpg';
+import worldChildrenDayImg4 from '../assets/portfolio/World Children\'s Day 360 Event - 2025/WCDC-216.jpg';
+
+// Green Steps Outreach 2025
+import greenStepsCover from '../assets/portfolio/Green Steps Outreach - 2025/E Policy Day5.jpg';
+import greenStepsImg1 from '../assets/portfolio/Green Steps Outreach - 2025/E Policy Day5-11.jpg';
+import greenStepsImg2 from '../assets/portfolio/Green Steps Outreach - 2025/E Policy Day5-12.jpg';
+import greenStepsImg3 from '../assets/portfolio/Green Steps Outreach - 2025/E Policy Day5-18.jpg';
+import greenStepsImg4 from '../assets/portfolio/Green Steps Outreach - 2025/E Policy Day5-19.jpg';
+
+// Nakaaba Initiative 2025
+import nakaabaCover from '../assets/portfolio/Nakaaba Initiative - 2025/nakaaba init.jpg';
 
 export default function Portfolio() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -35,10 +139,10 @@ export default function Portfolio() {
   const galleryRef = useRef(null);
 
   // Count-up animations for portfolio stats
-  const majorProjects = useCountUp(6, 2000);
-  const livesTransformed = useCountUpFromString('8,300+', 2000);
-  const communitiesServed = useCountUpFromString('50+', 2000);
-  const focusAreas = useCountUp(4, 2000);
+  const majorProjects = useCountUp(22, 2000);
+  const livesTransformed = useCountUpFromString('12K+', 2000);
+  const communitiesServed = useCountUpFromString('2', 2000);
+  const focusAreas = useCountUp(6, 2000);
 
   const portfolioCategories = [
     { id: 'all', name: 'All Work', icon: <FaImages /> },
@@ -49,101 +153,327 @@ export default function Portfolio() {
   ];
 
   const portfolioItems = [
+    // GHANA - Education Projects
     {
       id: 1,
-      title: "Education Empowerment Initiative",
+      title: "Spark It Up – School Empowerment Program",
       category: "education",
       type: "photo",
-      description: "Transforming lives through quality education across rural communities in Ghana and The Gambia.",
-      mainImage: africanWomanImg,
-      gallery: [africanWomanImg, boyRaisingHandImg, kidReadingImg, worldBookDayImg, studyGroupImg],
+      description: "A foundational school empowerment initiative equipping young learners with purpose-driven education, leadership values, and inspiration for academic excellence.",
+      mainImage: sparkCover,
+      gallery: [sparkCover, sparkImg1, sparkImg2, sparkImg3, sparkImg4, sparkImg5],
       stats: {
-        beneficiaries: "2,500+",
-        duration: "4 Years",
-        locations: "15 Communities"
+        beneficiaries: "600+",
+        locations: "Multiple Schools, Ghana"
       },
-      achievements: ["Built 5 Schools", "Trained 50 Teachers", "Distributed 1,000+ Books"],
-      date: "2021 - Present"
+      achievements: ["Delivered motivational sessions", "Early purpose discovery framework", "First structured school outreach model"],
+      date: "2016"
     },
     {
       id: 2,
-      title: "Spark It Up Leadership Program",
-      category: "programs",
+      title: "Gospel Merges with Science – Ada",
+      category: "education",
       type: "photo",
-      description: "Igniting leadership potential in young minds through innovative training and mentorship programs.",
-      mainImage: sparkitupImg,
-      gallery: [sparkImg1, sparkImg2, sparkImg3, sparkImg4, sparkImg5, sparkImg6, sparkImg7, sparkImg8],
+      description: "An interdisciplinary outreach integrating faith, science, and critical thinking to inspire holistic student development.",
+      mainImage: gmsCover,
+      gallery: [gmsCover, gmsAdaImg1, gmsAdaImg2, gmsAdaImg3, gmsAdaImg4],
       stats: {
-        beneficiaries: "800+",
-        duration: "3 Years",
-        locations: "2 Countries"
+        beneficiaries: "1,000+",
+        locations: "Ada, Ghana"
       },
-      achievements: ["200 Leaders Graduated", "50 Jobs Created", "15 Startups Launched"],
-      date: "2022 - Present"
+      achievements: ["Bridged faith-based values with scientific inquiry", "Donated full Science Apparatus set", "Distributed 1,000 Bibles and stationery"],
+      date: "2019"
     },
     {
       id: 3,
-      title: "Community Health Outreach",
-      category: "community",
+      title: "Gospel Merges with Science – Upper East Region",
+      category: "education",
       type: "photo",
-      description: "Bringing essential healthcare services to underserved communities through mobile clinics.",
-      mainImage: volunteerImg,
-      gallery: [volunteerImg, aboutImg, kidsEnjoyingImg, heroImg],
+      description: "A regional expansion of the Gospel–Science integration model targeting underserved communities in Northern Ghana.",
+      mainImage: gmsUECover,
+      gallery: [gmsUECover, gmsUEImg1, gmsUEImg2, gmsUEImg3, gmsUEImg4],
       stats: {
-        beneficiaries: "3,200+",
-        duration: "2 Years",
-        locations: "20 Villages"
+        beneficiaries: "1,600+",
+        locations: "Upper East Region, Ghana"
       },
-      achievements: ["500+ Health Checkups", "800 Vaccinations", "25 Health Workers Trained"],
-      date: "2023 - Present"
+      achievements: ["Extended STEM-faith engagement to rural schools", "Full Science Apparatus donation", "Increased access in marginalized areas"],
+      date: "2021"
     },
     {
       id: 4,
-      title: "Annual Youth Summit",
-      category: "events",
+      title: "Salt and Light – KNUST",
+      category: "education",
       type: "photo",
-      description: "Celebrating and empowering young changemakers across Africa through our flagship annual event.",
-      mainImage: studyGroupImg,
-      gallery: [studyGroupImg, kidsEnjoyingImg, sparkImg1, sparkImg3],
+      description: "A campus-based values and leadership activation empowering students to become change agents.",
+      mainImage: saltLightKNUSTCover,
+      gallery: [saltLightKNUSTCover, saltLightKNUSTImg1],
       stats: {
-        beneficiaries: "1,000+",
-        duration: "3 Days",
-        locations: "Tema, Ghana"
+        beneficiaries: "250+",
+        locations: "KNUST, Kumasi, Ghana"
       },
-      achievements: ["500+ Youth Participants", "50 Speakers", "20 Workshops"],
-      date: "December 2024"
+      achievements: ["Engaged tertiary students in ethical leadership", "Encouraged service-oriented initiatives", "Strengthened campus-community linkages"],
+      date: "2022"
     },
     {
       id: 5,
-      title: "Women Empowerment Campaign",
-      category: "community",
+      title: "Minds Alive Conference – KNUST",
+      category: "education",
       type: "photo",
-      description: "Supporting women entrepreneurs through microfinance and business development programs.",
-      mainImage: smanorvaImg,
-      gallery: [smanorvaImg, africanWomanImg, volunteerImg, aboutImg],
+      description: "A student-focused innovation conference equipping young people to transform ideas into sustainable ventures.",
+      mainImage: mindsAliveKNUSTCover,
+      gallery: [mindsAliveKNUSTCover, mindsAliveKNUSTImg1, mindsAliveKNUSTImg2, mindsAliveKNUSTImg3, mindsAliveKNUSTImg4, mindsAliveKNUSTImg5],
       stats: {
-        beneficiaries: "600+",
-        duration: "2 Years",
-        locations: "Gambia & Ghana"
+        beneficiaries: "40+",
+        locations: "KNUST, Ghana"
       },
-      achievements: ["400 Microloans", "300 Women Trained", "100 Businesses Started"],
-      date: "2022 - Present"
+      achievements: ["Delivered hands-on ideation training", "Connected students to mentors", "Strengthened entrepreneurial mindset"],
+      date: "2025"
     },
     {
       id: 6,
-      title: "Digital Literacy Workshop",
+      title: "BAE Scholar Program",
       category: "education",
       type: "photo",
-      description: "Bridging the digital divide by teaching essential computer and internet skills.",
-      mainImage: boyRaisingHandImg,
-      gallery: [boyRaisingHandImg, studyGroupImg, worldBookDayImg, kidReadingImg],
+      description: "A structured leadership, research, and ethics development program for selected senior high school students.",
+      mainImage: baeScholarCover,
+      gallery: [baeScholarCover, baeScholarImg1, baeScholarImg2, baeScholarImg3, baeScholarImg4],
+      stats: {
+        beneficiaries: "50+",
+        locations: "Ghana"
+      },
+      achievements: ["Trained in leadership and ethics", "Mentored future ethical leaders", "Built pipeline for academic excellence"],
+      date: "2024 - 2025"
+    },
+    {
+      id: 7,
+      title: "Female Power Conference",
+      category: "education",
+      type: "photo",
+      description: "A transformational conference empowering young women with leadership, confidence, and purpose.",
+      mainImage: femalePowerCover,
+      gallery: [femalePowerCover, femalePowerImg1, femalePowerImg2, femalePowerImg3, femalePowerImg4],
+      stats: {
+        beneficiaries: "30+",
+        locations: "The Gambia"
+      },
+      achievements: ["Inspired female leadership", "Addressed gender equity", "Built networks of empowered women"],
+      date: "2025"
+    },
+    {
+      id: 8,
+      title: "TIME WITH SERIES – Verda Annan",
+      category: "education",
+      type: "photo",
+      description: "A leadership and empowerment webinar supporting women in leadership and personal growth.",
+      mainImage: timeWithSeriesCover,
+      gallery: [timeWithSeriesCover],
+      stats: {
+        beneficiaries: "1,300+",
+        locations: "Online (Global)"
+      },
+      achievements: ["Delivered leadership sessions", "Built confidence and capacity", "Supported women leaders globally"],
+      date: "2022",
+      externalLink: "https://www.instagram.com/p/CjDEHAADtN4/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D"
+    },
+    {
+      id: 9,
+      title: "She Leads Webinar",
+      category: "education",
+      type: "photo",
+      description: "A leadership and empowerment webinar supporting women in leadership and personal growth.",
+      mainImage: sheLeadsCover,
+      gallery: [sheLeadsCover],
+      stats: {
+        beneficiaries: "1,300+",
+        locations: "Online (Global)"
+      },
+      achievements: ["Delivered leadership development sessions", "Built confidence and capacity", "Expanded digital gender programming"],
+      date: "2025",
+      externalLink: "https://www.instagram.com/p/DNEDapIqUp7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D"
+    },
+    // GHANA - Community Projects
+    {
+      id: 10,
+      title: "BAE Valentine Project – REMA Orphanage",
+      category: "community",
+      type: "photo",
+      description: "A compassion-driven outreach delivering love, care, and essential support to orphaned children.",
+      mainImage: baeValentineCover,
+      gallery: [baeValentineCover, baeValentineImg1, baeValentineImg2],
+      stats: {
+        beneficiaries: "300+",
+        locations: "Kumasi, Ghana"
+      },
+      achievements: ["Provided food and care items", "Fostered dignity and belonging", "Strengthened partnerships with institutions"],
+      date: "2020"
+    },
+    {
+      id: 11,
+      title: "Salt and Light Project – Accra",
+      category: "community",
+      type: "photo",
+      description: "A community impact initiative promoting ethical leadership, service, and positive social influence.",
+      mainImage: saltLightAccraCover,
+      gallery: [saltLightAccraCover, saltLightAccraImg1, saltLightAccraImg2],
+      stats: {
+        beneficiaries: "100+",
+        locations: "Accra, Ghana"
+      },
+      achievements: ["Mobilized youth for community service", "Reinforced values of integrity", "Expanded urban engagement footprint"],
+      date: "2020"
+    },
+    {
+      id: 12,
+      title: "BaeLentine Project – Lake Bosomtwe",
+      category: "community",
+      type: "photo",
+      description: "A community-centered outreach blending compassion, giving, and relationship-building in lakeside communities.",
+      mainImage: baeLentineLakeCover,
+      gallery: [baeLentineLakeCover, baeLentineLakeImg1, baeLentineLakeImg2, baeLentineLakeImg3, baeLentineLakeImg4],
+      stats: {
+        beneficiaries: "500+",
+        locations: "Lake Bosomtwe, Ghana"
+      },
+      achievements: ["Delivered relief and support activities", "Fostered social inclusion", "Strengthened rural outreach presence"],
+      date: "2022"
+    },
+    {
+      id: 13,
+      title: "BaeLentine Love by the Lake",
+      category: "community",
+      type: "photo",
+      description: "A relationship and community engagement experience promoting love, values, and social connection.",
+      mainImage: baeLentineLoveCover,
+      gallery: [baeLentineLoveCover, baeLentineLoveImg1, baeLentineLoveImg2, baeLentineLoveImg3, baeLentineLoveImg4],
+      stats: {
+        beneficiaries: "600+",
+        locations: "Lake Bosomtwe, Ghana"
+      },
+      achievements: ["Reinforced community bonding", "Delivered relief items", "Supported water polo club"],
+      date: "2025"
+    },
+    {
+      id: 14,
+      title: "Hand Hygiene Outreach – Ho",
+      category: "community",
+      type: "photo",
+      description: "A public health outreach improving hygiene awareness and preventive health practices.",
+      mainImage: handHygieneCover,
+      gallery: [handHygieneCover, handHygieneImg1, handHygieneImg2, handHygieneImg3, handHygieneImg4],
+      stats: {
+        beneficiaries: "1,000+",
+        locations: "Ho, Volta Region, Ghana"
+      },
+      achievements: ["Educated on hygiene and disease prevention", "Distributed hygiene materials", "Supported local health efforts"],
+      date: "2025"
+    },
+    {
+      id: 15,
+      title: "World Children's Day 360° Event",
+      category: "community",
+      type: "photo",
+      description: "A holistic children-centered celebration amplifying child rights, well-being, and empowerment through immersive engagement.",
+      mainImage: worldChildrenDayCover,
+      gallery: [worldChildrenDayCover, worldChildrenDayImg1, worldChildrenDayImg2, worldChildrenDayImg3, worldChildrenDayImg4],
+      stats: {
+        beneficiaries: "700+",
+        locations: "Ghana"
+      },
+      achievements: ["Reached children through education and fun", "Promoted child protection awareness", "Delivered multi-dimensional celebration"],
+      date: "2025"
+    },
+    {
+      id: 16,
+      title: "FEM Menstrual Hygiene Outreach",
+      category: "community",
+      type: "photo",
+      description: "A dignity-focused outreach improving menstrual health awareness and access for secondary school girls.",
+      mainImage: femHygieneCover,
+      gallery: [femHygieneCover, femHygieneImg1, femHygieneImg2, femHygieneImg3, femHygieneImg4],
+      stats: {
+        beneficiaries: "300+",
+        locations: "The Gambia"
+      },
+      achievements: ["Educated on menstrual hygiene management", "Distributed sanitary materials", "Promoted school attendance"],
+      date: "2024"
+    },
+    {
+      id: 17,
+      title: "Green Steps Outreach – Environmental Awareness",
+      category: "community",
+      type: "photo",
+      description: "An environmental education outreach promoting climate responsibility and sustainable practices in schools.",
+      mainImage: greenStepsCover,
+      gallery: [greenStepsCover, greenStepsImg1, greenStepsImg2, greenStepsImg3, greenStepsImg4],
+      stats: {
+        beneficiaries: "700+",
+        locations: "The Gambia"
+      },
+      achievements: ["Raised environmental awareness", "Engaged in climate action conversations", "Supported sustainability advocacy"],
+      date: "2025"
+    },
+    // GHANA/GAMBIA - Events & Conferences
+    {
+      id: 18,
+      title: "Minds Alive Conference – Ghana",
+      category: "events",
+      type: "photo",
+      description: "An entrepreneurship, innovation, and leadership conference igniting youth creativity, purpose, and sustainable thinking.",
+      mainImage: mindsAliveGhanaCover,
+      gallery: [mindsAliveGhanaCover, mindsAliveGhanaImg1, mindsAliveGhanaImg2, mindsAliveGhanaImg3, mindsAliveGhanaImg4],
+      stats: {
+        beneficiaries: "30+",
+        locations: "Ghana"
+      },
+      achievements: ["Convened youth leaders across countries", "Promoted innovation and sustainability", "Sparked entrepreneurial mindset"],
+      date: "2024"
+    },
+    {
+      id: 19,
+      title: "Minds Alive Conference – The Gambia",
+      category: "events",
+      type: "photo",
+      description: "An entrepreneurship, innovation, and leadership conference igniting youth creativity, purpose, and sustainable thinking.",
+      mainImage: mindsAliveGambiaCover,
+      gallery: [mindsAliveGambiaCover, mindsAliveGambiaImg1, mindsAliveGambiaImg2, mindsAliveGambiaImg3, mindsAliveGambiaImg4],
+      stats: {
+        beneficiaries: "30+",
+        locations: "The Gambia"
+      },
+      achievements: ["Convened youth leaders across countries", "Promoted innovation and sustainability", "Expanded regional impact"],
+      date: "2024"
+    },
+    {
+      id: 20,
+      title: "GOSCCI Virtual Conference",
+      category: "events",
+      type: "photo",
+      description: "A global virtual conference delivering faith, innovation, leadership, and purpose-driven conversations online.",
+      mainImage: goscci2020Cover,
+      gallery: [goscci2020Cover],
       stats: {
         beneficiaries: "1,200+",
-        duration: "1 Year",
-        locations: "8 Centers"
+        locations: "Online (Global)"
       },
-      achievements: ["8 Computer Labs", "400 Students Trained", "Digital Courses Created"],
-      date: "2024 - Present"
+      achievements: ["Reached international audiences", "Facilitated virtual learning", "Expanded digital outreach capacity"],
+      date: "2020",
+      externalLink: "https://www.instagram.com/p/CDjMXgHh-Ly/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D"
+    },
+    {
+      id: 21,
+      title: "Nakaaba Initiative – Youth-Led Climate Roundtable",
+      category: "events",
+      type: "photo",
+      description: "A policy-oriented climate dialogue platform amplifying youth voices in environmental decision-making.",
+      mainImage: nakaabaCover,
+      gallery: [nakaabaCover],
+      stats: {
+        beneficiaries: "2,000+",
+        locations: "Online (Africa-focused)"
+      },
+      achievements: ["Convened youth climate policy discussions", "Generated actionable insights", "Strengthened youth participation"],
+      date: "2025",
+      externalLink: "https://www.instagram.com/p/DIYqrRytD7l/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D"
     }
   ];
 
@@ -225,21 +555,17 @@ export default function Portfolio() {
         <div className="portfolio-container">
           {filteredItems.map(item => (
             <div key={item.id} className="portfolio-item">
-              <div className="portfolio-image" onClick={() => openGallery(item)}>
+              <div className="portfolio-image" onClick={() => !item.externalLink && openGallery(item)}>
                 <img src={item.mainImage} alt={item.title} />
-                <div className="portfolio-overlay">
-                  <div className="portfolio-info">
-                    <span className="portfolio-type">
-                      {item.type === 'photo' ? <FaImages /> : <FaVideo />}
-                      {item.gallery.length} Photos
-                    </span>
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                  </div>
+                {item.externalLink ? (
+                  <a href={item.externalLink} target="_blank" rel="noopener noreferrer" className="view-gallery follow-link">
+                    <FiExternalLink /> Follow Link
+                  </a>
+                ) : (
                   <button className="view-gallery">
                     <FaImages /> View Gallery
                   </button>
-                </div>
+                )}
               </div>
               
               <div className="portfolio-details">
@@ -261,11 +587,6 @@ export default function Portfolio() {
                     <FiUsers className="stat-icon" />
                     <span>{item.stats.beneficiaries}</span>
                     <small>Beneficiaries</small>
-                  </div>
-                  <div className="stat">
-                    <FiCalendar className="stat-icon" />
-                    <span>{item.stats.duration}</span>
-                    <small>Duration</small>
                   </div>
                   <div className="stat">
                     <FiMapPin className="stat-icon" />
@@ -342,11 +663,11 @@ export default function Portfolio() {
           </div>
           <div className="impact-item">
             <span className="impact-number" ref={communitiesServed.ref}>{communitiesServed.count}</span>
-            <span className="impact-label">Communities Served</span>
+            <span className="impact-label">Countries Reached</span>
           </div>
           <div className="impact-item">
             <span className="impact-number" ref={focusAreas.ref}>{focusAreas.count}</span>
-            <span className="impact-label">Focus Areas</span>
+            <span className="impact-label">Thematic Focus Areas</span>
           </div>
         </div>
       </section>
