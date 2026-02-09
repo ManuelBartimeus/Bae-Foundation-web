@@ -396,7 +396,7 @@
 
 .mv-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 40px;
 }
 
@@ -719,9 +719,9 @@
     flex-shrink: 0;
     min-width: 140px;
   }
-  
+
   .mv-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 

@@ -27,7 +27,7 @@ import sarahking from "../assets/team/sarah_king.png";
 // Ghanaian Chapter Team Images
 import manuelBartimeus from '../assets/team/manuel_bartimeus.png';
 
-export default function Team() {
+export default function Team({ onNavigate }) {
   const [activeSlide, setActiveSlide] = useState(0);
 
   const teamSections = [
@@ -41,9 +41,9 @@ export default function Team() {
           image: founderImg,
           location: "Tema, Ghana",
           socials: {
-            linkedin: "https://www.linkedin.com/in/derrick-p-006672114/",
+            linkedin: "https://linkedin.com//in/derrick-p-006672114/",
             instagram: "https://www.instagram.com/capt.derrick_pope/",
-            email: "mailto:derrick@baefoundation.org"
+            email: "mailto:baefoundation3@gmail.com"
           },
           achievements: ["9 Years Leadership", "12K+ Lives Impacted", "International Expansion"]
         }
@@ -423,8 +423,8 @@ export default function Team() {
             across Africa and beyond.
           </p>
           <div className="cta-buttons">
-            <button className="donate">View Open Positions</button>
-            <button className="volunteer">Volunteer With Us</button>
+            <button className="donate" onClick={() => onNavigate && onNavigate('donate')}>Empower Our Team</button>
+            <button className="volunteer" onClick={() => onNavigate && onNavigate('contact')}>Volunteer With Us</button>
           </div>
         </div>
       </section>

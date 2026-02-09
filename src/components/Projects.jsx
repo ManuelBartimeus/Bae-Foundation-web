@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useCountUp, useCountUpFromString } from '../hooks/useCountUp';
 import './AboutScreen.css';
 import './Projects.css';
@@ -13,7 +13,7 @@ import initiative6 from '../assets/initiatives/initiative-6.png';
 import initiative7 from '../assets/initiatives/initiative-7.png';
 import initiative8 from '../assets/initiatives/initiative-8.png';
 
-export default function Projects() {
+export default function Projects({ onNavigate, selectedProjectId }) {
   const [activeFilter, setActiveFilter] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedProject, setSelectedProject] = useState(null);
@@ -248,6 +248,16 @@ export default function Projects() {
     }
   ];
 
+  // Open modal when selectedProjectId prop is provided from Footer
+  useEffect(() => {
+    if (selectedProjectId) {
+      const project = projects.find(p => p.id === selectedProjectId);
+      if (project) {
+        setSelectedProject(project);
+      }
+    }
+  }, [selectedProjectId]);
+
   const filteredProjects = projects.filter(project => {
     const matchesFilter = activeFilter === 'all' || project.category === activeFilter;
     const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -401,9 +411,9 @@ export default function Projects() {
             and reach even more communities in need.
           </p>
           <div className="cta-buttons">
-            <button className="donate">Donate Now</button>
-            <button className="volunteer">Volunteer</button>
-            <button className="partner">Partner With Us</button>
+            <button className="donate" onClick={() => onNavigate && onNavigate('donate')}>Donate Now</button>
+            <button className="volunteer" onClick={() => onNavigate && onNavigate('contact')}>Volunteer</button>
+            <button className="partner" onClick={() => onNavigate && onNavigate('contact')}>Partner With Us</button>
           </div>
         </div>
       </section>

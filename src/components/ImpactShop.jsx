@@ -21,7 +21,7 @@ import hopeEveryMorningMug from '../assets/merch/hope_every_morning_mug.jpg';
 import messageOfHopePoster from '../assets/merch/message_of_hope_poster.jpg';
 import dailyLightDevotional from '../assets/merch/daily_light_devotional.jpg';
 
-export default function ImpactShop() {
+export default function ImpactShop({ onNavigate }) {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [cart, setCart] = useState([]);
@@ -378,9 +378,9 @@ export default function ImpactShop() {
             creates measurable, lasting change in communities across Africa.
           </p>
           <div className="cta-buttons">
-            <button className="browse">Browse All Products</button>
-            <button className="gift">Give as Gift</button>
-            <button className="subscribe">Monthly Impact</button>
+            <button className="browse" onClick={() => window.open('https://selar.com/m/baelegacystore', '_blank')}>Browse All Products</button>
+            <button className="gift" onClick={() => onNavigate && onNavigate('donate')}>Give as Gift</button>
+            <button className="subscribe" onClick={() => onNavigate && onNavigate('donate')}>Monthly Impact</button>
           </div>
         </div>
       </section>

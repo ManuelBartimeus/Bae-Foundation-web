@@ -17,39 +17,53 @@ import './components/HomeScreen.css'; // Import header styles
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
+  const [selectedProjectId, setSelectedProjectId] = useState(null);
 
-  const handleNavigation = (page) => {
+  const handleNavigation = (page, projectId = null) => {
     setCurrentPage(page);
+    if (projectId !== null) {
+      setSelectedProjectId(projectId);
+    }
     // Scroll to top when navigating to a new page
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    
+    // If navigating to contact form, scroll to form after a short delay
+    if (page === 'contact') {
+      setTimeout(() => {
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+          contactForm.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 300);
+    }
   };
 
   const renderCurrentPage = () => {
     switch (currentPage) {
       case 'home':
-        return <HomeScreen />;
+        return <HomeScreen onNavigate={handleNavigation} />;
       case 'about':
-        return <AboutScreen />;
+        return <AboutScreen onNavigate={handleNavigation} />;
       case 'founders-message':
-        return <FoundersMessage />;
+        return <FoundersMessage onNavigate={handleNavigation} />;
       case 'our-story':
-        return <OurStory />;
+        return <OurStory onNavigate={handleNavigation} />;
       case 'team':
-        return <Team />;
+        return <Team onNavigate={handleNavigation} />;
       case 'projects':
-        return <Projects />;
+        return <Projects onNavigate={handleNavigation} selectedProjectId={selectedProjectId} />;
       case 'portfolio':
-        return <Portfolio />;
+        return <Portfolio onNavigate={handleNavigation} />;
       case 'impact-shop':
-        return <ImpactShop />;
+        return <ImpactShop onNavigate={handleNavigation} />;
       case 'blog':
-        return <Blog />;
+        return <Blog onNavigate={handleNavigation} />;
       case 'contact':
-        return <Contact />;
+        return <Contact onNavigate={handleNavigation} />;
       case 'donate':
-        return <Donate />;
+        return <Donate onNavigate={handleNavigation} />;
       default:
-        return <HomeScreen />;
+        return <HomeScreen onNavigate={handleNavigation} />;
     }
   };
 

@@ -12,7 +12,30 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 
-export default function Footer() {
+export default function Footer({ onNavigate }) {
+  const handleGetInvolved = () => {
+    if (onNavigate) {
+      onNavigate('contact');
+    }
+  };
+
+  // Map initiatives to their project IDs in the Projects component
+  const initiativeMap = {
+    'B.A.E. Foundation Scholar': 3,
+    'Nakaaba Policy and Action Initiative': 4,
+    'SMARNOVA Initiative': 6,
+    'Gospel Merges with Science': 2,
+    'B.A.E. Foundation Legacy Spots': 7,
+    'B.A.E. Foundation Fem-Virtutis': 1,
+    'Spark It Up Initiative': 5,
+  };
+
+  const handleInitiativeClick = (initiativeName) => {
+    const projectId = initiativeMap[initiativeName];
+    if (onNavigate && projectId) {
+      onNavigate('projects', projectId);
+    }
+  };
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -33,7 +56,7 @@ export default function Footer() {
             calling to serve, uplift, and transform
           </p>
 
-          <button className="get-involved-btn">Get Involved</button>
+          <button className="get-involved-btn" onClick={handleGetInvolved}>Get Involved</button>
         </div>
 
         {/* Center Section - Recent Projects */}
@@ -41,25 +64,25 @@ export default function Footer() {
           <h3 className="footer-title">RECENT INITIATIVES</h3>
           <ul className="project-links">
             <li>
-              <a href="#">BAE Foundation Scholar</a>
+              <a href="#" onClick={(e) => { e.preventDefault(); handleInitiativeClick('B.A.E. Foundation Scholar'); }}>B.A.E. Foundation Scholar</a>
             </li>
             <li>
-              <a href="#">Nakaaba Policy and Action Initiative</a>
+              <a href="#" onClick={(e) => { e.preventDefault(); handleInitiativeClick('Nakaaba Policy and Action Initiative'); }}>Nakaaba Policy and Action Initiative</a>
             </li>
             <li>
-              <a href="#">SMARNOVA Initiative</a>
+              <a href="#" onClick={(e) => { e.preventDefault(); handleInitiativeClick('SMARNOVA Initiative'); }}>SMARNOVA Initiative</a>
             </li>
             <li>
-              <a href="#">Gospel Merges with Science</a>
+              <a href="#" onClick={(e) => { e.preventDefault(); handleInitiativeClick('Gospel Merges with Science'); }}>Gospel Merges with Science</a>
             </li>
             <li>
-              <a href="#">BAE Foundation Legacy Spots</a>
+              <a href="#" onClick={(e) => { e.preventDefault(); handleInitiativeClick('B.A.E. Foundation Legacy Spots'); }}>B.A.E. Foundation Legacy Spots</a>
             </li>
             <li>
-              <a href="#">BAE Foundation Fem-Virtutis</a>
+              <a href="#" onClick={(e) => { e.preventDefault(); handleInitiativeClick('B.A.E. Foundation Fem-Virtutis'); }}>B.A.E. Foundation Fem-Virtutis</a>
             </li>
             <li>
-              <a href="#">Spark It Up Initiative</a>
+              <a href="#" onClick={(e) => { e.preventDefault(); handleInitiativeClick('Spark It Up Initiative'); }}>Spark It Up Initiative</a>
             </li>
           </ul>
         </div>
@@ -69,17 +92,17 @@ export default function Footer() {
           <h3 className="footer-title">CONTACT US</h3>
 
           <div className="contact-info">
-            <div className="contact-item">
+            <div className="footer-contact-item">
               <FaPhone className="contact-icon" />
               <span>+233 57 001 0755 (Ghana)</span>
             </div>
 
-            <div className="contact-item">
+            <div className="footer-contact-item">
               <FaPhone className="contact-icon" />
-              <span>+2203535544 (The Gambia)</span>
+              <span>+220 35 355 44 (The Gambia)</span>
             </div>
 
-            <div className="contact-item">
+            <div className="footer-contact-item">
               <FaEnvelope className="contact-icon" />
               <span>baefoundation3@gmail.com</span>
             </div>
@@ -141,7 +164,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="footer-bottom">
         <div className="footer-bottom-container">
-          <p>Copyright © 2025 BAE Foundation. | All Rights Reserved.</p>
+          <p>Copyright © 2025 Before Anyone Else (B.A.E.) Foundation. | All Rights Reserved.</p>
           <p>
             Powered by <span className="powered-by">Elite Creatives</span>
           </p>

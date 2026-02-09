@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import './AboutScreen.css';
 import './Contact.css';
 import { FiPhone, FiMail, FiMapPin, FiClock, FiSend, FiUser, FiMessageSquare, FiGlobe, FiCalendar } from 'react-icons/fi';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
+import { FaSquareXTwitter } from 'react-icons/fa6';
 
-export default function Contact() {
+export default function Contact({ onNavigate }) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -22,18 +23,18 @@ export default function Contact() {
     {
       country: "Ghana",
       address: "Tema Community 25, Greater Accra Region, Ghana",
-      phone: "+233 55 032 4380",
-      email: "info@baefoundation.org",
-      whatsapp: "+233 55 032 4380",
+      phone: "+233 57 001 0755",
+      email: "baefoundation3@gmail.com",
+      whatsapp: "+233 57 001 0755",
       hours: "Mon - Fri: 8:00 AM - 5:00 PM",
       timezone: "GMT"
     },
     {
       country: "The Gambia",
       address: "Serrekunda, West Coast Region, The Gambia",
-      phone: "+220 321 4567",
-      email: "gambia@baefoundation.org",
-      whatsapp: "+220 321 4567",
+      phone: "+220 35 355 44",
+      email: "baefoundation3@gmail.com",
+      whatsapp: "+220 35 355 44",
       hours: "Mon - Fri: 8:00 AM - 5:00 PM",
       timezone: "GMT"
     }
@@ -147,7 +148,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Form */}
-      <section className="contact-form-section">
+      <section className="contact-form-section" id="contact-form">
         <div className="form-container">
           <div className="form-header">
             <h2>Send Us a Message</h2>
@@ -310,19 +311,19 @@ export default function Contact() {
             <h3>Follow Us</h3>
             <p>Stay connected with our latest updates and impact stories</p>
             <div className="social-links">
-              <a href="https://facebook.com/baefoundation" className="social-link facebook">
+              <a href="https://web.facebook.com/Christisbae/?viewas=100000686899395" target="_blank" rel="noopener noreferrer" className="social-link facebook">
                 <FaFacebook />
                 <span>Facebook</span>
               </a>
-              <a href="https://twitter.com/baefoundation" className="social-link twitter">
-                <FaTwitter />
-                <span>Twitter</span>
+              <a href="https://x.com/_baefoundation" target="_blank" rel="noopener noreferrer" className="social-link twitter">
+                <FaSquareXTwitter />
+                <span>X</span>
               </a>
-              <a href="https://instagram.com/baefoundation" className="social-link instagram">
+              <a href="https://www.instagram.com/_baefoundationgh/" target="_blank" rel="noopener noreferrer" className="social-link instagram">
                 <FaInstagram />
                 <span>Instagram</span>
               </a>
-              <a href="https://linkedin.com/company/baefoundation" className="social-link linkedin">
+              <a href="https://www.linkedin.com/company/before-anyone-else-foundation/" target="_blank" rel="noopener noreferrer" className="social-link linkedin">
                 <FaLinkedin />
                 <span>LinkedIn</span>
               </a>
@@ -376,10 +377,6 @@ export default function Contact() {
             <div className="faq-item">
               <h4>Do you accept international partnerships?</h4>
               <p>Yes! We welcome partnerships with organizations worldwide that share our mission of creating positive impact in African communities.</p>
-            </div>
-            <div className="faq-item">
-              <h4>How can I stay updated on your programs?</h4>
-              <p>Subscribe to our newsletter, follow our social media channels, or visit our blog for regular updates on our impact and programs.</p>
             </div>
           </div>
         </div>

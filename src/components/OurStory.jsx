@@ -69,7 +69,7 @@ import img2024_11 from "../assets/2024/FP-83.jpg";
 import img2024_12 from "../assets/2024/FP-71.jpg";
 import img2024_13 from "../assets/2024/FP-43.jpg";
 
-export default function OurStory() {
+export default function OurStory({ onNavigate }) {
   const [activeTimeline, setActiveTimeline] = useState(0);
   const [activeCarousel, setActiveCarousel] = useState(0);
 
@@ -351,7 +351,7 @@ export default function OurStory() {
             <div className="mv-icon-wrapper">
               <LuTarget className="mv-icon" />
             </div>
-            <h3>Our Mission</h3>
+            <h3>Our Core Mission</h3>
             <p>
               To serve as agents of change—championing compassion, justice, and
               ethical leadership—by integrating actionable practices that
@@ -371,6 +371,19 @@ export default function OurStory() {
               </strong>
               , where every person, regardless of background, has the
               opportunity to thrive.
+            </p>
+          </div>
+          <div className="mv-card mission-card">
+            <div className="mv-icon-wrapper">
+              <LuTarget className="mv-icon" />
+            </div>
+            <h3>Gospel Mission</h3>
+            <p>
+              To advance the principles of the Gospel across generations and
+              nations by equipping and deploying purpose-driven individuals to
+              fulfil God's present mandate by raising transformational agents
+              of change who place Christ, the Kingdom, and people before
+              systems, structures, programs, or processes.
             </p>
           </div>
         </div>
@@ -437,8 +450,8 @@ export default function OurStory() {
             people who believe in our mission. Help us write the next chapter.
           </p>
           <div className="cta-buttons">
-            <button className="donate">Join Our Mission</button>
-            <button className="volunteer">Volunteer With Us</button>
+            <button className="donate" onClick={() => onNavigate && onNavigate('donate')}>Support Our Mission</button>
+            <button className="volunteer" onClick={() => onNavigate && onNavigate('contact')}>Volunteer With Us</button>
           </div>
         </div>
       </section>

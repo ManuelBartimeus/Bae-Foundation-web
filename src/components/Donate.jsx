@@ -5,10 +5,10 @@ import { FiHeart, FiDollarSign, FiCreditCard, FiShield, FiUsers, FiTarget, FiGif
 import { FaPaypal, FaCcVisa, FaCcMastercard, FaMobileAlt, FaUniversity } from 'react-icons/fa';
 
 // Import images
-import aboutImg from '../assets/about-us-pic.jpg';
-import studyGroupImg from '../assets/study-group-african-people_23-2149156390.jpg';
-import kidsEnjoyingImg from '../assets/african-kids-enjoying-life_23-2151438340.jpg';
-import africanWomanImg from '../assets/african-woman-teaching-children-class.jpg';
+import neededImg from '../assets/donation/needed_most.jpg';
+import educationImg from '../assets/donation/education.jpg';
+import healthcareImg from '../assets/donation/healthcare.jpg';
+import womenImg from '../assets/donation/women_empowerment.jpg';
 
 export default function Donate() {
   const [donationAmount, setDonationAmount] = useState(50);
@@ -25,50 +25,35 @@ export default function Donate() {
       name: 'Where Most Needed',
       description: 'Support our most urgent programs and initiatives',
       icon: <FiTarget />,
-      image: aboutImg,
-      impact: 'Flexible funding for maximum impact across all programs'
+      image: neededImg,
+      impact: 'Flexible funding that targets maximum impact across all programs and initiatives of the foundation'
     },
     {
       id: 'education',
       name: 'Education Programs',
       description: 'Fund schools, supplies, and teacher training',
       icon: <FiUsers />,
-      image: studyGroupImg,
-      impact: '$25 provides school supplies for 1 child for 3 months'
+      image: educationImg,
+      impact: 'Your support provides school supplies for several children in our education outreaches'
     },
     {
       id: 'health',
       name: 'Healthcare Access',
       description: 'Mobile clinics and health services',
       icon: <FiHeart />,
-      image: kidsEnjoyingImg,
-      impact: '$50 sponsors health checkups for 5 people'
+      image: healthcareImg,
+      impact: 'Contributes to medical care for families in underserved communities through our health initiatives'
     },
     {
       id: 'women',
       name: 'Women Empowerment',
       description: 'Microfinance and business training for women',
       icon: <FiStar />,
-      image: africanWomanImg,
-      impact: '$100 provides microloan and training for 1 woman'
+      image: womenImg,
+      impact: 'Funding for empowerment programs, training conference and startup capital to support the dreams of young women'
     }
   ];
 
-  const paymentMethods = [
-    { id: 'card', name: 'Credit/Debit Card', icon: <FiCreditCard />, available: true },
-    { id: 'paypal', name: 'PayPal', icon: <FaPaypal />, available: true },
-    { id: 'bank', name: 'Bank Transfer', icon: <FaUniversity />, available: true },
-    { id: 'mobile', name: 'Mobile Money', icon: <FaMobileAlt />, available: true }
-  ];
-
-  const impactCalculations = {
-    25: { children: 1, meals: 50, books: 5 },
-    50: { children: 2, meals: 100, books: 10 },
-    100: { children: 4, meals: 200, books: 20 },
-    250: { children: 10, meals: 500, books: 50 },
-    500: { children: 20, meals: 1000, books: 100 },
-    1000: { children: 40, meals: 2000, books: 200 }
-  };
 
   const getImpact = (amount) => {
     const closest = presetAmounts.reduce((prev, curr) => 
@@ -125,7 +110,7 @@ export default function Donate() {
               </div>
 
               {/* Donation Type */}
-              <div className="donation-type">
+              {/* <div className="donation-type">
                 <div className="type-buttons">
                   <button
                     type="button"
@@ -144,7 +129,7 @@ export default function Donate() {
                     Monthly Giving
                   </button>
                 </div>
-              </div>
+              </div> */}
 
               {/* Cause Selection */}
               <div className="cause-selection">
@@ -167,7 +152,7 @@ export default function Donate() {
               </div>
 
               {/* Amount Selection */}
-              <div className="amount-selection">
+              {/* <div className="amount-selection">
                 <h3>Donation Amount</h3>
                 <div className="amount-presets">
                   {presetAmounts.map(amount => (
@@ -195,30 +180,7 @@ export default function Donate() {
                     />
                   </div>
                 </div>
-              </div>
-
-              {/* Payment Method */}
-              <div className="payment-method">
-                <h3>Payment Method</h3>
-                <div className="payment-options">
-                  {paymentMethods.map(method => (
-                    <button
-                      key={method.id}
-                      type="button"
-                      className={`payment-btn ${paymentMethod === method.id ? 'active' : ''} ${!method.available ? 'disabled' : ''}`}
-                      onClick={() => method.available && setPaymentMethod(method.id)}
-                      disabled={!method.available}
-                    >
-                      {method.icon}
-                      <span>{method.name}</span>
-                    </button>
-                  ))}
-                </div>
-                <div className="payment-security">
-                  <FiShield className="security-icon" />
-                  <span>Your payment is secured with 256-bit SSL encryption</span>
-                </div>
-              </div>
+              </div> */}
 
               {/* Donate Button */}
               <button type="submit" className="donate-btn" disabled={isProcessing}>
@@ -230,7 +192,7 @@ export default function Donate() {
                 ) : (
                   <>
                     <FiHeart />
-                    Donate ${donationAmount} {donationType === 'monthly' ? '/month' : 'now'}
+                    Donate
                   </>
                 )}
               </button>
@@ -250,21 +212,6 @@ export default function Donate() {
                 <div className="cause-details">
                   <h4>{causes.find(c => c.id === selectedCause)?.name}</h4>
                   <p>{causes.find(c => c.id === selectedCause)?.impact}</p>
-                </div>
-              </div>
-              
-              <div className="impact-metrics">
-                <div className="metric">
-                  <span className="metric-number">{getImpact(donationAmount).children}</span>
-                  <span className="metric-label">Children Supported</span>
-                </div>
-                <div className="metric">
-                  <span className="metric-number">{getImpact(donationAmount).meals}</span>
-                  <span className="metric-label">Meals Provided</span>
-                </div>
-                <div className="metric">
-                  <span className="metric-number">{getImpact(donationAmount).books}</span>
-                  <span className="metric-label">Books Distributed</span>
                 </div>
               </div>
 
@@ -315,7 +262,7 @@ export default function Donate() {
               <FiGift className="way-icon" />
               <h3>Corporate Partnerships</h3>
               <p>Partner with us for employee giving programs, CSR initiatives, and matching gift opportunities.</p>
-              <button className="way-btn">Learn More</button>
+              <button className="way-btn">Reach Out</button>
             </div>
             
             <div className="way-card">
@@ -350,7 +297,7 @@ export default function Donate() {
             <div className="story-card">
               <p>"Supporting BAE Foundation's education programs has been incredibly rewarding. Seeing the updates and photos of children using the supplies I funded brings me so much joy."</p>
               <div className="story-author">
-                <strong>Sarah Johnson</strong>
+                <strong>Daniela Asabea George</strong>
                 <span>Monthly Donor since 2023</span>
               </div>
             </div>
@@ -358,7 +305,7 @@ export default function Donate() {
             <div className="story-card">
               <p>"The transparency and regular communication from BAE Foundation gives me confidence that my donations are making a real difference in African communities."</p>
               <div className="story-author">
-                <strong>Michael Chen</strong>
+                <strong>George Amankwatah</strong>
                 <span>Corporate Partner</span>
               </div>
             </div>
@@ -366,7 +313,7 @@ export default function Donate() {
             <div className="story-card">
               <p>"I started with a small donation and have watched the foundation grow. Their impact on women's empowerment aligns perfectly with my values."</p>
               <div className="story-author">
-                <strong>Emma Williams</strong>
+                <strong>Ethel Shieley Anang</strong>
                 <span>Legacy Donor</span>
               </div>
             </div>

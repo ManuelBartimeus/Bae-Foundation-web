@@ -7,7 +7,7 @@ import { FiUser, FiStar, FiHome } from "react-icons/fi";
 import { FaQuoteLeft, FaWhatsapp, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { SiThreads } from "react-icons/si";
 
-export default function FoundersMessage() {
+export default function FoundersMessage({ onNavigate }) {
   // Count-up animations for founder stats
   const founderYears = useCountUp(9, 2000);
   const livesImpacted = useCountUpFromString('12K+', 2000);
@@ -119,7 +119,7 @@ export default function FoundersMessage() {
               </div>
               
               <div className="social-media-icons">
-                <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className="founder-social-icon whatsapp">
+                <a href="https://wa.me/233243575562" target="_blank" rel="noopener noreferrer" className="founder-social-icon whatsapp">
                   <FaWhatsapp />
                 </a>
                 <a href="https://www.threads.com/@capt.derrick_pope?xmt=AQF0ADeMZol0PnYuHJ-XF72c9CZuBmD20_AxSsAyoePlm4M" target="_blank" rel="noopener noreferrer" className="founder-social-icon threads">
@@ -161,8 +161,8 @@ export default function FoundersMessage() {
             Your support enables us to continue serving those who need it most.
           </p>
           <div className="cta-buttons">
-            <button className="donate">Support Our Cause</button>
-            <button className="founder-volunteer">Become a Volunteer</button>
+            <button className="donate" onClick={() => onNavigate && onNavigate('donate')}>Support Our Cause</button>
+            <button className="founder-volunteer" onClick={() => onNavigate && onNavigate('contact')}>Become a Volunteer</button>
           </div>
         </div>
       </section>

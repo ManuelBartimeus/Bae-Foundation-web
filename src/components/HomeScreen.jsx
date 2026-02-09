@@ -42,9 +42,24 @@ import hygieneOutreachImg from "../assets/HHo-89.jpg";
 import healthImg from "../assets/SAFE-HEALING-SPACES-RESOURCES-FOR-BLACK-WOMEN-1-1024x681.jpg";
 import reelVideo from "../assets/reel-video.mp4";
 
-export default function HomeScreen() {
+export default function HomeScreen({ onNavigate }) {
   const videoRef = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Navigation handlers for impact cards
+  const handleCardNavigation = (cardNumber) => {
+    const navigationMap = {
+      1: 'our-story',      // Card 1 → ourstory.jsx
+      2: 'portfolio',      // Card 2 → portfolio.jsx
+      3: 'projects',       // Card 3 → projects.jsx
+      4: 'portfolio',      // Card 4 → portfolio.jsx
+      5: 'portfolio',      // Card 5 → portfolio.jsx
+      6: 'team'            // Card 6 → team.jsx
+    };
+    if (onNavigate) {
+      onNavigate(navigationMap[cardNumber]);
+    }
+  };
 
   // Slideshow data
   const slides = [
@@ -123,11 +138,11 @@ export default function HomeScreen() {
   }, []);
 
   // Count-up animations for impact cards
-  const years = useCountUp(9, 2000);
+  const years = useCountUp(10, 2000);
   const beneficiaries = useCountUpFromString("12K+", 2000);
   const initiatives = useCountUp(7, 2000);
   const campaigns = useCountUpFromString("16+", 2000);
-  const volunteers = useCountUpFromString("50+", 2000);
+  const volunteers = useCountUpFromString("22+", 2000);
   const partners = useCountUpFromString("10+", 2000);
 
   // Count-up animations for stats sections
@@ -169,12 +184,12 @@ export default function HomeScreen() {
           </p>
 
           <div className="es-cta">
-            <button className="es-btn-primary" aria-label="Donate Now">
+            <button className="es-btn-primary" aria-label="Donate Now" onClick={() => onNavigate && onNavigate('donate')}>
               <span>Donate Now</span>
               <FaArrowRight className="es-btn-icon" aria-hidden="true" />
             </button>
 
-            <button className="es-btn-ghost" aria-label="Learn More">
+            <button className="es-btn-ghost" aria-label="Learn More" onClick={() => onNavigate && onNavigate('donate')}>
               Learn More
             </button>
           </div>
@@ -377,13 +392,13 @@ export default function HomeScreen() {
               <h3 className="metric-main" ref={years.ref}>
                 {years.count} Years
               </h3>
-              <p className="metric-title">Since Establishment</p>
+              <p className="metric-title">Of Active Service</p>
               <p className="metric-text">
                 Nearly a decade of dedicated service to communities in need
                 across Ghana and beyond.
               </p>
             </div>
-            <div className="card-image">
+            <div className="card-image" onClick={() => handleCardNavigation(1)} style={{ cursor: 'pointer' }}>
               <div className="card-icon">
                 <FaArrowRight />
               </div>
@@ -405,11 +420,11 @@ export default function HomeScreen() {
               </h3>
               <p className="metric-title">Beneficiaries</p>
               <p className="metric-text">
-                Thousands of lives touched through our comprehensive support
+                Thousands of lives touched through our support
                 programs and initiatives.
               </p>
             </div>
-            <div className="card-image">
+            <div className="card-image" onClick={() => handleCardNavigation(2)} style={{ cursor: 'pointer' }}>
               <div className="card-icon">
                 <FaArrowRight />
               </div>
@@ -431,11 +446,11 @@ export default function HomeScreen() {
               </h3>
               <p className="metric-title">Successfully Launched</p>
               <p className="metric-text">
-                Strategic programs designed to address key challenges in
+                Strategic programs targeted at key challenges in
                 education, health, and poverty alleviation.
               </p>
             </div>
-            <div className="card-image">
+            <div className="card-image" onClick={() => handleCardNavigation(3)} style={{ cursor: 'pointer' }}>
               <div className="card-icon">
                 <FaArrowRight />
               </div>
@@ -457,11 +472,11 @@ export default function HomeScreen() {
               </h3>
               <p className="metric-title">Successful Campaigns</p>
               <p className="metric-text">
-                Impactful campaigns that have raised awareness and resources for
+                Impactful campaigns that have raised awareness for
                 vulnerable communities.
               </p>
             </div>
-            <div className="card-image">
+            <div className="card-image" onClick={() => handleCardNavigation(4)} style={{ cursor: 'pointer' }}>
               <div className="card-icon">
                 <FaArrowRight />
               </div>
@@ -481,13 +496,13 @@ export default function HomeScreen() {
               <h3 className="metric-main" ref={volunteers.ref}>
                 {volunteers.count}
               </h3>
-              <p className="metric-title">Registered Volunteers</p>
+              <p className="metric-title">Impact Programs & Events</p>
               <p className="metric-text">
-                Dedicated individuals committed to making a difference in their
-                communities through service.
+                People-driven programs and events that have fostered impact
+                in motion for a lasting change.
               </p>
             </div>
-            <div className="card-image">
+            <div className="card-image" onClick={() => handleCardNavigation(5)} style={{ cursor: 'pointer' }}>
               <div className="card-icon">
                 <FaArrowRight />
               </div>
@@ -513,7 +528,7 @@ export default function HomeScreen() {
                 maximize our collective impact.
               </p>
             </div>
-            <div className="card-image">
+            <div className="card-image" onClick={() => handleCardNavigation(6)} style={{ cursor: 'pointer' }}>
               <div className="card-icon">
                 <FaArrowRight />
               </div>
@@ -729,8 +744,8 @@ export default function HomeScreen() {
             and reach even more communities in need.
           </p>
           <div className="home-cta-buttons">
-            <button className="donate">Donate Now</button>
-            <button className="volunteer">Volunteer</button>
+            <button className="donate" onClick={() => onNavigate && onNavigate('donate')}>Donate Now</button>
+            <button className="volunteer" onClick={() => onNavigate && onNavigate('contact')}>Volunteer</button>
           </div>
         </div>
 
