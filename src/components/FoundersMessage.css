@@ -4,11 +4,11 @@
 .founder-hero {
   background: linear-gradient(135deg, #1520a6 0%, #2563eb 100%);
   color: white;
-  padding: 120px 20px 80px;
-  margin: 0 -48px 0 -48px;
+  padding: 6rem 2rem 4rem;
   text-align: center;
   position: relative;
   overflow: hidden;
+  border-radius: 35px;
 }
 
 .founder-hero::before {
@@ -288,11 +288,6 @@
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .founder-hero {
-    margin: 0 -32px 0 -32px;
-    padding: 100px 20px 60px;
-  }
-  
   .hero-quote {
     font-size: 2.5rem;
   }
@@ -304,13 +299,8 @@
 }
 
 @media (max-width: 768px) {
-  .founder-hero {
-    margin: 0 -20px 0 -20px;
-    padding: 80px 20px 50px;
-  }
-  
   .hero-quote {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   
   .quote-icon {
@@ -346,11 +336,6 @@
 }
 
 @media (max-width: 480px) {
-  .founder-hero {
-    margin: 0 -14px 0 -14px;
-    padding: 60px 14px 40px;
-  }
-  
   .hero-quote {
     font-size: 1.5rem;
   }
@@ -377,13 +362,8 @@
 }
 
 @media (max-width: 768px) {
-  .founder-hero {
-    margin: 0 -20px 0 -20px;
-    padding: 80px 15px 50px;
-  }
-  
   .hero-quote {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   
   .quote-icon {
@@ -429,11 +409,6 @@
 }
 
 @media (max-width: 480px) {
-  .founder-hero {
-    margin: 0 -14px 0 -14px;
-    padding: 60px 10px 40px;
-  }
-  
   .hero-quote {
     font-size: 1.5rem;
   }
@@ -444,5 +419,11 @@
   
   .founder-cta {
     padding: 40px 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .hero-quote {
+    font-size: 1.8rem;
   }
 }

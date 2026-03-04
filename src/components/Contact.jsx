@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import './AboutScreen.css';
 import './Contact.css';
 import { FiPhone, FiMail, FiMapPin, FiClock, FiSend, FiUser, FiMessageSquare, FiGlobe, FiCalendar } from 'react-icons/fi';
@@ -6,6 +7,18 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa'
 import { FaSquareXTwitter } from 'react-icons/fa6';
 
 export default function Contact({ onNavigate }) {
+  const location = useLocation();
+
+  // Scroll to the contact form when navigated here with scrollToForm flag
+  useEffect(() => {
+    if (location.state?.scrollToForm) {
+      setTimeout(() => {
+        const el = document.getElementById('contact-form');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  }, [location.state]);
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -16,7 +29,6 @@ export default function Contact({ onNavigate }) {
     inquiryType: 'general'
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
 
   const contactInfo = [
@@ -57,24 +69,44 @@ export default function Contact({ onNavigate }) {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const scrollToContactForm = () => {
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setSubmitMessage('Thank you for your message! We will get back to you within 24 hours.');
-      setIsSubmitting(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: '',
-        country: 'Ghana',
-        inquiryType: 'general'
-      });
-    }, 2000);
+
+    const { name, email, phone, country, inquiryType, subject, message } = formData;
+    const inquiryLabel = inquiryTypes.find(t => t.value === inquiryType)?.label || inquiryType;
+
+    const emailBody = [
+      `Name: ${name}`,
+      `Email: ${email}`,
+      `Phone: ${phone || 'N/A'}`,
+      `Country/Region: ${country}`,
+      `Inquiry Type: ${inquiryLabel}`,
+      `Subject: ${subject}`,
+      ``,
+      `Message:`,
+      message,
+    ].join('\n');
+
+    const mailtoLink = `mailto:baefoundation3@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+    window.location.href = mailtoLink;
+
+    setSubmitMessage('Your email client has been opened with your message pre-filled. Please send the email to complete your inquiry.');
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      subject: '',
+      message: '',
+      country: 'Ghana',
+      inquiryType: 'general'
+    });
   };
 
   return (
@@ -287,18 +319,9 @@ export default function Contact({ onNavigate }) {
               ></textarea>
             </div>
             
-            <button type="submit" className="submit-btn" disabled={isSubmitting}>
-              {isSubmitting ? (
-                <>
-                  <div className="loading-spinner"></div>
-                  Sending Message...
-                </>
-              ) : (
-                <>
-                  <FiSend />
-                  Send Message
-                </>
-              )}
+            <button type="submit" className="submit-btn">
+              <FiSend />
+              Send Message
             </button>
           </form>
         </div>
@@ -333,7 +356,7 @@ export default function Contact({ onNavigate }) {
           <div className="quick-actions">
             <h3>Quick Actions</h3>
             <div className="action-buttons">
-              <button className="action-btn volunteer">
+              <button className="action-btn volunteer" onClick={scrollToContactForm}>
                 <FiUser />
                 <div>
                   <span className="action-title">Become a Volunteer</span>
@@ -341,7 +364,7 @@ export default function Contact({ onNavigate }) {
                 </div>
               </button>
               
-              <button className="action-btn partner">
+              <button className="action-btn partner" onClick={scrollToContactForm}>
                 <FiGlobe />
                 <div>
                   <span className="action-title">Partner With Us</span>
@@ -349,7 +372,7 @@ export default function Contact({ onNavigate }) {
                 </div>
               </button>
               
-              <button className="action-btn schedule">
+              <button className="action-btn schedule" onClick={scrollToContactForm}>
                 <FiCalendar />
                 <div>
                   <span className="action-title">Schedule a Meeting</span>

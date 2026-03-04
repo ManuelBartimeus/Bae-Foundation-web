@@ -10,12 +10,11 @@ import educationImg from '../assets/donation/education.jpg';
 import healthcareImg from '../assets/donation/healthcare.jpg';
 import womenImg from '../assets/donation/women_empowerment.jpg';
 
-export default function Donate() {
+export default function Donate({ onNavigate }) {
   const [donationAmount, setDonationAmount] = useState(50);
   const [donationType, setDonationType] = useState('one-time');
   const [selectedCause, setSelectedCause] = useState('general');
   const [paymentMethod, setPaymentMethod] = useState('card');
-  const [isProcessing, setIsProcessing] = useState(false);
 
   const presetAmounts = [25, 50, 100, 250, 500, 1000];
   
@@ -64,13 +63,7 @@ export default function Donate() {
 
   const handleDonationSubmit = (e) => {
     e.preventDefault();
-    setIsProcessing(true);
-    
-    // Simulate payment processing
-    setTimeout(() => {
-      setIsProcessing(false);
-      alert('Thank you for your generous donation! You will receive a confirmation email shortly.');
-    }, 3000);
+    window.open('https://selar.com/showlove/baefoundation', '_blank');
   };
 
   return (
@@ -183,18 +176,9 @@ export default function Donate() {
               </div> */}
 
               {/* Donate Button */}
-              <button type="submit" className="donate-btn" disabled={isProcessing}>
-                {isProcessing ? (
-                  <>
-                    <div className="loading-spinner"></div>
-                    Processing...
-                  </>
-                ) : (
-                  <>
-                    <FiHeart />
-                    Donate
-                  </>
-                )}
+              <button type="submit" className="donate-btn">
+                <FiHeart />
+                Donate
               </button>
 
               <p className="donation-note">
@@ -262,28 +246,28 @@ export default function Donate() {
               <FiGift className="way-icon" />
               <h3>Corporate Partnerships</h3>
               <p>Partner with us for employee giving programs, CSR initiatives, and matching gift opportunities.</p>
-              <button className="way-btn">Reach Out</button>
+              <button className="way-btn" onClick={() => onNavigate && onNavigate('contact')}>Reach Out</button>
             </div>
             
             <div className="way-card">
               <FiUsers className="way-icon" />
               <h3>Volunteer Your Time</h3>
               <p>Join our volunteer programs and contribute your skills to make a direct impact in communities.</p>
-              <button className="way-btn">Get Involved</button>
+              <button className="way-btn" onClick={() => onNavigate && onNavigate('contact')}>Get Involved</button>
             </div>
             
             <div className="way-card">
               <FiStar className="way-icon" />
               <h3>Legacy Giving</h3>
               <p>Create a lasting legacy by including BAE Foundation in your will or estate planning.</p>
-              <button className="way-btn">Plan Your Legacy</button>
+              <button className="way-btn" onClick={() => onNavigate && onNavigate('contact')}>Plan Your Legacy</button>
             </div>
             
             <div className="way-card">
               <FiTarget className="way-icon" />
               <h3>Fundraise for Us</h3>
               <p>Start your own fundraising campaign for birthdays, events, or special occasions.</p>
-              <button className="way-btn">Start Fundraising</button>
+              <button className="way-btn" onClick={() => onNavigate && onNavigate('contact')}>Start Fundraising</button>
             </div>
           </div>
         </div>

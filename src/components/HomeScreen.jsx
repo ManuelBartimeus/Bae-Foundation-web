@@ -189,7 +189,7 @@ export default function HomeScreen({ onNavigate }) {
               <FaArrowRight className="es-btn-icon" aria-hidden="true" />
             </button>
 
-            <button className="es-btn-ghost" aria-label="Learn More" onClick={() => onNavigate && onNavigate('donate')}>
+            <button className="es-btn-ghost" aria-label="Learn More" onClick={() => onNavigate && onNavigate('our-story')}>
               Learn More
             </button>
           </div>

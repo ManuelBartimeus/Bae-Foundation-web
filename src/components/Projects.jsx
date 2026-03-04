@@ -13,7 +13,11 @@ import initiative6 from '../assets/initiatives/initiative-6.png';
 import initiative7 from '../assets/initiatives/initiative-7.png';
 import initiative8 from '../assets/initiatives/initiative-8.png';
 
-export default function Projects({ onNavigate, selectedProjectId }) {
+import { useLocation } from 'react-router-dom';
+
+export default function Projects({ onNavigate }) {
+  const location = useLocation();
+  const selectedProjectId = location.state?.selectedProjectId ?? null;
   const [activeFilter, setActiveFilter] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedProject, setSelectedProject] = useState(null);

@@ -4,6 +4,7 @@
   padding: 6rem 2rem 4rem;
   background: linear-gradient(135deg, #1520a6 0%, #1520a680 100%);
   color: white;
+  border-radius: 35px;
 }
 
 .donate-header h1 {
@@ -713,10 +714,6 @@
 }
 
 @media (max-width: 480px) {
-  .donate-header {
-    padding: 4rem 1rem 3rem;
-  }
-  
   .donation-section,
   .other-ways,
   .donor-stories {
