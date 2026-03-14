@@ -159,17 +159,6 @@ export default function HomeScreen({ onNavigate }) {
       <section className="es-hero" aria-labelledby="hero-heading">
         {/* Left column */}
         <aside className="es-left" aria-label="Intro column">
-          <div className="es-donor-row" aria-hidden="false">
-            <img
-              src={volunteer}
-              alt="donor avatars preview"
-              className="es-donor-avatars"
-            />
-            <span className="es-donor-label">
-              50+ Active international volunteers
-            </span>
-          </div>
-
           <h1 id="hero-heading" className="es-title">
             Empowering
             <br />

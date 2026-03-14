@@ -8,18 +8,14 @@ import { FaGraduationCap, FaHandsHelping, FaLeaf, FaHeart, FaShoppingBag } from 
 import legacyStoreLogo from '../assets/Legacy Store logo png.png';
 
 // Import merchandise images
-import hopeLivesHereTshirt from '../assets/merch/hope_lives_here_tshirt.jpg';
-import serveWithPurposeCap from '../assets/merch/serve_with_purpose_cap.jpg';
-import changeMakerWristband from '../assets/merch/change_maker_wristband.jpg';
-import purposePlannerNotebook from '../assets/merch/purpose_planner_notepad.jpg';
-import writeForChangePenSet from '../assets/merch/write_for_change_pen_set.jpg';
-import learnAndRiseFlashCards from '../assets/merch/learn_and_rise_flash_card.jpg';
-import sustainLifeWaterBottle from '../assets/merch/sustain_life_water_bottle.jpg';
-import carryHopeToteBag from '../assets/merch/carry_hope_tote bag.jpg';
-import keyToChangeKeyHolder from '../assets/merch/keys_to_change_keyholder.jpg';
-import hopeEveryMorningMug from '../assets/merch/hope_every_morning_mug.jpg';
-import messageOfHopePoster from '../assets/merch/message_of_hope_poster.jpg';
-import dailyLightDevotional from '../assets/merch/daily_light_devotional.jpg';
+import itempen1 from '../assets/merch/pen.png';
+import itemshirt1 from '../assets/merch/shirt 1.png';
+import itemshirt2 from '../assets/merch/shirt 2.png';
+import itemshirt3 from '../assets/merch/shirt 3.png';
+import itemshirt4 from '../assets/merch/shirt 4.png';
+import itemflask1 from '../assets/merch/Thermal Flask.png';
+import itemtote1 from '../assets/merch/tote 1.png';
+import itemtote2 from '../assets/merch/tote 2.png';
 
 export default function ImpactShop({ onNavigate }) {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -31,154 +27,98 @@ export default function ImpactShop({ onNavigate }) {
     { id: 'all', name: 'All Products', icon: <FaShoppingBag /> },
     { id: 'apparel', name: 'Apparel & Wearables', icon: <FaGraduationCap /> },
     { id: 'stationery', name: 'Stationery & Learning', icon: <FaHeart /> },
-    { id: 'lifestyle', name: 'Lifestyle & Accessories', icon: <FaHandsHelping /> },
-    { id: 'faith', name: 'Faith & Inspiration', icon: <FaLeaf /> }
+    { id: 'lifestyle', name: 'Lifestyle', icon: <FaHandsHelping /> },
+    { id: 'accessories', name: 'Accessories', icon: <FaLeaf /> }
   ];
 
   const products = [
     {
       id: 1,
-      name: "Hope Lives Here T-Shirt",
+      name: "Anniversary 'Impact' Tee (White)",
       category: "apparel",
-      price: 120,
-      description: "A comfortable cotton T-shirt branded with the foundation's message of hope and service. Designed for everyday wear and outreach events.",
-      image: hopeLivesHereTshirt,
-      impact: "One purchase supports basic relief materials for a vulnerable family during outreach programs.",
-      rating: 4.7,
-      reviews: 89,
-      purchaseLink: "https://selar.com/v1wds47o16"
+      price: 150,
+      description: "A clean, white premium cotton tee featuring the 10th Anniversary logo on the chest and a bold vertical 'Places, People, Impact, Project, Service' graphic.",
+      image: itemshirt1,
+      rating: 4.8,
+      reviews: 12,
+      purchaseLink: "https://selar.com/y6ak7u71q6"
     },
     {
       id: 2,
-      name: "Serve With Purpose Cap",
-      category: "apparel",
+      name: "Legacy Adinkra Tote",
+      category: "accessories",
       price: 80,
-      description: "A durable, adjustable cap featuring the foundation's logo, suitable for outdoor outreach activities.",
-      image: serveWithPurposeCap,
-      impact: "Funds transportation for volunteers to rural outreach locations.",
-      rating: 4.5,
-      reviews: 72,
-      purchaseLink: "https://selar.com/8467mapx1b"
-    },
-    {
-      id: 3,
-      name: "Change Maker Wristband",
-      category: "apparel",
-      price: 30,
-      description: "Silicone wristband printed with a short inspirational message representing the foundation's mission.",
-      image: changeMakerWristband,
-      impact: "Supports the printing of educational materials for community sensitization programs.",
-      rating: 4.6,
-      reviews: 134,
-      purchaseLink: "https://selar.com/641w11u666"
-    },
-    {
-      id: 4,
-      name: "Purpose Planner Notebook",
-      category: "stationery",
-      price: 60,
-      description: "A high-quality notebook with motivational quotes and the foundation's branding.",
-      image: purposePlannerNotebook,
-      impact: "Helps provide school supplies for underprivileged children.",
-      rating: 4.8,
-      reviews: 156,
-      purchaseLink: "https://selar.com/815r957716"
-    },
-    {
-      id: 5,
-      name: "Write for Change Pen Set",
-      category: "stationery",
-      price: 25,
-      description: "A set of branded pens ideal for daily use at school, work, or outreach events.",
-      image: writeForChangePenSet,
-      impact: "Contributes to literacy and reading programs in underserved communities.",
-      rating: 4.4,
-      reviews: 98,
-      purchaseLink: "https://selar.com/27x7885l37"
-    },
-    {
-      id: 6,
-      name: "Learn & Rise Flash Cards",
-      category: "stationery",
-      price: 50,
-      description: "Simple educational flash cards designed for early childhood learning during community outreaches.",
-      image: learnAndRiseFlashCards,
-      impact: "Supports early childhood education initiatives in rural areas.",
-      rating: 4.7,
-      reviews: 112,
-      purchaseLink: "https://selar.com/81m484959j"
-    },
-    {
-      id: 7,
-      name: "Sustain Life Water Bottle",
-      category: "lifestyle",
-      price: 100,
-      description: "A reusable, eco-friendly water bottle with the foundation's logo.",
-      image: sustainLifeWaterBottle,
-      impact: "Promotes environmental responsibility while funding clean-water awareness programs.",
+      description: "Durable canvas tote bag featuring the 10th Anniversary seal and a decorative Adinkra symbol border representing wisdom and continuity.",
+      image: itemtote1,
       rating: 4.9,
-      reviews: 203,
-      purchaseLink: "https://selar.com/66d9dy8p17"
-    },
-    {
-      id: 8,
-      name: "Carry Hope Tote Bag",
-      category: "lifestyle",
-      price: 70,
-      description: "A strong canvas tote bag suitable for shopping, school, or outreach use.",
-      image: carryHopeToteBag,
-      impact: "Supports women empowerment initiatives through skills training programs.",
-      rating: 4.6,
-      reviews: 145,
-      purchaseLink: "https://selar.com/727007am79"
-    },
-    {
-      id: 9,
-      name: "Key to Change Key Holder",
-      category: "lifestyle",
-      price: 20,
-      description: "A simple branded key holder that keeps your keys organized while spreading awareness.",
-      image: keyToChangeKeyHolder,
-      impact: "Helps cover administrative costs for outreach coordination.",
-      rating: 4.3,
-      reviews: 67,
-      purchaseLink: "https://selar.com/ukf68i1278"
-    },
-    {
-      id: 10,
-      name: "Hope Every Morning Mug",
-      category: "faith",
-      price: 65,
-      description: "A ceramic mug printed with an encouraging message aligned with the foundation's values.",
-      image: hopeEveryMorningMug,
-      impact: "Supports counseling and emotional-support outreach programs.",
-      rating: 4.8,
-      reviews: 178,
-      purchaseLink: "https://selar.com/10611l6896"
-    },
-    {
-      id: 11,
-      name: "Message of Hope Poster",
-      category: "faith",
-      price: 45,
-      description: "A beautifully designed poster carrying a strong message of resilience and compassion.",
-      image: messageOfHopePoster,
-      impact: "Funds community awareness campaigns and advocacy efforts.",
-      rating: 4.5,
-      reviews: 92,
+      reviews: 25,
       purchaseLink: "https://selar.com/tf55l17561"
     },
     {
-      id: 12,
-      name: "Daily Light Devotional",
-      category: "faith",
-      price: 40,
-      description: "A short devotional booklet encouraging reflection, compassion, and service.",
-      image: dailyLightDevotional,
-      impact: "Supports spiritual and moral development sessions during outreach programs.",
+      id: 3,
+      name: "10 Years of Smiles Tote",
+      category: "accessories",
+      price: 85,
+      description: "An evocative canvas bag featuring a collage of the children and communities impacted over the last decade of service.",
+      image: itemtote2,
+      rating: 5.0,
+      reviews: 18,
+      purchaseLink: "https://selar.com/10611l6896"
+    },
+    {
+      id: 4,
+      name: "Commemorative Thermal Flask",
+      category: "lifestyle",
+      price: 200,
+      description: "Insulated stainless steel flask with a white finish, featuring the anniversary logo and traditional Adinkra patterns.",
+      image: itemflask1,
+      rating: 4.7,
+      reviews: 30,
+      purchaseLink: "https://selar.com/ukf68i1278"
+    },
+    {
+      id: 5,
+      name: "Anniversary 'Impact' Tee (Royal Blue)",
+      category: "apparel",
+      price: 150,
+      description: "Premium royal blue tee with high-contrast white typography highlighting the foundation's core pillars of service.",
+      image: itemshirt2,
       rating: 4.9,
-      reviews: 215,
-      purchaseLink: "https://selar.com/y6ak7u71q6"
+      reviews: 15,
+      purchaseLink: "https://selar.com/727007am79"
+    },
+    {
+      id: 6,
+      name: "Adinkra Heritage Tee (Royal Blue)",
+      category: "apparel",
+      price: 160,
+      description: "A vibrant blue tee featuring a unique Adinkra collar print and a large 10th-anniversary celebratory graphic.",
+      image: itemshirt3,
+      rating: 4.8,
+      reviews: 22,
+      purchaseLink: "https://selar.com/66d9dy8p17"
+    },
+    {
+      id: 7,
+      name: "Adinkra Heritage Tee (White)",
+      category: "apparel",
+      price: 160,
+      description: "Classic white tee with a blue Adinkra symbol collar design and the anniversary photo-collage logo.",
+      image: itemshirt4,
+      rating: 4.6,
+      reviews: 19,
+      purchaseLink: "https://selar.com/81m484959j"
+    },
+    {
+      id: 8,
+      name: "BAE Signature Stylus Pen",
+      category: "stationery",
+      price: 30,
+      description: "A sleek blue multi-function pen featuring anniversary branding and a soft-touch stylus tip for digital devices.",
+      image: itempen1,
+      rating: 4.5,
+      reviews: 40,
+      purchaseLink: "https://selar.com/27x7885l37"
     }
   ];
 
@@ -299,11 +239,6 @@ export default function ImpactShop({ onNavigate }) {
                 
                 <h3>{product.name}</h3>
                 <p className="product-description">{product.description}</p>
-                
-                <div className="product-impact">
-                  <FiHeart className="impact-icon" />
-                  <span>{product.impact}</span>
-                </div>
                 
                 <div className="product-rating">
                   <div className="stars">

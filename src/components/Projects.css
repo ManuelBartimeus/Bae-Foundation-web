@@ -95,6 +95,8 @@
   gap: 0.75rem;
   justify-content: center;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .filter-label {
@@ -614,7 +616,7 @@
   }
   
   .impact-stats {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
   
   .projects-cta {

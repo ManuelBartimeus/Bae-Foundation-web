@@ -104,7 +104,7 @@ export default function Team({ onNavigate }) {
             instagram: "https://www.instagram.com/every_thingsome10?igsh=OW1pNTZ2YXd2aXlr&utm_source=qr",
             email: "mailto: ahybee98@gmail.com"
           },
-          achievements: ["Project Management", "Youth Programs", "Local Government Service"]
+          achievements: ["Organizational Coordination", "Administrative Excellence", "Operations Management"]
         },
         {
           name: "Unity Reynard Nutakor",
@@ -116,7 +116,7 @@ export default function Team({ onNavigate }) {
             linkedin: "https://www.linkedin.com/in/reynard-nutakor-a60699379?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
             email: "mailto: reynardnutakor24@gmail.com"
           },
-          achievements: ["Technical Expert", "Group Leadership", "Human Relations"]
+          achievements: ["Logistics Planning", "Project Delivery", "Operational Efficiency"]
         },
         {
           name: "Vanessa Kwao",
@@ -129,7 +129,7 @@ export default function Team({ onNavigate }) {
             instagram: "https://www.instagram.com/vanessa_kwao?igsh=YzE1ejFsdDlhdDZi&utm_source=qr",
             email: "mailto: vannykwao@gmail.com"
           },
-          achievements: ["Founder & CEO", "Real Estate Solutions", "Human Relations"]
+          achievements: ["Partnership Development", "Stakeholder Engagement", "Resource Mobilization"]
         },
         {
           name: "Esunam Aseye Ami Akpaloo",
@@ -141,7 +141,7 @@ export default function Team({ onNavigate }) {
             instagram: "https://www.instagram.com/aseyeesunam/?utm_source=ig_web_button_share_sheet",
             email: "mailto: aseyeesunam@gmail.com"
           },
-          achievements: ["Nature Enthusiast", "Sustainable Solutions", "Environmental Activist"]
+          achievements: ["Regional Community Outreach", "Volta Development Programs", "Youth Empowerment"]
         },
         {
           name: "Doreen Selassie Dotse ",
@@ -153,7 +153,7 @@ export default function Team({ onNavigate }) {
             instagram: "https://www.instagram.com/sel.asiii/?utm_source=ig_web_button_share_sheet",
             email: "mailto: doreenselasi67@gmail.com"
           },
-          achievements: ["Youth Programs", "Youth Empowerment", "Girl-Child Activist"]
+          achievements: ["Community Leadership", "Youth Development Programs", "Local Empowerment"]
         },
         {
           name: "Nana Ankama Yirenkyi ",
@@ -165,11 +165,11 @@ export default function Team({ onNavigate }) {
             instagram: "https://www.instagram.com/op.nana_/?utm_source=ig_web_button_share_sheet",
             email: "mailto: nayirenkyi05@gmail.com"
           },
-          achievements: ["Multimedia Expert", "Community Mobilization", "Youth Development"]
+          achievements: ["Program Support", "Community Mobilization", "Youth Development"]
         },
         {
           name: "Manuel Bartimeus",
-          role: "IT & Digital Systems Manager",
+          role: "IT & Digital Systems Lead",
           bio: "Technology innovator driving digital transformation and systems infrastructure for BAE Foundation.",
           image: manuelBartimeus,
           location: "Tema, Ghana",
@@ -196,7 +196,7 @@ export default function Team({ onNavigate }) {
             facebook: "https://www.facebook.com/share/1BuifUQxx3/?mibextid=wwXIfr",
             email: "mailto: agnesgomez05@gmail.com"
           },
-          achievements: ["Policy Reformer", "Public Speaker", "Youth & Women Advocate"]
+          achievements: ["National Strategy", "Cross-Border Coordination", "Community Development"]
         },
         {
           name: "Alice Sally Macauley",
@@ -209,7 +209,7 @@ export default function Team({ onNavigate }) {
             instagram: "https://www.instagram.com/its_alicia_019",
             email: "mailto: sallymacauleyalice@gmail.com"
           },
-          achievements: ["Public Healthcare", "Hairstylist", "Travel Enthusiast"]
+          achievements: ["Program Management", "Project Coordination", "Community Implementation"]
         },
         {
           name: "Sarata Ceesay",
@@ -222,7 +222,7 @@ export default function Team({ onNavigate }) {
             x: "https://x.com/ceesaysarata?s=11&t=xVnB7_I_z6Lx6MlqVZ70xA",
             email: "mailto: ceesaysarata92@gmail.com"
           },
-          achievements: ["Public Speaker", "Youth Parliamentarian", "Political Enthusiast"]
+          achievements: ["Sponsorship Acquisition", "Partnership Building", "Resource Mobilization"]
         },
         {
           name: "Sarah Eyatundeh King",
@@ -235,7 +235,7 @@ export default function Team({ onNavigate }) {
             instagram: "https://www.instagram.com/xx_sarah_05?igsh=NTkzdXd5Z2N3eHFm&utm_source=qr",
             email: "mailto: saraheya555@gmail.com"
           },
-          achievements: ["Sales Specialist", "Administrative Expert", "Virtual Entrepreneur"]
+          achievements: ["Volunteer Management", "Community Outreach", "Civic Engagement"]
         },
         {
           name: "Cecelia Wuday Sanyang",
@@ -247,7 +247,7 @@ export default function Team({ onNavigate }) {
             x: "https://x.com/cecciahogero?s=11",
             email: "mailto: ceccisphotography@gmail.com"
           },
-          achievements: ["Visual Storyteller", "Photographer", "Girl-Child Advocate"]
+          achievements: ["Media Strategy", "Public Relations", "Brand Communications"]
         },
         {
           name: "Georgian Eda Badjie",
@@ -260,7 +260,7 @@ export default function Team({ onNavigate }) {
             instagram: "https://www.instagram.com/gina__eda?igsh=MWRsaTJxMWtnYjdveg==",
             email: "mailto: badjiegeorgian12@gmail.com"
           },
-          achievements: ["HR Management", "Project Management", "Policy Making Expert"]
+          achievements: ["Digital Communications", "Content Creation", "Media Support"]
         },
         {
           name: "Philip Kanform",
@@ -273,7 +273,7 @@ export default function Team({ onNavigate }) {
             facebook: "https://www.facebook.com/share/184NCjGZZL/",
             email: "mailto: pkanform10@gmail.com "
           },
-          achievements: ["Music Minister", "Youth Programs", "Local Partnerships"]
+          achievements: ["Operational Support", "Logistics Coordination", "Field Execution"]
         },
         {
           name: "Abigail Bennett Edet",
@@ -284,7 +284,7 @@ export default function Team({ onNavigate }) {
           socials: {
             instagram: "https://instagram.com/abigail.edet"
           },
-          achievements: ["Financial Projection", "Capacity Building", "Youth Development"]
+          achievements: ["Financial Management", "Budget Oversight", "Fiscal Transparency"]
         }
       ]
     }

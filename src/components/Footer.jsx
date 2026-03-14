@@ -166,7 +166,7 @@ export default function Footer({ onNavigate }) {
         <div className="footer-bottom-container">
           <p>Copyright © 2025 Before Anyone Else (B.A.E.) Foundation. | All Rights Reserved.</p>
           <p>
-            Powered by <span className="powered-by">Elite Creatives</span>
+            Powered by <a href="https://www.instagram.com/_elite_creatives/" target="_blank" rel="noopener noreferrer"><span className="powered-by">Elite Creatives</span></a>
           </p>
         </div>
       </div>

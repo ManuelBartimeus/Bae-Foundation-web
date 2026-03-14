@@ -188,7 +188,7 @@ export default function Blog({ onNavigate }) {
         </div>
       ),
       image: article3Img,
-      author: "Mr. Derrick Puplampu",
+      author: "Research & Development Team",
       date: "2025-11-10",
       readTime: 4,
       tags: ["Climate Action", "Youth Leadership", "Policy", "Sustainability", "Africa"],

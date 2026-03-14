@@ -9,7 +9,7 @@ import { SiThreads } from "react-icons/si";
 
 export default function FoundersMessage({ onNavigate }) {
   // Count-up animations for founder stats
-  const founderYears = useCountUp(9, 2000);
+  const founderYears = useCountUp(10, 2000);
   const livesImpacted = useCountUpFromString('12K+', 2000);
   const countries = useCountUp(2, 2000);
 

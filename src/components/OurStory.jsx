@@ -170,7 +170,7 @@ export default function OurStory({ onNavigate }) {
       icon: <FiAward />,
     },
     {
-      year: "2024",
+      year: "2024-2026",
       title: "International Reach",
       description:
         "A historic milestone as BAE Foundation's first international chapter was inaugurated in The Gambia through our Legacy & Expansion Program. The Legacy SPOTS decentralized model empowers local teams to design community-focused solutions across borders. This year marks our transition from a national to a truly multinational organization, extending our vision of transformative leadership and sustainable impact beyond Ghana's borders.",
@@ -242,7 +242,7 @@ export default function OurStory({ onNavigate }) {
 
             <div className="overview-stats">
               <div className="stat-card">
-                <span className="stat-number">9</span>
+                <span className="stat-number">10</span>
                 <span className="stat-label">Years of Service</span>
               </div>
               <div className="stat-card">

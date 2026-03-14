@@ -58,10 +58,12 @@
 .filter-tabs {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
-  max-width: 1000px;
+  max-width: 100%;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .filter-tab {
@@ -648,11 +650,14 @@
   
   .filter-tabs {
     gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   
   .filter-tab {
     padding: 0.8rem 1rem;
     font-size: 0.9rem;
+    white-space: normal;
   }
   
   .portfolio-container {
@@ -679,7 +684,7 @@
   }
   
   .portfolio-stats {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.8rem;
     padding: 1rem;
   }
@@ -763,7 +768,7 @@
   }
   
   .impact-overview {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
   
   .portfolio-cta {
