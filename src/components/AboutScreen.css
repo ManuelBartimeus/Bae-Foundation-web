@@ -151,6 +151,10 @@
   background: linear-gradient(135deg, #0077B5 0%, #0a66c2 100%);
 }
 
+.founder-social-icon.email {
+  background: linear-gradient(135deg, #e63946 0%, #a4161a 100%);
+}
+
 .rebuild-section {
   max-width: 1400px;
   margin: 60px auto;

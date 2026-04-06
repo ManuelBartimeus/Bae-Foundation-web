@@ -6,6 +6,7 @@ import FoundersMessage from './components/FoundersMessage';
 import OurStory from './components/OurStory';
 import Team from './components/Team';
 import Projects from './components/Projects';
+import Events from './components/Events';
 import Portfolio from './components/Portfolio';
 import ImpactShop from './components/ImpactShop';
 import Blog from './components/Blog';
@@ -24,6 +25,7 @@ const PAGE_ROUTES = {
   'our-story': '/our-story',
   'team': '/team',
   'projects': '/projects',
+  'events': '/events',
   'portfolio': '/portfolio',
   'impact-shop': '/impact-shop',
   'blog': '/blog',
@@ -74,6 +76,7 @@ function App() {
         <Route path="/our-story" element={<OurStory onNavigate={handleNavigation} />} />
         <Route path="/team" element={<Team onNavigate={handleNavigation} />} />
         <Route path="/projects" element={<Projects onNavigate={handleNavigation} />} />
+        <Route path="/events" element={<Events onNavigate={handleNavigation} />} />
         <Route path="/portfolio" element={<Portfolio onNavigate={handleNavigation} />} />
         <Route path="/impact-shop" element={<ImpactShop onNavigate={handleNavigation} />} />
         <Route path="/blog" element={<Blog onNavigate={handleNavigation} />} />

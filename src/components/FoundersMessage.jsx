@@ -4,7 +4,7 @@ import "./AboutScreen.css";
 import "./FoundersMessage.css";
 import founderImg from "../assets/founder_img.png";
 import { FiUser, FiStar, FiHome } from "react-icons/fi";
-import { FaQuoteLeft, FaWhatsapp, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaQuoteLeft, FaEnvelope, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { SiThreads } from "react-icons/si";
 
 export default function FoundersMessage({ onNavigate }) {
@@ -119,8 +119,8 @@ export default function FoundersMessage({ onNavigate }) {
               </div>
               
               <div className="social-media-icons">
-                <a href="https://wa.me/233243575562" target="_blank" rel="noopener noreferrer" className="founder-social-icon whatsapp">
-                  <FaWhatsapp />
+                <a href="mailto:popederrick3@gmail.com" className="founder-social-icon email">
+                  <FaEnvelope />
                 </a>
                 <a href="https://www.threads.com/@capt.derrick_pope?xmt=AQF0ADeMZol0PnYuHJ-XF72c9CZuBmD20_AxSsAyoePlm4M" target="_blank" rel="noopener noreferrer" className="founder-social-icon threads">
                   <SiThreads />

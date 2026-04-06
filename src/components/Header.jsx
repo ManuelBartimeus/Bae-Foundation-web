@@ -86,6 +86,7 @@ export default function Header({ onNavigate }) {
             )}
           </div>
           <button className={`es-nav-item ${pathname === '/projects' ? 'active' : ''}`} onClick={() => handleNavigation('projects')}>Initiatives</button>
+          <button className={`es-nav-item ${pathname === '/events' ? 'active' : ''}`} onClick={() => handleNavigation('events')}>Events</button>
           <button className={`es-nav-item ${pathname === '/portfolio' ? 'active' : ''}`} onClick={() => handleNavigation('portfolio')}>Portfolio</button>
           <button className={`es-nav-item ${pathname === '/impact-shop' ? 'active' : ''}`} onClick={() => handleNavigation('impact-shop')}>Legacy Store</button>
           <button className={`es-nav-item ${pathname === '/blog' ? 'active' : ''}`} onClick={() => handleNavigation('blog')}>Blog</button>
@@ -146,6 +147,7 @@ export default function Header({ onNavigate }) {
             </div>
 
             <button className="es-mobile-nav-item" onClick={() => handleNavigation('projects')}>Initiatives</button>
+            <button className="es-mobile-nav-item" onClick={() => handleNavigation('events')}>Events</button>
             <button className="es-mobile-nav-item" onClick={() => handleNavigation('portfolio')}>Portfolio</button>
             <button className="es-mobile-nav-item" onClick={() => handleNavigation('impact-shop')}>Legacy Store</button>
             <button className="es-mobile-nav-item" onClick={() => handleNavigation('blog')}>Blog</button>

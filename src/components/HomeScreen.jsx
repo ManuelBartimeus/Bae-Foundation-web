@@ -41,10 +41,31 @@ import greenStepImg from "../assets/E Policy Day2-26.jpg";
 import hygieneOutreachImg from "../assets/HHo-89.jpg";
 import healthImg from "../assets/SAFE-HEALING-SPACES-RESOURCES-FOR-BLACK-WOMEN-1-1024x681.jpg";
 import reelVideo from "../assets/reel-video.mp4";
+import aceMedical from "../assets/sponsors/ace.png";
+import akpasa from "../assets/sponsors/akpasa.png";
+import amazaoha from "../assets/sponsors/amazeng.jpg";
+import startersTech from "../assets/sponsors/asset45.png";
+import shaunOpoku from "../assets/sponsors/shaun.png";
+import mindRenewal from "../assets/sponsors/mri.png";
+import ektelo from "../assets/sponsors/ektelo.png";
+import nissi from "../assets/sponsors/nissi.png";
+import proconnect from "../assets/sponsors/proconnect.png";
 
 export default function HomeScreen({ onNavigate }) {
   const videoRef = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [expandedConceptIndex, setExpandedConceptIndex] = useState(null);
+  const [expandedColorIndex, setExpandedColorIndex] = useState(null);
+
+  // Toggle concept card expansion (accordion style - only one open at a time)
+  const toggleConceptExpansion = (index) => {
+    setExpandedConceptIndex(expandedConceptIndex === index ? null : index);
+  };
+
+  // Toggle color card expansion (accordion style - only one open at a time)
+  const toggleColorExpansion = (index) => {
+    setExpandedColorIndex(expandedColorIndex === index ? null : index);
+  };
 
   // Navigation handlers for impact cards
   const handleCardNavigation = (cardNumber) => {
@@ -678,49 +699,325 @@ export default function HomeScreen({ onNavigate }) {
         </div>
       </section>
 
+      {/* Sponsors Carousel Section */}
+      <section className="es-sponsors" aria-label="Our Partners and Sponsors">
+        <h3 className="es-sponsors-title">Trusted Partners Driving Change</h3>
+        <div className="es-sponsors-carousel">
+          <div className="es-sponsors-track">
+            {/* First set of sponsors */}
+            <div className="es-sponsor-item">
+              <img
+                src={aceMedical}
+                alt="ACE Medical Insurance"
+                className="es-sponsor-image"
+              />
+            </div>
+            <div className="es-sponsor-item">
+              <img
+                src={akpasa}
+                alt="Akpasa"
+                className="es-sponsor-image"
+              />
+            </div>
+            <div className="es-sponsor-item">
+              <img
+                src={amazaoha}
+                alt="Amazaoha Holstrom"
+                className="es-sponsor-image"
+              />
+            </div>
+            <div className="es-sponsor-item">
+              <img
+                src={startersTech}
+                alt="Starters Technology"
+                className="es-sponsor-image"
+              />
+            </div>
+            <div className="es-sponsor-item">
+              <img
+                src={shaunOpoku}
+                alt="Shaun Opoku Foundation"
+                className="es-sponsor-image"
+              />
+            </div>
+            <div className="es-sponsor-item">
+              <img
+                src={mindRenewal}
+                alt="Mind Renewal International"
+                className="es-sponsor-image"
+              />
+            </div>
+            <div className="es-sponsor-item">
+              <img
+                src={ektelo}
+                alt="Ektelo"
+                className="es-sponsor-image"
+              />
+            </div>
+            <div className="es-sponsor-item">
+              <img
+                src={nissi}
+                alt="Nissi Holdings"
+                className="es-sponsor-image"
+              />
+            </div>
+            <div className="es-sponsor-item">
+              <img
+                src={proconnect}
+                alt="ProConnect Live"
+                className="es-sponsor-image"
+              />
+            </div>
+            {/* Duplicate set for seamless loop */}
+            <div className="es-sponsor-item">
+              <img
+                src={aceMedical}
+                alt="ACE Medical Insurance"
+                className="es-sponsor-image"
+              />
+            </div>
+            <div className="es-sponsor-item">
+              <img
+                src={akpasa}
+                alt="Akpasa"
+                className="es-sponsor-image"
+              />
+            </div>
+            <div className="es-sponsor-item">
+              <img
+                src={amazaoha}
+                alt="Amazaoha Holstrom"
+                className="es-sponsor-image"
+              />
+            </div>
+            <div className="es-sponsor-item">
+              <img
+                src={startersTech}
+                alt="Starters Technology"
+                className="es-sponsor-image"
+              />
+            </div>
+            <div className="es-sponsor-item">
+              <img
+                src={shaunOpoku}
+                alt="Shaun Opoku Foundation"
+                className="es-sponsor-image"
+              />
+            </div>
+            <div className="es-sponsor-item">
+              <img
+                src={mindRenewal}
+                alt="Mind Renewal International"
+                className="es-sponsor-image"
+              />
+            </div>
+            <div className="es-sponsor-item">
+              <img
+                src={ektelo}
+                alt="Ektelo"
+                className="es-sponsor-image"
+              />
+            </div>
+            <div className="es-sponsor-item">
+              <img
+                src={nissi}
+                alt="Nissi Holdings"
+                className="es-sponsor-image"
+              />
+            </div>
+            <div className="es-sponsor-item">
+              <img
+                src={proconnect}
+                alt="ProConnect Live"
+                className="es-sponsor-image"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Logo Meaning Section */}
       <section className="logo-meaning-section">
-        <div className="logo-section-header">
-          <h1 className="logo-section-title">Our Identity in Colour</h1>
-          <p className="logo-section-subtitle">
-            The colours in our emblem speak the language of our cause.
-          </p>
-        </div>
-
+        <div className="overlay"></div>
         <div className="content">
-          {/* Logo and Heading */}
-          <div className="logo-center">
-            <img src={logo1} alt="Our Logo" className="logo-image" />
-            <h2 className="logo-title">Our Logo</h2>
+          {/* Header */}
+          <div className="logo-section-header">
+            <h1 className="logo-section-title">Our Identity in Colour</h1>
+            <p className="logo-section-subtitle">
+              Every element of our logo tells a story of unity, love, and purposeful impact
+            </p>
           </div>
 
-          {/* Color meanings */}
-          <div className="meanings-grid">
-            {[
-              { color: "Red", text: "Red stands for LOVE & PASSION" },
-              { color: "Orange", text: "Orange stands for HOSPITALITY" },
-              {
-                color: "Yellow",
-                text: "Yellow stands for OPTIMISM & JOY TO THE LEAST",
-              },
-              { color: "Blue", text: "Blue stands for SYMPATHY AND HARMONY" },
-              {
-                color: "Green",
-                text: "Green stands for US SPARKING UP THE HOPES OF THE LESS PRIVILEGED",
-              },
-              {
-                color: "Purple",
-                text: "Purple stands for DEVOTION TO SERVING",
-              },
-            ].map((item, index) => (
-              <div className={`meaning-card ${item.color.toLowerCase()}`} key={index}>
-                <h3 className={`color-name ${item.color.toLowerCase()}`}>
-                  {item.color}
-                </h3>
-                <p className="color-text">{item.text}</p>
-              </div>
-            ))}
+          {/* Logo Showcase */}
+          <div className="logo-center">
+            <img src={logo1} alt="Before Anyone Else Foundation Logo" className="logo-image" />
           </div>
+
+          {/* Unified Logo Understanding Section */}
+          <div className="logo-understanding-section">
+            {/* Concept Cards Subsection */}
+            <div className="concepts-subsection">
+              <div className="logo-concept">
+                {/* Concept Card 1 */}
+                <div 
+                  className={`concept-card ${expandedConceptIndex === 0 ? 'expanded' : ''}`}
+                  onClick={() => toggleConceptExpansion(0)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      toggleConceptExpansion(0);
+                    }
+                  }}
+                  aria-expanded={expandedConceptIndex === 0}
+                >
+                  <div className="concept-card-header">
+                    <div className="concept-icon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                        <circle cx="8" cy="10" r="1.5" fill="currentColor"/>
+                        <circle cx="12" cy="8" r="1.5" fill="currentColor"/>
+                        <circle cx="16" cy="10" r="1.5" fill="currentColor"/>
+                        <circle cx="10" cy="14" r="1.5" fill="currentColor"/>
+                        <circle cx="14" cy="14" r="1.5" fill="currentColor"/>
+                      </svg>
+                    </div>
+                    <h4 className="concept-title">Heads of Diverse Hues</h4>
+                    <div className="expand-icon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="concept-card-content">
+                    <p>
+                      The logo is composed of a circle of diverse human figures, each represented in 
+                      a different colour. These figures symbolize our commitment to reaching people 
+                      from all walks of life, regardless of ethnicity, gender, or background, 
+                      emphasizing inclusivity and unity.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Concept Card 2 */}
+                <div 
+                  className={`concept-card ${expandedConceptIndex === 1 ? 'expanded' : ''}`}
+                  onClick={() => toggleConceptExpansion(1)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      toggleConceptExpansion(1);
+                    }
+                  }}
+                  aria-expanded={expandedConceptIndex === 1}
+                >
+                  <div className="concept-card-header">
+                    <div className="concept-icon">
+                      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 21.35C6.51 15.86 2 12.46 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.96-4.51 7.36-10 12.85z"/>
+                      </svg>
+                    </div>
+                    <h4 className="concept-title">The Interwoven Love Symbols</h4>
+                    <div className="expand-icon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="concept-card-content">
+                    <p>
+                      At the center, the figures connect in a heart-like formation, illustrating love 
+                      in action. This reflects our core values of compassion, service, and genuine care 
+                      for humanity. It embodies the spirit of unity and togetherness.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Concept Card 3 */}
+                <div 
+                  className={`concept-card ${expandedConceptIndex === 2 ? 'expanded' : ''}`}
+                  onClick={() => toggleConceptExpansion(2)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      toggleConceptExpansion(2);
+                    }
+                  }}
+                  aria-expanded={expandedConceptIndex === 2}
+                >
+                  <div className="concept-card-header">
+                    <div className="concept-icon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2"/>
+                        <path d="M12 3v18M3 12h18" stroke="currentColor" strokeWidth="2"/>
+                      </svg>
+                    </div>
+                    <h4 className="concept-title">Circular Arrangement</h4>
+                    <div className="expand-icon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="concept-card-content">
+                    <p>
+                      The circular arrangement signifies continuity, community, and collective impact, 
+                      reminding us that lasting change happens when people come together as one. 
+                      It represents the cyclical nature of our mission.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Color Meanings Subsection */}
+            <div className="color-meanings-subsection">
+              <div className="meanings-grid">
+                {[
+                  { color: "red", name: "Red", text: "Love & Passion", description: "The heart of our compassion and commitment to serve with deep devotion." },
+                  { color: "orange", name: "Orange", text: "Hospitality", description: "Our open doors and warm welcome to all who seek help and support." },
+                  { color: "yellow", name: "Yellow", text: "Optimism & Joy", description: "Joy and hopeful spirit brought to the least reached communities." },
+                  { color: "blue", name: "Blue", text: "Sympathy & Harmony", description: "Understanding, empathy, and peaceful coexistence among all people." },
+                  { color: "green", name: "Green", text: "Renewing Hope", description: "Fresh opportunities and renewed hope for the less privileged." },
+                  { color: "purple", name: "Purple", text: "Devotion to Service", description: "Unwavering commitment to service and our sacred duty to others." },
+                  { color: "white", name: "White", text: "Honesty & Truth", description: "Transparency, integrity, and truthfulness in all our endeavours." },
+                ].map((item, index) => (
+                  <div 
+                    className={`meaning-card ${item.color} ${expandedColorIndex === index ? 'expanded' : ''}`} 
+                    key={index}
+                    onClick={() => toggleColorExpansion(index)}
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        toggleColorExpansion(index);
+                      }
+                    }}
+                    aria-expanded={expandedColorIndex === index}
+                  >
+                    <div className="meaning-card-header">
+                      <div className="color-indicator"></div>
+                      <div className="card-title-section">
+                        <h4 className="color-name">{item.name}</h4>
+                        <p className="color-subtext">{item.text}</p>
+                      </div>
+                      <div className="expand-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <div className="meaning-card-content">
+                      <p className="color-text">{item.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 

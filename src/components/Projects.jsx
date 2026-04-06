@@ -44,7 +44,6 @@ export default function Projects({ onNavigate }) {
       description: "A women-focused initiative that empowers young girls and women to break gender bias and develop leadership and personal excellence.",
       image: initiative4,
       location: "Ghana, Gambia",
-      startDate: "2019",
       status: "Ongoing",
       beneficiaries: "N/A",
       goals: ["Empower women and girls to reach their full potential through education and leadership", "Promote female participation in global policy and advocacy"],
@@ -75,7 +74,6 @@ export default function Projects({ onNavigate }) {
       description: "A STEM–spirituality blended program offering rural students STEM skills alongside Gospel-based moral formation.",
       image: initiative6,
       location: "Ghana",
-      startDate: "2020",
       status: "Ongoing",
       beneficiaries: "N/A",
       goals: ["Promote STEM education for rural high school students", "Build morally grounded innovators with strong ethical foundation"],
@@ -105,7 +103,6 @@ export default function Projects({ onNavigate }) {
       description: "A scholarship and mentorship program supporting talented students to excel academically and become future leaders.",
       image: initiative1,
       location: "Ghana, Gambia",
-      startDate: "2021",
       status: "Ongoing",
       beneficiaries: "N/A",
       goals: ["Provide financial and academic support to talented students", "Develop leadership capacity through training and mentorship"],
@@ -135,7 +132,6 @@ export default function Projects({ onNavigate }) {
       description: "A global-policy think tank conducting research and offering evidence-based recommendations for sustainable development.",
       image: initiative2,
       location: "Ghana, Gambia",
-      startDate: "2020",
       status: "Ongoing",
       beneficiaries: "N/A",
       goals: ["Evaluate and strengthen global policies using evidence-based research", "Produce actionable strategies that address emerging global issues"],
@@ -166,7 +162,6 @@ export default function Projects({ onNavigate }) {
       description: "A charity-focused initiative supporting orphanages, prisoners, the homeless, and community welfare programs.",
       image: initiative7,
       location: "Ghana",
-      startDate: "2022",
       status: "Ongoing",
       beneficiaries: "N/A",
       goals: ["Provide hope and support to marginalized groups through charitable outreach", "Strengthen compassion and social responsibility within communities"],
@@ -196,7 +191,6 @@ export default function Projects({ onNavigate }) {
       description: "An innovation and entrepreneurship platform enabling high school students to solve real-world problems.",
       image: initiative5,
       location: "Ghana",
-      startDate: "2021",
       status: "Ongoing",
       beneficiaries: "N/A",
       goals: ["Build innovation, creativity, and problem-solving skills in students", "Promote leadership, teamwork, and ethical innovation"],
@@ -227,7 +221,6 @@ export default function Projects({ onNavigate }) {
       description: "A decentralized regional development model empowering local teams to design and implement community-focused solutions.",
       image: initiative8,
       location: "Ghana & Gambia",
-      startDate: "2022",
       status: "Ongoing",
       beneficiaries: "N/A",
       goals: ["Strengthen local leadership and decentralize community development", "Influence community-centered policies through regional empowerment"],
@@ -333,9 +326,6 @@ export default function Projects({ onNavigate }) {
                   <span className="project-category">
                     {projectCategories.find(cat => cat.id === project.category)?.icon}
                     {projectCategories.find(cat => cat.id === project.category)?.name}
-                  </span>
-                  <span className="project-year">
-                    <FiCalendar /> {project.startDate}
                   </span>
                 </div>
                 

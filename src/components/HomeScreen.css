@@ -328,6 +328,75 @@
   animation-play-state: paused;
 }
 
+/* Sponsors Carousel Section */
+.es-sponsors{
+  padding: 40px 0;
+  width: 100%;
+  margin-top: 0;
+}
+
+.es-sponsors-title{
+  font-size:24px;
+  font-weight:600;
+  margin-bottom:24px;
+  color: var(--black);
+  text-align: center;
+}
+
+.es-sponsors-carousel{
+  width: 100%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.es-sponsors-track{
+  display: flex;
+  gap: 80px;
+  animation: scroll-sponsors 50s linear infinite;
+  width: max-content;
+  padding-left: 50px;
+}
+
+.es-sponsor-item{
+  flex: 0 0 auto;
+  width: 160px;
+  height: 80px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.es-sponsor-image{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+  background: white;
+}
+
+.es-sponsor-item:hover .es-sponsor-image{
+  filter: grayscale(0%);
+  transform: scale(1.02);
+}
+
+/* Carousel animation - seamless loop */
+@keyframes scroll-sponsors {
+  0% {
+    transform: translateX(70px);
+  }
+  100% {
+    transform: translateX(calc(-160px * 9 - 80px * 9 - 70px));
+  }
+}
+
+/* Pause animation on hover */
+.es-sponsors-carousel:hover .es-sponsors-track {
+  animation-play-state: paused;
+}
+
 /* Right column */
 .es-right{
   width:60%;
@@ -526,6 +595,7 @@ button:focus, .es-quote:focus, .es-team-card:focus, .es-nav-item:focus {
   .es-title{ font-size:72px; line-height:72px; }
   .es-right-panel{ width:620px; height:580px; border-radius:32px; }
   .es-initiative-carousel{ padding: 0 32px; }
+  .es-sponsors-carousel{ padding: 0 32px; }
   
   @keyframes scroll-initiatives {
     0% {
@@ -552,6 +622,7 @@ button:focus, .es-quote:focus, .es-team-card:focus, .es-nav-item:focus {
   .es-pill{ left:18px; bottom:18px; }
   .es-team-card{ right:18px; bottom:18px; width:200px; }
   .es-initiative-carousel{ padding: 0 20px; }
+  .es-sponsors-carousel{ padding: 0 20px; }
   
   @keyframes scroll-initiatives {
     0% {
@@ -587,6 +658,7 @@ button:focus, .es-quote:focus, .es-team-card:focus, .es-nav-item:focus {
   .es-pill{ left:12px; bottom:12px; font-size:12px; }
   .es-team-card{ right:12px; bottom:12px; width:160px; padding:12px; }
   .es-initiative-carousel{ padding: 0 14px; }
+  .es-sponsors-carousel{ padding: 0 14px; }
   
   @keyframes scroll-initiatives {
     0% {
@@ -984,7 +1056,7 @@ button:focus, .es-quote:focus, .es-team-card:focus, .es-nav-item:focus {
   text-align: center;
   background-color: #fff;
   color: #111;
-  padding: 80px 20px 0px;
+  padding: 0px 20px 0px;
   font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
@@ -1447,152 +1519,472 @@ button:focus, .es-quote:focus, .es-team-card:focus, .es-nav-item:focus {
   }
 }
 
-/* Logo Meaning Section */
+/* ─────────────────────────────────────────────────── */
+/* LOGO MEANING SECTION - Complete Redesign */
+/* ─────────────────────────────────────────────────── */
+
 .logo-meaning-section {
   position: relative;
-  background: transparent;
-  min-height: 80vh;
+  background: linear-gradient(135deg, #ffffff 0%, #faf9f7 100%);
+  min-height: auto;
+  padding: 80px 48px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  color: #333;
-  text-align: center;
+  color: var(--black);
   overflow: hidden;
-  border-radius: 40px;
 }
 
-/* Dark overlay for readability */
+/* Overlay layer */
 .overlay {
   display: none;
 }
 
-/* Content Layer */
-.content {
+/* Main content wrapper */
+.logo-meaning-section .content {
   position: relative;
   z-index: 1;
   width: 100%;
   max-width: 1200px;
-  padding: 60px 20px;
+  margin: 0 auto;
 }
 
-/* Logo Section */
+/* Header section */
+.logo-section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.logo-section-title {
+  font-size: 52px;
+  font-weight: 800;
+  color: var(--black);
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.logo-section-subtitle {
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 28px;
+}
+
+/* Logo center showcase */
 .logo-center {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
+  animation: fadeIn 0.8s ease-out;
 }
 
 .logo-image {
-  width: 140px;
-  height: 120px;
-  border-radius: 50%;
-  margin-bottom: 12px;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 24px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo-center:hover .logo-image {
+  transform: scale(1.05);
 }
 
 .logo-title {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 700;
-  color: #333;
+  color: var(--black);
+  text-align: center;
 }
 
-/* Meanings Grid */
+/* ─────────────────────────────────────────────────── */
+/* UNIFIED LOGO UNDERSTANDING SECTION */
+/* ─────────────────────────────────────────────────── */
+
+.logo-understanding-section {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-top: 80px;
+  animation: fadeIn 1s ease-out 0.2s both;
+}
+
+/* Subsections */
+.concepts-subsection,
+.color-meanings-subsection {
+  width: 100%;
+}
+
+.color-meanings-subsection {
+  padding-top: 60px;
+  border-top: 1px solid rgba(10, 10, 10, 0.08);
+}
+
+.subsection-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--black);
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: -0.3px;
+}
+
+/* ─────────────────────────────────────────────────── */
+/* CONCEPT CARDS - NOW COLLAPSIBLE */
+/* ─────────────────────────────────────────────────── */
+
+.logo-concept {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  width: 100%;
+  justify-items: center;
+}
+
+.concept-card {
+  background: #ffffff;
+  border: 2px solid #f0f0f0;
+  border-radius: 20px;
+  padding: 28px 24px;
+  text-align: left;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.concept-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #fad6a5, #fab885);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.concept-card:hover::before {
+  transform: scaleX(1);
+}
+
+.concept-card:hover {
+  border-color: transparent;
+  box-shadow: 0 16px 48px rgba(10, 10, 10, 0.1);
+  transform: translateY(-8px);
+}
+
+.concept-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.concept-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #fad6a5 0%, #faddb3 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--black);
+  font-size: 28px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.concept-card:hover .concept-icon {
+  transform: scale(1.1) rotate(5deg);
+  background: linear-gradient(135deg, #fab885 0%, #faaf70 100%);
+}
+
+.concept-icon svg {
+  width: 32px;
+  height: 32px;
+  stroke-width: 1.5;
+}
+
+.concept-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--black);
+  margin: 0;
+  flex: 1;
+  transition: all 0.3s ease;
+}
+
+.concept-card:hover .concept-title {
+  color: #0A0A0A;
+}
+
+.concept-card .expand-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: var(--muted);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 2px;
+}
+
+.concept-card .expand-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2;
+}
+
+/* Concept card content */
+.concept-card-content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 0;
+}
+
+.concept-card-content p {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 26px;
+  margin: 0;
+  margin-top: 12px;
+}
+
+/* Expanded state for concept cards */
+.concept-card.expanded .expand-icon {
+  transform: rotate(180deg);
+}
+
+.concept-card.expanded .concept-card-content {
+  max-height: 200px;
+  margin-top: 16px;
+}
+
+/* ─────────────────────────────────────────────────── */
+/* COLOR MEANINGS SECTION */
+/* ─────────────────────────────────────────────────── */
+
+.color-meanings-subsection {
+  animation: fadeIn 1s ease-out 0.4s both;
+}
+
+/* Meanings grid - 7 colors */
 .meanings-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 24px;
+  width: 100%;
   justify-items: center;
 }
 
 .meaning-card {
+  background: #ffffff;
+  border: 2px solid #f0f0f0;
+  border-radius: 20px;
+  padding: 28px 20px;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 30px 20px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 4px solid white;
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-  position: relative;
 }
 
-/* Inner colored borders for each meaning card */
-.meaning-card.red {
-  box-shadow: 0 0 0 3px white, 0 0 0 6px #ff1a1a, 0 8px 32px rgba(0, 0, 0, 0.1);
+.meaning-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.meaning-card.orange {
-  box-shadow: 0 0 0 3px white, 0 0 0 6px #ff7a00, 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
-.meaning-card.yellow {
-  box-shadow: 0 0 0 3px white, 0 0 0 6px #ffca28, 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
-.meaning-card.blue {
-  box-shadow: 0 0 0 3px white, 0 0 0 6px #2196f3, 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
-.meaning-card.green {
-  box-shadow: 0 0 0 3px white, 0 0 0 6px #4caf50, 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
-.meaning-card.purple {
-  box-shadow: 0 0 0 3px white, 0 0 0 6px #9c27b0, 0 8px 32px rgba(0, 0, 0, 0.1);
+.meaning-card:hover::before {
+  transform: scaleX(1);
 }
 
 .meaning-card:hover {
-  transform: translateY(-12px);
-  background: rgba(255, 255, 255, 0.15);
-  border-color: white;
+  border-color: transparent;
+  box-shadow: 0 16px 48px rgba(10, 10, 10, 0.1);
+  transform: translateY(-8px);
 }
 
-/* Hover state maintains colored borders */
-.meaning-card.red:hover {
-  box-shadow: 0 0 0 3px white, 0 0 0 6px #ff1a1a, 0 20px 60px rgba(255, 26, 26, 0.3);
+/* Collapsed state (default) */
+.meaning-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
 }
 
-.meaning-card.orange:hover {
-  box-shadow: 0 0 0 3px white, 0 0 0 6px #ff7a00, 0 20px 60px rgba(255, 122, 0, 0.3);
+.card-title-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
 }
 
-.meaning-card.yellow:hover {
-  box-shadow: 0 0 0 3px white, 0 0 0 6px #ffca28, 0 20px 60px rgba(255, 202, 40, 0.3);
+.expand-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: currentColor;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.meaning-card.blue:hover {
-  box-shadow: 0 0 0 3px white, 0 0 0 6px #2196f3, 0 20px 60px rgba(33, 150, 243, 0.3);
+.expand-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2;
 }
 
-.meaning-card.green:hover {
-  box-shadow: 0 0 0 3px white, 0 0 0 6px #4caf50, 0 20px 60px rgba(76, 175, 80, 0.3);
+/* Content section - hidden by default */
+.meaning-card-content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 0;
 }
 
-.meaning-card.purple:hover {
-  box-shadow: 0 0 0 3px white, 0 0 0 6px #9c27b0, 0 20px 60px rgba(156, 39, 176, 0.3);
+.meaning-card-content .color-text {
+  margin-top: 12px;
+  margin-bottom: 0;
 }
 
+/* Expanded state */
+.meaning-card.expanded {
+  padding: 28px 20px;
+}
+
+.meaning-card.expanded .expand-icon {
+  transform: rotate(180deg);
+}
+
+.meaning-card.expanded .meaning-card-content {
+  max-height: 200px;
+  margin-top: 16px;
+}
+
+/* Color indicator dot */
+.color-indicator {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: currentColor;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.meaning-card:hover .color-indicator {
+  transform: scale(1.3);
+}
+
+/* Color meanings text */
 .color-name {
-  font-weight: 700;
   font-size: 18px;
-  margin-bottom: 8px;
-  transition: transform 0.3s ease;
+  font-weight: 700;
+  color: currentColor;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.meaning-card:hover .color-name {
+  transform: scale(1.05);
+}
+
+.color-subtext {
+  font-size: 14px;
+  font-weight: 600;
+  color: currentColor;
+  margin: 0;
+  opacity: 0.8;
+  transition: all 0.3s ease;
 }
 
 .color-text {
-  color: #666;
   font-size: 13px;
-  line-height: 1.4;
-  max-width: 140px;
+  color: var(--muted);
+  line-height: 20px;
+  margin: 0;
+}
+
+/* Color variants */
+.meaning-card.red {
+  color: #e63946;
+}
+
+.meaning-card.orange {
+  color: #f77f00;
+}
+
+.meaning-card.yellow {
+  color: #fcbf49;
+}
+
+.meaning-card.blue {
+  color: #4895ef;
+}
+
+.meaning-card.green {
+  color: #06a77d;
+}
+
+.meaning-card.purple {
+  color: #9d4edd;
+}
+
+.meaning-card.white {
+  color: #555555;
+  border-color: #e0e0e0;
+}
+
+/* ─────────────────────────────────────────────────── */
+/* VISION MESSAGE */
+/* ─────────────────────────────────────────────────── */
+
+.logo-vision-message {
   text-align: center;
+  margin-top: 60px;
+  padding: 40px;
+  background: linear-gradient(135deg, rgba(250, 214, 165, 0.1) 0%, rgba(250, 221, 179, 0.1) 100%);
+  border-radius: 24px;
+  border: 1px solid rgba(250, 214, 165, 0.3);
+  animation: fadeIn 1s ease-out 0.6s both;
+}
+
+.logo-vision-message p {
+  font-size: 18px;
+  line-height: 32px;
+  color: var(--black);
+  margin: 0;
+}
+
+.logo-vision-message strong {
+  font-weight: 700;
+  color: var(--black);
 }
 
 /* Individual Color Styles for Logo Meaning Section */
@@ -1618,6 +2010,513 @@ button:focus, .es-quote:focus, .es-team-card:focus, .es-nav-item:focus {
 /* Hover effect */
 .meaning-card:hover .color-name {
   transform: scale(1.05);
+}
+
+/* ─────────────────────────────────────────────────── */
+/* RESPONSIVE DESIGN - LOGO MEANING SECTION */
+/* ─────────────────────────────────────────────────── */
+
+/* ≤ 1024px (Tablet/Large) */
+@media (max-width: 1024px) {
+  .logo-meaning-section {
+    padding: 60px 36px;
+  }
+
+  .logo-section-title {
+    font-size: 44px;
+  }
+
+  .logo-section-subtitle {
+    font-size: 16px;
+  }
+
+  .logo-image {
+    width: 160px;
+    height: 160px;
+  }
+
+  .color-meanings-subsection {
+    padding-top: 50px;
+  }
+
+  .logo-understanding-section {
+    gap: 50px;
+    margin-top: 60px;
+  }
+
+  .subsection-title {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+
+  .logo-concept {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+
+  .concept-card {
+    padding: 24px 20px;
+  }
+
+  .concept-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .concept-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .concept-title {
+    font-size: 16px;
+  }
+
+  .concept-card-content p {
+    font-size: 14px;
+  }
+
+  .concept-card.expanded .concept-card-content {
+    max-height: 180px;
+  }
+
+  .meanings-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+
+  .meaning-card.expanded .meaning-card-content {
+    max-height: 180px;
+  }
+
+  .logo-vision-message {
+    margin-top: 50px;
+    padding: 32px;
+  }
+
+  .logo-vision-message p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+
+/* ≤ 768px (Tablet) */
+@media (max-width: 768px) {
+  .logo-meaning-section {
+    padding: 50px 24px;
+  }
+
+  .logo-section-title {
+    font-size: 36px;
+  }
+
+  .logo-section-subtitle {
+    font-size: 15px;
+  }
+
+  .logo-center {
+    margin-bottom: 60px;
+  }
+
+  .logo-image {
+    width: 140px;
+    height: 140px;
+  }
+
+  .color-meanings-subsection {
+    padding-top: 40px;
+  }
+
+  .logo-understanding-section {
+    gap: 40px;
+    margin-top: 50px;
+  }
+
+  .subsection-title {
+    font-size: 20px;
+    margin-bottom: 28px;
+  }
+
+  .logo-concept {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    justify-items: center;
+  }
+
+  .concept-card {
+    padding: 20px 16px;
+    border-radius: 16px;
+  }
+
+  .concept-card-header {
+    gap: 12px;
+  }
+
+  .concept-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .concept-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .concept-title {
+    font-size: 15px;
+  }
+
+  .concept-card-content p {
+    font-size: 13px;
+    line-height: 22px;
+  }
+
+  .concept-card.expanded .concept-card-content {
+    max-height: 160px;
+  }
+
+  .meanings-grid {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 16px;
+    justify-items: center;
+  }
+
+  .meaning-card {
+    padding: 24px 16px;
+    border-radius: 16px;
+  }
+
+  .meaning-card-header {
+    flex-wrap: wrap;
+  }
+
+  .meaning-card.expanded .meaning-card-content {
+    max-height: 160px;
+  }
+
+  .color-indicator {
+    width: 12px;
+    height: 12px;
+    margin-bottom: 0;
+  }
+
+  .color-name {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+
+  .color-subtext {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .color-text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .logo-vision-message {
+    margin-top: 40px;
+    padding: 24px;
+  }
+
+  .logo-vision-message p {
+    font-size: 15px;
+    line-height: 26px;
+  }
+}
+
+/* ≤ 600px (Large Phone) */
+@media (max-width: 600px) {
+  .logo-meaning-section {
+    padding: 40px 16px;
+  }
+
+  .logo-section-header {
+    margin-bottom: 40px;
+  }
+
+  .logo-section-title {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .logo-section-subtitle {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .logo-center {
+    margin-bottom: 50px;
+  }
+
+  .logo-image {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 16px;
+  }
+
+  .color-meanings-subsection {
+    padding-top: 36px;
+  }
+
+  .logo-understanding-section {
+    gap: 36px;
+    margin-top: 40px;
+  }
+
+  .subsection-title {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+
+  .logo-concept {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    justify-items: center;
+  }
+
+  .concept-card {
+    padding: 18px 14px;
+    border-radius: 16px;
+  }
+
+  .concept-card-header {
+    gap: 10px;
+  }
+
+  .concept-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .concept-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .concept-title {
+    font-size: 14px;
+  }
+
+  .concept-card-content p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .concept-card.expanded .concept-card-content {
+    max-height: 140px;
+  }
+
+  .meanings-grid {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 12px;
+    justify-items: center;
+  }
+
+  .meaning-card {
+    padding: 20px 12px;
+    border-radius: 16px;
+  }
+
+  .meaning-card-header {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .meaning-card.expanded .meaning-card-content {
+    max-height: 140px;
+  }
+
+  .color-indicator {
+    width: 11px;
+    height: 11px;
+    margin-bottom: 0;
+  }
+
+  .color-name {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .color-subtext {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+
+  .color-text {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .logo-vision-message {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .logo-vision-message p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+/* ≤ 480px (Mobile) */
+@media (max-width: 480px) {
+  .logo-meaning-section {
+    padding: 32px 12px;
+  }
+
+  .logo-section-header {
+    margin-bottom: 32px;
+  }
+
+  .logo-section-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+    line-height: 36px;
+  }
+
+  .logo-section-subtitle {
+    font-size: 13px;
+    line-height: 22px;
+  }
+
+  .logo-center {
+    margin-bottom: 40px;
+  }
+
+  .logo-image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 12px;
+  }
+
+  .color-meanings-subsection {
+    padding-top: 32px;
+  }
+
+  .logo-understanding-section {
+    gap: 32px;
+    margin-top: 36px;
+  }
+
+  .subsection-title {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .logo-concept {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    justify-items: center;
+  }
+
+  .concept-card {
+    padding: 16px 12px;
+    border-radius: 14px;
+  }
+
+  .concept-card-header {
+    gap: 8px;
+  }
+
+  .concept-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .concept-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .concept-title {
+    font-size: 13px;
+  }
+
+  .concept-card-content p {
+    font-size: 11px;
+    line-height: 18px;
+  }
+
+  .concept-card.expanded .concept-card-content {
+    max-height: 130px;
+  }
+
+  .concept-card .expand-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .concept-card .expand-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .meanings-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    justify-items: center;
+  }
+
+  .meaning-card {
+    padding: 16px 10px;
+    border-radius: 14px;
+  }
+
+  .meaning-card-header {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .meaning-card.expanded .meaning-card-content {
+    max-height: 130px;
+  }
+
+  .expand-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .expand-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .color-indicator {
+    width: 10px;
+    height: 10px;
+    margin-bottom: 0;
+  }
+
+  .color-name {
+    font-size: 13px;
+    margin-bottom: 3px;
+  }
+
+  .color-subtext {
+    font-size: 11px;
+    margin-bottom: 5px;
+  }
+
+  .color-text {
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  .logo-vision-message {
+    margin-top: 24px;
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .logo-vision-message p {
+    font-size: 13px;
+    line-height: 20px;
+  }
 }
 
 /* Impact Results Styles */
@@ -1648,23 +2547,6 @@ button:focus, .es-quote:focus, .es-team-card:focus, .es-nav-item:focus {
   max-width: 600px;
   margin: 0 auto;
   margin-bottom: 10px;
-}
-
-.logo-section-header {
-  text-align: center;
-  margin-top: 50px; 
-}
-
-.logo-section-title {
-  font-size: 42px;
-  font-weight: 800;
-  margin-bottom: 10px;
-}
-
-.logo-section-subtitle {
- color: #666;
- max-width: 600px;
- margin-bottom: 10px; 
 }
 
 /* Grid Layouts */
