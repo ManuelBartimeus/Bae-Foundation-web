@@ -16,6 +16,7 @@ import itemshirt4 from '../assets/merch/shirt 4.png';
 import itemflask1 from '../assets/merch/Thermal Flask.png';
 import itemtote1 from '../assets/merch/tote 1.png';
 import itemtote2 from '../assets/merch/tote 2.png';
+import customized from '../assets/merch/customised.png';
 
 export default function ImpactShop({ onNavigate }) {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -119,6 +120,17 @@ export default function ImpactShop({ onNavigate }) {
       rating: 4.5,
       reviews: 40,
       purchaseLink: "https://selar.com/27x7885l37"
+    },
+    {
+      id: 9,
+      name: "Customizable Legacy Package",
+      category: "All",
+      price: 400,
+      description: "A curated commemorative merchandise collection, featuring branded t-shirts, tote bags, a water bottle, and a stylus pen, all celebrating a 10th-anniversary.",
+      image: customized,
+      rating: 4.5,
+      reviews: 40,
+      purchaseLink: "https://selar.com/4267497742"
     }
   ];
 
