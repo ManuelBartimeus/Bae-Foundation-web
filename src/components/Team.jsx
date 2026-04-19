@@ -22,9 +22,6 @@ import reynardnutakor from "../assets/team/reynard_nutakor.jpeg";
 import nanayirenkyi from "../assets/team/nana_yirenkyi.jpeg";
 import doreendotse from "../assets/team/doreen_dotse.jpg";
 import agnesgomez from "../assets/team/agnes_gomez.jpeg";
-import sarahking from "../assets/team/sarah_king.png";
-
-// Ghanaian Chapter Team Images
 import manuelBartimeus from '../assets/team/manuel_bartimeus.png';
 
 export default function Team({ onNavigate }) {
@@ -223,19 +220,6 @@ export default function Team({ onNavigate }) {
             email: "mailto: ceesaysarata92@gmail.com"
           },
           achievements: ["Sponsorship Acquisition", "Partnership Building", "Resource Mobilization"]
-        },
-        {
-          name: "Sarah Eyatundeh King",
-          role: "Volunteer and Outreach Coordinator",
-          bio: "Manages volunteer programs and outreach to expand community involvement.",
-          image: sarahking,
-          location: "Banjul, The Gambia",
-          socials: {
-            linkedin: "https://www.linkedin.com/in/sarah-king-8732642ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-            instagram: "https://www.instagram.com/xx_sarah_05?igsh=NTkzdXd5Z2N3eHFm&utm_source=qr",
-            email: "mailto: saraheya555@gmail.com"
-          },
-          achievements: ["Volunteer Management", "Community Outreach", "Civic Engagement"]
         },
         {
           name: "Cecelia Wuday Sanyang",
